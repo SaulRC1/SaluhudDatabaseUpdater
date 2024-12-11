@@ -1244,3 +1244,1128 @@ ALTER TABLE IF EXISTS WEIGHT_HISTORICAL_ENTRY ALTER COLUMN ENTITY_VERSION SET DE
 -- END SQL STATEMENTS DATE --> 13/10/2024
 
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.3', database_date = '2024-10-13', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- START SQL STATEMENTS DATE --> 19/10/2024
+-- Added a new relation between Ingredient and Allergenic tables to know if an ingredient contains any type of allergens
+CREATE TABLE INGREDIENT_ALLERGIC (
+    id_ingredient bigint NOT NULL,
+    id_allergenic bigint NOT NULL,
+    ingrediente text NOT NULL,
+    allergen text NOT NULL,
+    entity_version bigint NOT NULL DEFAULT 0
+    PRIMARY KEY (id_ingredient, id_allergenic),
+    FOREIGN KEY (id_ingredient) REFERENCES INGREDIENT(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_allergenic) REFERENCES ALLERGENIC(id) ON DELETE CASCADE
+);
+
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (464, 5, 'Aceite de cacahuete', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (465, 6, 'Aceite de coco', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (466, 6, 'Aceite de colza', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (467, 5, 'Aceite de germen de trigo', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (468, 2, 'Aceite de girasol', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (469, 6, 'Aceite de grano de uva', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (470, 4, 'Aceite de hígado de bacalao', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (471, 5, 'Aceite de lino', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (472, 12, 'Aceite de nuez', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (473, 6, 'Aceite de oliva', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (474, 6, 'Aceite de oliva virgen extra', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (475, 6, 'Aceite de oliva virgen extra, producción ecológica', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (476, 6, 'Aceite de palma', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (477, 6, 'Aceite de sésamo', 'SESAME_SEED');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (478, 6, 'Aceite de soja', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (479, 4, 'Aceituna', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (480, 4, 'Aceituna negra, con hueso', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (481, 7, 'Acelga, cruda', 'CELERY');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (482, 7, 'Acelga, en conserva', 'CELERY');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (483, 7, 'Acelgas, hervidas', 'CELERY');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (484, 11, 'Achicoria, cruda', 'LUPIN_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (485, 10, 'Agua de la red', 'SULFUR_DIOXIDE_AND_SULPHITES');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (486, 10, 'Agua mineral, mineralización débil', 'SULFUR_DIOXIDE_AND_SULPHITES');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (487, 10, 'Agua, con gas, embotellada', 'SULFUR_DIOXIDE_AND_SULPHITES');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (496, 3, 'Albondigas en conserva', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (497, 7, 'Alcachofa, cruda', 'CELERY');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (498, 7, 'Alcachofas en conserva', 'CELERY');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (501, 2, 'Almeja', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (502, 2, 'Almejas en conserva', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (503, 12, 'Almendra, cruda', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (504, 12, 'Almendra, cruda, con cáscara', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (505, 12, 'Almendra, frita, salada', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (506, 12, 'Almendra, tostada', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (508, 5, 'Almidón de maíz', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (509, 5, 'Almidón de trigo', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (510, 11, 'Altramuz', 'LUPIN_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (514, 12, 'Anacardo, crudo', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (515, 2, 'Anchoas en aceite vegetal', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (516, 4, 'Anguila, al horno', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (517, 4, 'Anguila, cruda', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (518, 4, 'Anguila, hervida', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (519, 4, 'Angula, cruda', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (521, 5, 'Aperitivos de trigo', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (522, 7, 'Apio, crudo', 'CELERY');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (523, 7, 'Apio, en conserva en salmuera', 'CELERY');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (525, 4, 'Arenque, ahumado', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (526, 4, 'Arenque, salado', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (528, 3, 'Arroz con leche', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (533, 4, 'Atún en aceite de oliva Isabel', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (534, 4, 'Atún en aceite vegetal', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (535, 4, 'Atún en escabeche', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (536, 4, 'Atún, al horno', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (537, 4, 'Atún, al natural', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (538, 4, 'Atún, crudo', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (539, 4, 'Atún, plancha', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (540, 12, 'Avellana', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (541, 12, 'Avellana, cruda, con cáscara', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (547, 4, 'Bacaladilla', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (548, 4, 'Bacalao, ahumado', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (549, 4, 'Bacalao, crudo', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (550, 4, 'Bacalao, fresco, al horno', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (551, 4, 'Bacalao, frito', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (552, 4, 'Bacalao, salado, crudo', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (553, 4, 'Bacalao, salado, remojado, crudo', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (562, 5, 'Barrita cereales maíz y trigo', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (563, 5, 'Barrita cereales trigo y chocolate', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (564, 6, 'Batido de chocolate', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (565, 6, 'Batido de fresa', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (566, 6, 'Batido de soja', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (567, 6, 'Batido fermentado de soja', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (568, 3, 'Batido lácteo de cacao, bajo en calorías', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (569, 3, 'Batido lácteo, de fresa, bajo en calorías', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (573, 2, 'Berberechos', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (574, 2, 'Berberechos en conserva', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (578, 4, 'Besugo', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (582, 2, 'Bogavante', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (583, 2, 'Bogavante, hervido', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (584, 5, 'Bollería, genérico', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (587, 4, 'Bonito del norte, al vapor', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (588, 6, 'Bonito del norte, enlatado en aceite de soja', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (589, 6, 'Bonito en aceite vegetal', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (591, 4, 'Boquerón', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (592, 4, 'Boquerón, frito', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (594, 4, 'Breca, cruda', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (598, 4, 'Caballa, al horno', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (599, 4, 'Caballa, cruda', 'FISH');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (607, 5, 'Cacahuete, crudo, con cáscara', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (608, 5, 'Cacahuete, frito, salado', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (609, 5, 'Cacahuete, tostado, salado', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (612, 3, 'Café, con leche', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (632, 2, 'Cangrejo', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (633, 2, 'Cangrejo de río crudo', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (634, 2, 'Cangrejo, en conserva', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (652, 12, 'Castaña, cruda', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (653, 12, 'Castaña, tostada', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (656, 5, 'Cebada, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (662, 5, 'Centeno, crudo', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (663, 2, 'Centollo, crudo', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (673, 5, 'Cereales base trigo y chocolate', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (673, 12, 'Cereales base trigo y chocolate', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (674, 5, 'Cereales desayuno base de arroz chocolateado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (675, 5, 'Cereales desayuno base de arroz y miel', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (676, 5, 'Cereales desayuno base de arroz, trigo y fruta', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (677, 5, 'Cereales desayuno base de maíz y miel', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (678, 5, 'Cereales desayuno base de maíz y trigo', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (679, 5, 'Cereales desayuno base de maíz, trigo y avena', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (680, 5, 'Cereales desayuno base de trigo azucarado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (681, 5, 'Cereales desayuno base de trigo y arroz', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (682, 5, 'Cereales desayuno base de trigo y frutas', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (683, 5, 'Cereales desayuno base de trigo y miel', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (684, 5, 'Cereales desayuno base de trigo, avena, maiz y miel', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (685, 5, 'Cereales desayuno base de trigo, avena, maíz, miel y nueces', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (685, 12, 'Cereales desayuno base de trigo, avena, maíz, miel y nueces', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (686, 5, 'Cereales desayuno base muesli', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (687, 5, 'Cereales desayuno, maíz azucarado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (688, 5, 'Cereales para el desayuno, ricos en fibra, tipo "all-bran"', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (705, 3, 'Chocolate blanco', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (705, 12, 'Chocolate blanco', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (706, 3, 'Chocolate con leche', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (707, 3, 'Chocolate con leche y almendras', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (707, 12, 'Chocolate con leche y almendras', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (708, 3, 'Chocolate con leche y arroz', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (709, 3, 'Chocolate con nueces de macadamia', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (709, 12, 'Chocolate con nueces de macadamia', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (710, 12, 'Chocolate negro, con almendras', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (718, 2, 'Cigala', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (721, 12, 'Coco, desecado', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (722, 12, 'Coco, fresco', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (732, 3, 'Conejo de granja, carne, cruda', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (755, 12, 'Crema de almendras', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (756, 5, 'Crema de cacahuete', 'PEANUT');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (757, 12, 'Crema de chocolate con avellanas', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (758, 3, 'Crema de chocolate y nata', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (760, 12, 'Crema de coco', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (762, 3, 'Crema inglesa', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES(763, 3, 'Crema pastelera', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (765, 5, 'Croissant', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (765, 3, 'Croissant', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (765, 12, 'Croissant', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (766, 5, 'Croissant de chocolate', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (766, 3, 'Croissant de chocolate', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (766, 12, 'Croissant de chocolate', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (767, 3, 'Croquetas de pollo', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (768, 14, 'Cuajada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (773, 5, 'Donut', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (773, 3, 'Donut', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (774, 5, 'Donut, de chocolate', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (774, 3, 'Donut, de chocolate', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (781, 5, 'Ensaimada', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (781, 3, 'Ensaimada', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (783, 3, 'Ensaladilla rusa', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (790, 5, 'Fabada', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (792, 3, 'Flamenquín', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (793, 3, 'Flan de huevo', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (794, 3, 'Flan de huevo, bajo en calorías', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (803, 5, 'Galleta ,tipo "digestiva", con chocolate', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (804, 5, 'Galleta salada', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (805, 5, 'Galleta, barquillo, con jalea de frutas', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (806, 5, 'Galleta, cubierta de chocolate', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (807, 5, 'Galleta, genérico', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (808, 5, 'Galleta, tipo "Digestiva"', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (809, 5, 'Galletas integrales', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (810, 5, 'Galletas saladas, con queso', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (812, 5, 'Galletas, con chocolate, tipo "cookies"', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (813, 5, 'Galletas, de mantequilla', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (813, 3, 'Galletas, de mantequilla', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (822, 3, 'Gazpacho', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (823, 14, 'Gelatina', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (826, 5, 'Gofio', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (855, 3, 'Helado de chocolate', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (855, 14, 'Helado de chocolate', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (856, 3, 'Helado de fresa', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (856, 14, 'Helado de fresa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (857, 3, 'Helado de nata', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (857, 14, 'Helado de nata', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (864, 14, 'Horchata', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (865, 3, 'Huevo de codorniz, entero, crudo', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (866, 3, 'Huevo de gallina fresco', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (867, 3, 'Huevo de gallina, clara, cruda', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (868, 3, 'Huevo de gallina, escalfado', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (869, 3, 'Huevo de gallina, frito', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (870, 3, 'Huevo de gallina, hervido, duro', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (871, 3, 'Huevo de gallina, pasado por agua', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (872, 3, 'Huevo de gallina, revuelto, con mantequilla', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (873, 3, 'Huevo de gallina, yema, cruda', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (874, 3, 'Huevo de gallina, yema, desecada', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (875, 3, 'Huevo de pato, crudo', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (876, 3, 'Huevo de pavo, entero, crudo', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (879, 1, 'Jamón asado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (880, 1, 'Jamón cocido, categoría s/e', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (881, 1, 'Jamón cocido, enlatado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (884, 1, 'Jamón serrano', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (894, 1, 'Kebab', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (895, 14, 'Kefir', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (896, 5, 'Ketchup', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (901, 1, 'Lasaña', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (903, 14, 'Leche condensada, entera, con azúcar', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (905, 14, 'Leche de cabra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (907, 14, 'Leche de oveja', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (908, 14, 'Leche de vaca, desnatada, condensada, con azúcar', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (909, 14, 'Leche de vaca, entera', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (910, 14, 'Leche en polvo, semidesnatada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (911, 14, 'Leche fermentada, bifidobacterium, entera, natural', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (913, 14, 'Leche merengada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (914, 14, 'Leche, desnatada, pasteurizada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (915, 14, 'Leche, semidesnatada, pasteurizada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (917, 6, 'Lecitina de soja', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (946, 5, 'Magdalena', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (946, 3, 'Magdalena', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (958, 5, 'Masa de hojaldre, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (959, 3, 'Mayonesa con aceite de girasol', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (960, 3, 'Mayonesa, aceite de oliva', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (961, 3, 'Mayonesa, aceite de soja', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (961, 6, 'Mayonesa, aceite de soja', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (962, 3, 'Mayonesa, baja en calorías', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (963, 13, 'Mejillon', 'MOLLUSK');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (964, 13, 'Mejillón, en conserva, al natural', 'MOLLUSK');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (965, 13, 'Mejillón, en escabeche', 'MOLLUSK');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (966, 13, 'Mejillón, hervido', 'MOLLUSK');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (976, 1, 'Merluza, rebozada, frita', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (976, 3, 'Merluza, rebozada, frita', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (990, 6, 'Miso', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (993, 1, 'Morcilla', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (994, 1, 'Morcilla, frita', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (995, 1, 'Mortadela', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (996, 8, 'Mostaza', 'MUSTARD');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (997, 14, 'Mousse de chocolate', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (998, 14, 'Mousse de queso fresco, con frutas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (999, 14, 'Mousse de queso fresco, desnatado, azucarado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1000, 14, 'Mousse de queso fresco, desnatado, con frutas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1001, 14, 'Mousse de yogur, con frutas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1002, 14, 'Mousse de yogur, natural', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1003, 1, 'Muesli', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1007, 1, 'Napolitana, rellena con crema de cacao', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1009, 14, 'Nata montada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1010, 14, 'Nata, líquida, para cocinar, 18% de grasa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1011, 14, 'Natillas sabor vainilla', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1012, 13, 'Nécora', 'CRUSTACEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1028, 12, 'Nuez', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1029, 12, 'Nuez moscada', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1030, 12, 'Nuez, cruda, con cáscara', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1033, 13, 'Ostra, cruda', 'MOLLUSK');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1034, 1, 'Paella', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1035, 1, 'Paella marinera', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1036, 1, 'Palmera', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1040, 1, 'Pan blanco, de barra', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1041, 1, 'Pan blanco, de barra, sin sal', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1042, 1, 'Pan blanco, de molde, tostado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1043, 1, 'Pan blanco, frito', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1044, 1, 'Pan blanco, tipo "baguette"', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1045, 1, 'Pan blanco, tostado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1046, 1, 'Pan blanco, tostado sin sal', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1047, 1, 'Pan de avena', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1048, 1, 'Pan de cebada', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1049, 1, 'Pan de centeno', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1050, 1, 'Pan de leche', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1051, 1, 'Pan de maíz', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1052, 1, 'Pan integral', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1053, 1, 'Pan integral, de molde, tostado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1054, 1, 'Pan integral, sin sal', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1055, 1, 'Pan integral, tostado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1056, 1, 'Pan rallado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1057, 1, 'Pan tostado integral', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1058, 1, 'Pan, tipo hamburguesa', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1063, 1, 'Pasta alimenticia, con huevo, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1063, 3, 'Pasta alimenticia, con huevo, cruda', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1064, 1, 'Pasta alimenticia, con huevo, hervida', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1064, 3, 'Pasta alimenticia, con huevo, hervida', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1065, 1, 'Pasta alimenticia, con vegetales, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1066, 1, 'Pasta alimenticia, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1067, 1, 'Pasta alimenticia, integral, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1068, 1, 'Pasta alimenticia, integral, hervida', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1069, 1, 'Pasta alimenticia, rellena con carne, hervida', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1069, 3, 'Pasta alimenticia, rellena con carne, hervida', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1071, 9, 'Pasta de sésamo', 'SESAME_SEED');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1072, 1, 'Pastas de te', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1073, 1, 'Pastel', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1074, 1, 'Pastel con fruta confitada', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1075, 1, 'Pastel de chocolate', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1075, 14, 'Pastel de chocolate', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1076, 1, 'Pastel de manzana', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1085, 14, 'Pate de higado de cerdo, 30% de grasa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1086, 14, 'Paté de pimienta', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1090, 14, 'Pavo, fiambre', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1091, 14, 'Pavo, fiambre, bajo en grasa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1095, 10, 'Pepinillos en vinagre', 'SULFUR_DIOXIDE_AND_SULPHITES');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1107, 14, 'Petit líquido, sabor fresa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1108, 14, 'Petit suïsse, cereales y fruta', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1109, 14, 'Petit suisse, chocolate', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1110, 14, 'Petit suisse, fresa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1111, 14, 'Petit Suisse, natural azucarado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1125, 12, 'Piñon', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1126, 12, 'Piñón, crudo, con cáscara', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1130, 12, 'Pistacho', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1131, 1, 'Pizza, precocinada', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1131, 14, 'Pizza, precocinada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1135, 1, 'Pollo empanado, frito', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1148, 14, 'Preparado lácteo con omega 3', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1149, 1, 'Pudding de pasas', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1149, 14, 'Pudding de pasas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1156, 14, 'Puré de patata y queso, en copos', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1160, 14, 'Puré, de patata, con leche', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1161, 14, 'Queso afuegal pitu', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1162, 14, 'Queso ahumado de aliva', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1163, 14, 'Queso azul', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1164, 14, 'Queso brie', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1165, 14, 'Queso cabra, curado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1166, 14, 'Queso cabrales', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1167, 14, 'Queso Camembert 20-30% MG/ES', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1168, 14, 'Queso camembert 60% mg/es', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1169, 14, 'Queso cantabria', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1170, 14, 'Queso casín', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1171, 14, 'Queso Castellano', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1172, 14, 'Queso cebreiro', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1173, 14, 'Queso Cheddar', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1174, 14, 'Queso curado, genérico', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1175, 14, 'Queso de aracena', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1176, 14, 'Queso de arzúa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1177, 14, 'Queso de bola', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1178, 14, 'Queso de cádiz', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1179, 14, 'Queso de Castilla-La Mancha, oveja y cabra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1180, 14, 'Queso de Castilla-La Mancha, oveja, vaca y cabra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1181, 14, 'Queso de castilla-león, oveja y vaca', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1182, 14, 'Queso de murcia, al vino', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1183, 14, 'Queso de tenerife', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1184, 14, 'Queso de tiétar', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1185, 14, 'Queso edam', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1186, 14, 'Queso emmental', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1187, 14, 'Queso en porciones', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1188, 14, 'Queso flor de guía', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1189, 14, 'Queso fresco de burgos', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1190, 14, 'Queso fresco, cabra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1191, 14, 'Queso fresco, desnatado, con frutas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1192, 14, 'Queso fundido, extragraso (>60% MG/ES)', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1193, 14, 'Queso gata-hurdes', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1194, 14, 'Queso gaztazarra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1195, 14, 'Queso Gouda', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1196, 14, 'Queso grazalema', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1197, 14, 'Queso Gruyer', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1198, 14, 'Queso herreño', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1199, 14, 'Queso Ibores', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1200, 14, 'Queso Mahón', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1201, 14, 'Queso majorero', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1202, 14, 'Queso manchego', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1203, 14, 'Queso manchego, en aceite', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1204, 14, 'Queso mozzarella', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1205, 14, 'Queso munster', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1206, 14, 'Queso para untar', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1207, 14, 'Queso para untar, con finas hierbas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1208, 14, 'Queso para untar, con salmón', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1209, 14, 'Queso para untar, natural, bajo en calorías', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1210, 14, 'Queso parmesano', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1211, 14, 'Queso pasiego', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1212, 14, 'Queso pedroches', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1213, 14, 'Queso peñamellera', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1214, 14, 'Queso picón', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1215, 14, 'Queso porrúa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1216, 14, 'Queso Raclette', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1217, 14, 'Queso rallado, genérico', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1218, 14, 'Queso roquefort', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1219, 14, 'Queso San Simón', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1220, 14, 'Queso semicurado, genérico', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1221, 14, 'Queso serrat', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1222, 14, 'Queso servilleta', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1223, 14, 'Queso Tetilla', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1224, 14, 'Queso tierno, genérico', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1225, 14, 'Queso torta del casar', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1226, 14, 'Queso tupí', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1227, 14, 'Queso Zamorano', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1228, 1, 'Quinoa, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1256, 1, 'Rosquilla', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1256, 14, 'Rosquilla', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1260, 14, 'Salami', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1263, 14, 'Salchicha, tipo "frankfurt"', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1265, 14, 'Salchicha, tipo viena', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1266, 14, 'Salchichón', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1269, 14, 'Salmón ahumado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1274, 14, 'Salsa al roquefort', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1276, 14, 'Salsa bechamel', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1278, 14, 'Salsa carbonara', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1279, 14, 'Salsa de queso', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1280, 6, 'Salsa de soja', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1285, 1, 'San jacobo, congelado', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1285, 14, 'San jacobo, congelado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1293, 1, 'Seitán', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1295, 1, 'Sémola de trigo, cruda', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1296, 1, 'Sémola de trigo, hervida', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1298, 9, 'Sésamo, semilla', 'SESAME_SEED');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1305, 1, 'Sobao', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1305, 14, 'Sobao', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1306, 14, 'Sobrasada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1310, 6, 'Soja, frita', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1312, 6, 'Soja, seca, cruda', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1313, 6, 'Soja, seca, remojada, hervida', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1320, 14, 'Té, infusión, con leche', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1330, 6, 'Tofu', 'SOYA_BEAN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1332, 14, 'Tomate frito', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1337, 1, 'Torta de aceite', 'GLUTEN');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1338, 3, 'Tortilla, a la francesa', 'EGG');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1341, 14, 'Trucha, ahumada', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1343, 12, 'Turrón, tipo Alicante', 'NUTS');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1366, 14, 'Yogur griego', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1367, 14, 'Yogur líquido, "tipo actimel"', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1368, 14, 'Yogur líquido, aromatizado sabor s/e', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1369, 14, 'Yogur líquido, con frutas s/e', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1370, 14, 'Yogur líquido, entero, con cereales', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1371, 14, 'Yogur líquido, natural, azucarado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1372, 14, 'Yogur, búlgaro', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1373, 14, 'Yogur, desnatado, aromatizado sabor s/e', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1374, 14, 'Yogur, desnatado, con cereales', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1375, 14, 'Yogur, desnatado, con cereales, manzana y ciruela', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1376, 14, 'Yogur, desnatado, con cereza y frambuesa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1377, 14, 'Yogur, desnatado, con ciruela, albaricoque y fibra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1378, 14, 'Yogur, desnatado, con fresa, grosella y fibra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1379, 14, 'Yogur, desnatado, con frutas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1380, 14, 'Yogur, desnatado, con frutas del bosque', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1381, 14, 'Yogur, desnatado, con frutas tropicales', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1382, 14, 'Yogur, desnatado, con manzana', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1383, 14, 'Yogur, desnatado, con melocotón y maracuyá', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1384, 14, 'Yogur, desnatado, con melocotón, frambuesa y fibra', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1385, 14, 'Yogur, desnatado, con piña y pomelo', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1386, 14, 'Yogur, desnatado, sabor natural', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1387, 14, 'Yogur, desnatado, sabor natural, azucarado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1388, 14, 'Yogur, desnatado, sabor vainilla', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1389, 14, 'Yogur, enriquecido, con frutas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1390, 14, 'Yogur, enriquecido, natural', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1391, 14, 'Yogur, enriquecido, natural, azucarado', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1392, 14, 'Yogur, enriquecido, natural, con nata', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1393, 14, 'Yogur, enriquecido, sabor, s/e', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1394, 14, 'Yogur, entero, con cereales y fresas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1395, 14, 'Yogur, entero, con fresas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1396, 14, 'Yogur, entero, con frutas del bosque', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1397, 14, 'Yogur, líquido, desnatado, natural', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1398, 14, 'Yogur, líquido, entero, con fresas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1399, 14, 'Yogur, líquido, entero, con frutas', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1400, 14, 'Yogur, líquido, entero, sabor fresa', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1401, 14, 'Yogur, líquido, entero, sabor fresa y plátano', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1402, 14, 'Yogur, líquido, entero, sabor frutas del bosque', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1403, 14, 'Yogur, líquido, entero, sabor piña y coco', 'LACTOSE');
+INSERT INTO INGREDIENT_ALLERGIC (id_ingredient, id_allergenic, ingrediente, allergen) VALUES (1404, 13, 'Zamburiñas', 'MOLLUSK');
+-- END SQL STATEMENTS DATE --> 19/10/2024
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.4', database_date = '2024-10-19', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- START SQL STATEMENTS DATE --> 28/10/2024
+-- Added recipes to the database from scraping
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('BATIDO CON FRUTAS', 'Se lava, pela y corta la fruta. Se introduce en la batidora junto con la leche. Se bate hasta que no queden grumos y se añade azúcar al gusto del consumidor.Por último, se deja un rato en la nevera para que se enfríe. Se sirve frío.', '500 gramos de frutas muy maduras o que vayan a estropearse, 500 ml de leche, Azúcar', 145);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('BERENJENAS RELLENAS', 'Se lava la berenjena, se parte a la mitad (a lo largo), y se adereza con aceite y sal.Se pone en el horno 10 -15 minutos aproximadamente y cuando esté blanda, se saca de la bandeja, se pone la carne picada, y el queso rallado por encima y se mete la berenjena  en el horno, hasta que el queso esté gratinado.', '2 berenjenas grandes, 280 g carne picada sobrante de otro guiso, 2 cucharadas de queso rallado, 2 cucharadas de aceite de oliva virgen extra, Sal', 307);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('BIZCOCHO DE ALMENDRAS', 'En un bol se bate el huevo. A continuación, se añade la harina, levadura, azúcar y el yogur. Cuando se haya mezclado todo se trituran almendras y se añaden junto con la ralladura de limón.Cuando la mezcla esté homogénea se traspasa a un molde con un poco de aceite para evitar que se pegue.Por último, se colocan las almendras laminadas en la superficie y se mete al horno durante 45 minutos aproximadamente a 180 ºC. Para comprobar que está hecho se mete un cuchillo, si sale limpio estará listo.', '1 huevo, ½ yogur griego (restos de un yogur abierto), ½ vaso* de aceite de oliva virgen extra, 1 vaso de azúcar, 1 ½ vaso de yogur de harina, ¾ de vaso de almendras (restos de una bolsa ya abierta), 1 sobre levadura, Ralladura de limón, Medidas de vaso de yogur de 125 g', 592);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('BIZCOCHO DE YOGUR', 'Se baten en un bol los huevos. A continuación, se añade el azúcar, el yogur y el aceite de oliva virgen extra. Una vez que estén los ingredientes mezclados se añade la harina y la levadura. Se mezcla hasta que quede una masa homogénea. Por último, se unta mantequilla en el molde donde se va a poner la masa para que no se pegue y se mete al horno precalentado anteriormente a 180ºC durante aproximadamente 30 minutos. Antes de sacarse, se comprueba si está hecho metiendo un cuchillo, y si éste sale limpio quiere decir que ya está  hecho.', 'Yogur de un envase ya abierto, ½ vaso* de aceite de oliva virgen extra, 2 huevos, 1 vaso y medio de harina, 1 vaso de azúcar, ½ sobre de levadura royal, 10 g de mantequilla, Medidas de vaso de yogur de 125 g', 526);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('BOLAS DE PATATA CON CARNE', 'En primer lugar, sacamos de la nevera las patatas cocidas que nos hayan sobrado, las pelamos, cortamos en rodajas y machacamos con un tenedor hasta que queda una especie de puré muy compacto. A continuación se añade a la masa una pizca de sal, perejil picado y una cucharada de aceite de oliva. Por otro lado, se prepara el relleno haciendo un sofrito con los restos de carne, la cebolla (cortada en trozos pequeños y previamente pochada) y el ajo bien picados. Cuando la carne haya cogido color, se añade el tomate frito y la pimienta negra, se remueve y se deja calentar unos 10 minutos hasta que la salsa se reduzca y quede bien seco. Cuando se tenga preparada la mezcla, se deja enfriar en la sartén y mientras tanto se empieza a trabajar con el puré de patata. Se forman unas bolas con la masa y se aplastan. En cada una, se pone en el centro un poco de relleno y se cierran de nuevo haciendo una bola del tamaño deseado. Antes de freírlas se pasan por harina, huevo y pan rallado. Por último, se pone una sartén con abundante aceite a calentar y se fríen hasta que estén doradas por todos los lados. Es recomendable que se pongan sobre papel absorbente para retirar el exceso de aceite.', '700 g de restos de patata, 150 g de relleno de carne sobrante, 1 cebolla mediana, Harina, Huevo, Pan rallado (elaborado con pan duro del día anterior), Aceite de oliva virgen extra, 4 dientes de ajo, Sal, Perejil, Pimienta negra', 482);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('BRAZO GITANO SALADO', 'Se pone en el fuego un cazo de agua con sal, cuando esté hirviendo pones las patatas y las cueces durante 30 minutos. Se sacan las patatas, y a continuación se hierven los huevos durante 10 minutos. Una vez frías las patatas se pelan y se pasan por el pasapurés. Cuando la masa esté lista, se coloca papel de aluminio en una bandeja, y se extiende la masa. Posteriormente preparamos la mezcla, troceamos los huevos, desmenuzamos el atún, añadimos el tomate frito y un poco de mayonesa y se mueve hasta que quede todo mezclado. A continuación, se extiende la mezcla en el centro de la masa de patata. Acto seguido se enrolla con cuidado (sin el papel de plata). Para terminar, se añade por encima mayonesa y se decora con aceitunas y tiras de pimiento rojo.', '5 patatas, 160 g de atún en aceite de una lata que esté ya abierta, 2 huevos, 120 g de mayonesa, 4 aceitunas, 70 g de tomate frito, 4 tiras de pimiento rojo, Sal', 392);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('CALABACINES RELLENOS DE TORTILLA', 'En primer lugar se lavan los calabacines y se les quita el centro dejando siempre una base y se guarda la pulpa para el relleno. Se cuecen en agua con sal hirviendo durante 10 minutos. Por otro lado se trocea la tortilla de patata. A continuación, se pica la cebolla y la zanahoria y se pochan en la sartén junto con el relleno de los calabacines que hemos quitado antes. Cuando esté bien rehogado, se añaden los trozos de tortilla de patata y se deja calentar unos minutos. Finalmente, se rellenan los calabacines con la mezcla, se les pone un poco de queso rallado y a gratinar en el horno.', '4 calabacines medianos, Restos de tortilla de patata, 1 huevo, 1 cebolla, 1 zanahoria, Agua o caldo, 1 cucharada de harina o maicena., Aceite de oliva virgen extra, Sal', 214);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('CANELONES DE POLLO ASADO', 'Se pone el agua a hervir y cuando esté lista se cuecen las placas de canelones. Mientras tanto se tritura el pollo asado y se pica la cebolla. A continuación, se sofríe la cebolla y se añade el pollo y la salsa de tomate en la misma sartén. Una vez que estén cocidas las placas de canelones se remojan en agua fría. Posteriormente, se rellenan las placas de pasta, se hacen un rollito y se colocan en una fuente. Para hacer la bechamel se derrite la mantequilla, se añade harina y se mueve mientras que se añade leche caliente poco a poco. Se mueve hasta que no queden grumos. Por último, se vierte la salsa por encima de los canelones, se espolvorea por encima queso rallado y se gratina en el horno.', '1 paquete de placas de canelones, 300 g de restos de pollo asado, 160 g de salsa de tomate, Queso rallado, 1 cebolla, 1 cucharada sopera de aceite de oliva virgen extra', 614);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('CREPES RELLENOS DE MANZANA', 'Se mezcla la harina con los huevos, el aceite, azúcar y sal. Se puede hacer manualmente o en la batidora hasta que no queden grumos. A continuación se añade el agua y la leche mientras se sigue mezclando la masa. Cuando ya está espesa y sin grumos se deja reposar durante una hora aproximadamente. Mientras se espera se lavan las manzanas y se cortan en láminas finas, se ponen a hervir en un cazo de agua con canela durante 7 minutos a fuego lento. Una vez que la masa esté lista, se pone aceite a calentar y se hacen las crepes en una sartén vertiendo un poco de masa. Se deja en el fuego hasta que cuaje y se le da vuelta. Se repite la misma operación hasta tener la consistencia deseada. Por último, rellenamos las crepes con las láminas de manzana.', '2 manzanas muy maduras o que vayan a estropearse, 120 g de harina, 2 huevos, 1 cucharada sopera de aceite de oliva virgen extra, 1 cucharadita de azúcar, ½ vaso de agua, ½ vaso de leche, ½ ramita de canela, Un pellizco de sal', 250);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('CROQUETAS DE PESCADO', 'Se pone un cazo en el fuego con la mantequilla para que se derrita. Se echa la harina y se va mezclando con la mantequilla. Se añade leche poco a poco mientras se va formando la masa. El salmón ya cocinado se hace picadillo, se añade a la mezcla y se va dando vueltas. Mientras en un cazo con agua hirviendo se hace un huevo durante 10 minutos hasta que esté duro, se deja enfriar, se pela y se hace picadillo. Por último, se añade el huevo duro junto con un poco de sal. La mezcla se pone en un plato y se deja enfriar en la nevera hasta el día siguiente. Para freírlas, se pone un cazo con aceite y se espera hasta que esté bien caliente. Mientras se rebozan las croquetas con huevo y pan rallado. Se fríen hasta que queden doradas por ambos lados.', '350 g de pescado sobrante ya cocinado, 80 g de harina, 240 ml de leche, 2 huevos. 40 g de mantequilla, Pan rallado, Aceite de oliva virgen extra, Sal', 462);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('ENSALADA DE ARROZ', 'Escurrir el maíz y las aceitunas previamente lavados para quitar el exceso de sal. Hacer migajas el atún en aceite y cortar la cebolla y el tomate en dados. Mezclar todo con el arroz sobrante. Trocear el jamón y mezclar con el resto de ingredientes. Por último, añadir aceite y vinagre al gusto de los comensales.', '500 g de arroz blanco cocido sobrante 80 g de restos de pescado 1 lata de maíz 1 cebolla roja 2 tomates 8 lonchas de jamón de York 100 g de aceitunas verdes con hueso, 4 cucharadas de aceite de oliva virgen extra, Vinagre, Sal', 459);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('ENSALADA DE LEGUMBRES', 'Se calientan los garbanzos hasta que queden templados. Mientras se calientan, se lavan los tomates y se cortan en dados, posteriormente se pelan las zanahorias y se rallan. A continuación, se corta la cebolla en aros, se escurren el maíz y los pepinillos, y éstos últimos se cortan en rodajas. Una vez preparados los ingredientes, se colocan en un bol junto con los garbanzos. Por último, se sazona y se añade aceite y vinagre al gusto del comensal.', '500 g de garbanzos sobrantes de un guiso o cocido 120 g de tomate 120 g de maíz 120 g de zanahoria 1/2 cebolla roja 60 g de pepinillos 4 cucharadas de aceite de oliva virgen extra Vinagre Sal', 323);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('ENSALADA DE PASTA TEMPLADA', 'En primer lugar, ponemos a cocer los huevos. Por otro lado, se lavan los tomates, se pelan y trocean. A continuación se trocea también la lechuga previamente lavada, los huevos duros y las yemas de espárragos. Por otro lado, se calientan las sobras de pasta. Finalmente, se mezclan todos los ingredientes con la pasta, se sazona y se añade aceite y vinagre al gusto de los comensales.', '400 g de pasta cocida sobrante 2 tomates ½ lechuga tipo iceberg 4 huevos 125 g de yemas de espárragos 80 g de restos de pescado 4 cucharadas de aceite de oliva virgen extra Vinagre Sal', 408);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('ENSALADILLA RUSA', 'Primero se pelan las zanahorias. Luego se pone en el fuego un cazo con agua con sal, y cuando esté hirviendo se ponen las patatas junto con las zanahorias durante 25 minutos y se añaden al mismo cazo los huevos. Pasado diez minutos más se saca todo y se espera a que se enfríen. A continuación, se pelan las patatas y se trocean en pequeños cuadrados. Los huevos también se pelan y se trocean, el tamaño depende del gusto del consumidor. Las zanahorias se cortan en finas rodajas, las aceitunas se parten por la mitad y el atún se desmenuza. Por último, se juntan todos los ingredientes partidos en un cuenco, se añaden los guisantes, la mayonesa y se mueve para que quede mezclado. Se deja enfriar en la nevera durante media hora.', '4 patatas 2 huevos duros cocidos del día anterior 2 zanahorias 100 g de guisantes 80 g de atún en aceite 100 g de aceitunas 250 g de mayonesa Sal', 516);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('ESPAGUETIS CON PICADILLO DE BARBACOA', 'La carne sobrante de la barbacoa se parte en trozos pequeños. Se pone agua a hervir y se cuecen los espaguetis.Se calienta la carne y el tomate frito y se mezclan con la pasta. Por último, se añade queso rallado al gusto del comensal.', '280 g de espaguetis, 300 g de carne sobrante de una barbacoa, 50 g de queso rallado, 100 g de tomate frito, 2 cucharadas de aceite de oliva virgen extra, Agua, Sal', 651);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('FAJITAS DE TERNERA', 'Se trocea en juliana la cebolla y el pimiento. Se sofríen en una sartén hasta que estén dorados.Por otro lado, se trocea la ternera y se añade junto a la salsa de tomate en una sartén para calentarlos. Se añade pimentón picante o cayena a gusto del consumidor.Por último, se calientan las tortitas y se rellenan  con la masa.', '8 tortitas de maíz o trigo, 300 g de restos de ternera, 1 pimiento rojo, 1 pimiento verde, 1 cebolla, 100 g de salsa de tomate, 2 cucharadas de aceite de oliva virgen extra, Sal, Pimentón picante o cayena (opcional)', 384);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('FAJITAS DE VERDURAS', 'Se añade aceite a la sartén, cuando esté caliente, se salan las verduras y se añaden durante unos minutos para calentarlas.El tomate se lava y se corta en cuadraditos. A continuación, se calientan las tortas en el microondas o en la sartén y se rellenan con las verduras y el tomate.', '8 tortas de trigo, 250 g de verduras sobrantes, 80 g de tomate natural, 2 cucharadas de aceite de oliva virgen extra, Sal', 263);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('HUEVOS RELLENOS', '', '8 huevos cocidos, 80 g de pescado o marisco sobrante, 80 g de tomate frito, 4 cucharadas soperas de mayonesa', 293);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('HUMUS', 'Los garbanzos se pasan por el pasapurés. Se colocan en un bol y se trituran el resto de ingredientes añadiendo agua hasta conseguir la textura deseada (pasta espesa y homogénea).Se coloca la mezcla en un plato hondo. Se rocía el plato con un chorro de aceite y se espolvorea con el pimentón. Se pone pan tostado como acompañamiento.', '500 g de garbanzos cocidos que hayan sobrado, 2 cucharadas de aceite de oliva virgen extra, 3 dientes de ajo, Zumo de 1 limón, Agua, Sal, Pimentón, Comino molido, Pimienta negra, Pan de pita o pan del día anterior tostado', 449);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('LASAÑA DE VERDURAS CON CARNE', 'Se pone en un cazo agua con sal a hervir. Cuando ya esté hirviendo se añaden las láminas de pasta durante 5 minutos, tienen que quedar al dente para que no se rompan.Mientras tanto, en una sartén se añade un chorrito de aceite, se trocea una cebolla y se añade hasta dorarla. A continuación, se adereza la carne con sal y pimienta y se añade a la sartén. Al cabo de unos 10 minutos, (el tiempo depende del punto en el que se quiera que esté la carne) se mezcla con la verdura sobrante troceada y el tomate frito.Una vez que tenemos preparados los ingredientes se monta la lasaña. En un molde para horno ponemos un chorrito de aceite y harina para que no se pegue. Primero se coloca una lámina, a continuación la mezcla que hemos hecho, otra lámina, de nuevo la mezcla y otra lámina. Encima de esta última lámina ponemos queso de cabra cortado en rodajas muy finas. Para terminar espolvoreamos orégano al gusto. Se mete al horno durante 5 minutos a 250ºC en grill.', '12 láminas de pasta para lasaña, 180 g de verduras sobrantes de otro guiso, 200 g carne picada, 40 g de tomate frito, 1 cebolla, 120 g de queso de cabra, 2 cucharadas de aceite de oliva virgen extra, Sal, Pimienta, Orégano', 401);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('LENGUADO AL CAVA', 'Se echa la nata en un cazo junto con un vaso de cava y se deja reducir unos 20 minutos al fuego.Mientras tanto, se colocan los filetes de lenguado sazonados en una bandeja de horno ligeramente engrasada, se riegan con el otro vaso de cava, se meten en el horno, caliente al máximo, durante 5 minutos.Por otro lado, se echan los langostinos en la salsa de nata, y se dejan cocer 2-3 minutos.Por último, se les quita el pie a los champiñones, se lavan y trocean para luego rehogarlos en una sartén con un poco de aceite y sal. Valor nutricional: * Ingestas Recomendadas para un varón con edad 20-39 años y con una actividad física moderada: 3.000 kcal (Moreiras y col, 2013) Comentario nutricional: Este plato destaca por su ingrediente principal que es el lenguado, pescado blanco con un alto contenido en proteínas de elevada calidad, muy bajo contenido en grasa,  minerales como selenio y fósforo (ambos nutrientes cubren alrededor del 70% de las ingestas recomendadas de la población de estudio) y vitaminas como la B12 y niacina. En esta receta el lenguado se cocina al horno y se acompaña con una salsa de nata y cava, además de langostinos y champiñones ricos en vitaminas y minerales.', '4 filetes de lenguado, 2 vasos de cava (restos de una botella ya abierta), 4 langostinos (cocidos o a la plancha sobrantes), 100 g champiñones, 1 vaso de nata líquida, 2 cucharadas de aceite de oliva virgen extra, Sal', 367);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('MACEDONIA DE FRUTAS', 'Se pelan y trocean las frutas en trozos no muy grandes y se mezclan todas. Se añade zumo a las frutas a gusto del consumidor.', '200 g de frutas muy maduras o que vayan a estropearse, Bote de zumo que esté ya abierto', 76);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('MERENGUE AL HORNO CON FRUTAS', 'Se baten las claras de huevo hasta conseguir que queden a punto de nieve. A continuación, se va añadiendo azúcar poco a poco mientras se mueve la mezcla. Cuando esté mezclado, se pone a calentar el horno a 120 ºC y en la bandeja se pone papel de horno.Posteriormente, la mezcla formada anteriormente se mete en una manga pastelera y se hacen conos. Se meten al horno durante 60 minutos. Mientras esperamos, se lavan las fresas y se cortan en cuatro trozos.Por último, se colocan los conos de merengue en una bandeja y alrededor de cada uno se colocan los cuatro trozos de fresa.', '350 g de fruta madura o que vaya a estropearse, Restos de claras de huevos, 125 g de azúcar', 176);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('MIGAS CON CARNE', 'Se corta el pan duro en rebanadas y se coloca en un recipiente con agua hasta que queden cubiertas. Una vez mojado, se saca y escurre colocándolo en un recipiente donde lo dejamos reservado. Por otro lado, se cortan las sobras de carne en trozos pequeños. La cantidad a incorporar depende del gusto del comensal, lo ideal es que vayan acompañando a las migas que son el ingrediente principal.A continuación, se pone un poco de aceite en la sartén hasta que se caliente y se doran los dientes de ajo para que aromaticen el aceite en el que rehogaremos el resto de ingredientes. En cuanto estén los ajos dorados, se incorporan las sobras de carne y se dejan calentar durante 5-10 minutos. En la misma sartén donde se ha rehogado la carne con el ajo se echa el pimentón, un poco de agua y sal.Se incorpora el pan que tenemos escurrido y se va picando enérgicamente con una cuchara de madera sin parar de mover para ayudarle a que se seque el agua que le pueda quedar a la vez que se cuece la miga. Finalmente, se baja el fuego y se siguen trabajando las migas más lentamente hasta que estén bien doradas. Se sazona al gusto de los comensales.', '500 g de restos de pan duro, 150 g de restos de carne de un cocido o guiso, 4 dientes de ajo, 4 cucharadas de aceite de oliva virgen extra, Agua, Sal, 1 cuchara de postre de pimentón', 499);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('MOUSSE DE LIMÓN', 'Se lava y pela un limón. En un cazo se añade un vaso de agua y cuando esté hirviendo, se añade la piel del limón y la cucharada de azúcar. Después de unos 6-7 minutos se deja enfriar. A continuación, se pone en un bol la leche condensada, el zumo de limón, el agua aromatizada con la piel de limón y se bate. Posteriormente, las claras de huevo se ponen a punto de nieve. Cuando estén, se añaden a la mezcla anterior y se mueven lentamente. Una vez que la mezcla quede homogénea, se pone en un recipiente y se deja enfriar en la nevera mínimo media hora.', 'Restos de 1 bote de leche condensada ya abierta, 2 claras de huevo, 1 limón, 1 cucharada de postre de azúcar, 1 vaso de agua', 166);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('NUGGETS DE POLLO CON ENSALADA', 'Se trocea el pollo sobrante en pequeños trozos para darle forma de nugget, se añade a un bol con una yema de huevo, almendra molida, sal, pimienta y cebolla anteriormente picada al gusto del consumidor.Acto seguido, se rebozan los nuggets con pan rallado, huevo y otra vez una capa de pan rallado. Para freírlos es importante que sea en abundante aceite caliente para que la fritura sea la adecuada.Una vez hechos, se ponen encima de papel de cocina para retirar el aceite. Por último, se sirven acompañados de una ensalada de lechuga y tomate.', '400 g de pechuga de pollo o pollo asado sobrante de otro día, 1 yema de huevo, 20 g de almendras molidas, ½ cebolla, 2 huevos, Pan rallado, Aceite de oliva virgen extra, 200 g de lechugas variadas, 100 g de tomate, Zumo de limón, Sal, Pimienta', 403);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('PASTA CON VERDURAS', 'Se pone agua a hervir con sal y un chorrito de aceite. Una vez que esté lista se añade la pasta y se deja en agua unos 8 minutos.A continuación, se escurre la pasta y se deja en el cazo. Por otro lado, añadimos un poco de aceite en una sartén, cuando esté caliente ponemos la pasta y las verduras.Por último, se colocan los ingredientes en una fuente, se añade por encima una capa de queso rallado y se meten al horno unos 10 minutos hasta que el queso se dore.', '280 g de pasta (espaguetis o macarrones), 250 g de verduras sobrantes del día anterior, 2 cucharadas de aceite de oliva virgen extra, Queso rallado, Sal', 428);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('PASTEL DE PLÁTANO MADURO', 'Se mezclan en la batidora la harina, mantequilla, huevos y azúcar hasta que quede una masa homogénea. A continuación se añade la levadura. Se cortan en rodajas los plátanos maduros, se añaden a la masa y se vuelven a mezclar en la batidora. Posteriormente se añaden las nueces y las ralladuras de limón y naranja. Una vez conseguida una textura adecuada se coloca en un molde y se mete al horno precalentado anteriormente, durante una hora a 180 grados.Por último, se espolvorea por encima azúcar glas en polvo al gusto del consumidor.', '4 plátanos muy maduros o que vayan a estropearse, 200 g de harina, 2 cucharadas de postre de levadura, 40 g de mantequilla, 1 huevo, 70 g de azúcar en polvo, 25 g de nueces, Ralladura de naranja, Ralladura de limón', 435);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('PASTELES DE PIÑONES', 'Se pone agua sin sal a hervir y cuando esté lista se cuecen las patatas. Pasados unos 15 minutos se sacan, se pelan y se dejan enfriar. Posteriormente, se aplastan las patatas y se mezclan con el azúcar, la almendra molida y la ralladura de piel de limón.A continuación, se añaden la yema y se mezcla bien. Cuando la masa esté homogénea se hacen bolitas y se bate la clara de huevo para el rebozado y posteriormente, se incluyen los piñones. Se van colocando en una bandeja de horno con papel de aluminio y un poco de harina para evitar que se peguen.Una vez listos, se pintan por arriba con la yema y se meten al horno 15 minutos hasta que estén dorados, calentado previamente a 180 grados.', '100 g de almendra cruda molida (restos de una bolsa ya abierta), 50 g de piñones (restos de una bolsa ya abierta), 75 g de azúcar, 50 g de patata cocida, Ralladura de un limón, 1 huevo entero, 1 yema de huevo', 359);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('PATAPIZZAS', 'Se cogen las patatas cocidas del día anterior y se machacan hasta hacer un puré compacto. A continuación se añade un huevo y se mezcla homogéneamente. Después con la ayuda de un molde, se hacen unos redondeles sobre una bandeja de horno, se aplastan y por encima se pone un poco de jamón de york picado y queso rallado.Se doran las patapizzas en el horno a máxima potencia durante 10 minutos.', '600 g de patatas cocidas que hayan sobrado (con o sin piel), 1 huevo, 8 lonchas de jamón York, 80 g de queso rallado (bolsa o restos de queso), 2 cucharadas de aceite de oliva virgen extra, Sal', 356);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('PATÉ DE QUESO AZUL', 'Se añaden los restos de queso y la leche evaporada en un cazo a fuego lento. Se baten hasta que queden fundidos y mezclados. Se pone en un molde y se deja enfriar en la nevera.El pan se tuesta cuando se vaya a tomar el paté. Se sirve con una tostada de pan “para untar” como acompañamiento.', '150 g de restos de queso azul de un paquete ya abierto, 50 g de restos de queso manchego, 1 tarrina de queso cremoso, ½ bote de leche evaporada, 8 rebanadas de pan del día anterior', 614);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('PECHUGA DE POLLO A LAS UVAS CON MANZANAS GRATINADAS', 'Se limpian y cortan las pechugas de pollo en 4 trozos alargados. Se aderezan con sal y pimienta.En una fuente de horno, se pone una capa de nata líquida y se espolvorea crema de champiñón. Se lava y corta la manzana en rodajas y se añade a la fuente. Se añaden las pechugas, otra capa de nata y se vuelve a espolvorear crema de champiñón.Una vez calentado el horno, se mete durante 40 minutos aproximadamente. Por último, se añaden las uvas como acompañamiento.', '800 g de pechugas de pollo, 1 sobre de crema de champiñón, Restos de un bote de nata líquida, Manzana que esté muy madura o vaya a estropearse, 160 g de uvas, Sal, Pimienta', 432);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('PISTO CON HUEVO', 'En primer lugar se trocean las verduras sobrantes. Después, se añaden en una sartén con un chorrito de aceite y a continuación el tomate pelado y triturado. Se adereza con pimienta, sal y una cucharadita de azúcar. Mientras se deja reposar a fuego lento se fríen los huevos en aceite abundante. Por último, se juntan los huevos con el pisto.', '200 g de verduras sobrantes de otro guiso, 4 tomates, 4 huevos, 1 cebolla, Aceite de oliva virgen extra, Ázucar, Sal, Pimienta', 300);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('POLLO A LA CERVEZA', 'Se limpia el pollo y se corta en cuatro porciones y se adereza con sal y pimienta.A continuación, se cubre con aceite el fondo de una cacerola mediana. Mientras se calienta el aceite se va troceando la cebolla y se añade hasta que esté dorada.Posteriormente, a fuego fuerte se añade el pollo durante unos 5-10 minutos hasta que quede dorado.Por último, se baja el fuego y se añade la cerveza y el coñac. Se mantiene a fuego lento hasta que termine de dorarse el pollo y se ligue un poco la salsa.', '1 pollo en trozos medianos, 2 cebollas grandes, 1 vaso de cerveza (restos de una lata o botella ya abierta), 1 vasito de coñac, 2 cucharadas de aceite de oliva virgen extra, Sal, Pimienta', 235);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('QUICHE DE VERDURAS', 'En un bol se añade la harina, un huevo, el aceite y una pizca de sal. Se mezcla hasta que quede una masa homogénea.A continuación, se deja enfriar en la nevera durante 45 minutos aproximadamente. Posteriormente, se extiende con un rodillo y se coloca en un molde con un poco de aceite y harina para que no se pegue. Se hornea a 180ºC durante 20 minutos.Para el relleno, se trocean las sobras de verduras y se salpimentan. Se pone un fondo de aceite en una sartén, cuando el aceite esté caliente se añade primero la cebolla y a continuación los puerros, el calabacín, la cebolla, los champiñones y el tomate. Se dejan en la sartén hasta que estén doradas las verduras.A continuación, en un bol se añade la nata, un huevo sal y pimienta, cuando esté mezclado se añade la verdura. Posteriormente, la mezcla se vierte sobre el hojaldre, se añade queso rallado por encima y se hornea a 180ºC durante 20 minutos.', '175 g de verduras crudas sobrantes de otra receta, 150 g de harina, 2 huevos, 190 g de nata líquida, 50 g de queso rallado, 2 cucharadas de aceite de oliva virgen extra, 20 ml de agua, Sal, Pimienta', 464);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('ROPA VIEJA', 'Se añade un chorrito de aceite en una sartén y se fríen los garbanzos y la carne sobrantes de otro guiso.Mientras se doran, se prepara un sofrito: para ello se corta la cebolla, el pimiento, los ajo y el tomate. Se añaden a una sartén con un fondo de aceite.Cuando esté listo, se añade pimentón, una tacita de vino y se deja cocer todo junto durante 20 minutos. A continuación se puede añadir un poco de agua si se necesita. Se añade la carne y los garbanzos, se revuelven todos los ingredientes y se deja a fuego lento durante 10-15 minutos. Para servir, se puede adornar con una ramita de perejil fresco.', '400 g de carne (restos de un cocido o guiso), 300 g de garbanzos, 2 cucharadas de aceite de oliva virgen extra, 1 pimiento rojo, 2 dientes de ajo, 1 cebolla, 2 tomates, 1 cucharada de pimentón, 1 tacita de vino, 1 tacita de caldo, Tomillo al gusto, Sal', 379);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('SALPICÓN DE PESCADO Y MARISCOS', 'Se cuecen los mariscos en agua con sal y se reservan. En un bol se añaden los ingredientes troceados: pimiento, cebolla y tomate. Se añaden los mariscos troceados y se aliña todo con aceite, sal y limón al gusto. Se deja enfriar en la nevera antes de servir.', '300 g de mariscos (gambas, mejillones, pulpo), 1 pimiento rojo, 1 cebolla, 2 tomates, Aceite de oliva virgen extra, Sal, Limón', 191);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('SALTEADO DE VERDURAS CON ARROZ', 'En una sartén se calienta un poco de aceite y se añaden las verduras troceadas. Se saltean durante unos minutos hasta que estén tiernas. Mientras, se cuece el arroz en agua con sal. Una vez que el arroz esté listo, se mezcla con las verduras en la sartén y se salpimenta al gusto. Se puede servir caliente.', '160 g de verduras variadas (zanahoria, pimiento, calabacín), 280 g de arroz, 2 cucharadas de aceite de oliva virgen extra, Sal, Pimienta', 347);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('SOPA CASTELLANA', 'Se pelan los dientes de ajo y se doran en una cazuela grande con un chorrito de aceite. Se agrega el jamón cortado en daditos y se rehoga también. Se añaden las rodajas de pan duro y el pimentón. Se vierte el caldo y deja hervir a fuego no muy fuerte durante 15-20 minutos. Cuando lleve unos 10 minutos, se remueve la mezcla para romper un poco el pan. Por último, se añaden las rodajas de chorizo y el huevo batido. Se les da unas vueltas sobre el fuego hasta que los huevos se cuajen, se sala si es necesario y se sirve caliente en cazuela de barro.', '1 l de caldo de jamón Sobras de pan duro 60 g de jamón serrano 4 rodajas de chorizo 2 huevos 1 cucharada de aceite de oliva 1 cucharada de postre de pimentón 4 dientes de ajo Agua', 343);
+INSERT INTO RECIPE (name, description, ingredients_description, kilocalories) VALUES ('TORTILLITAS DE GAMBAS', 'Se pelan las gambas. A continuación, se trocean y se incorporan junto con la salsa bechamel en un bol. Por otro lado se baten los huevos y se añade una pizca de sal. En una sartén pequeña se pone una cucharada de postre de aceite y con un cacillo se pone un poco de huevo (como para una crepe). Se pone en el centro una cucharada de bechamel de gambas y se cierra la tortilla', ' 4 huevos, 10 gambas que nos hayan sobrado (cocidas o a la plancha) Aceite de oliva virgen extra Sal', 210);
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON INGREDIENT_ALLERGIC TO saluhud_admin;
+GRANT SELECT ON INGREDIENT_ALLERGIC TO saluhud_user;
+-- END SQL STATEMENTS DATE --> 28/10/2024
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.5', database_date = '2024-10-28', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- START SQL STATEMENTS DATE --> 30/10/2024
+-- Added new columns to intermediate tables of the recipes to improve the information stored and added entity_version column to the new table
+ALTER TABLE IF EXISTS RECIPE_INGREDIENT ADD COLUMN IF NOT EXISTS RECIPE_NAME VARCHAR(200);
+ALTER TABLE IF EXISTS RECIPE_INGREDIENT ADD COLUMN IF NOT EXISTS INGREDIENT_NAME VARCHAR(200);
+ALTER TABLE IF EXISTS RECIPE_INGREDIENT ADD COLUMN IF NOT EXISTS QUANTITY DECIMAL(6, 2);
+ALTER TABLE IF EXISTS RECIPE_INGREDIENT ADD COLUMN IF NOT EXISTS UNIT VARCHAR(20); 
+
+ALTER TABLE IF EXISTS INGREDIENT_ALLERGIC ALTER COLUMN ENTITY_VERSION SET DEFAULT 0;
+UPDATE INGREDIENT_ALLERGIC SET ENTITY_VERSION = 0 WHERE ENTITY_VERSION IS NULL;
+ALTER TABLE IF EXISTS INGREDIENT_ALLERGIC ALTER COLUMN ENTITY_VERSION SET NOT NULL;
+
+ALTER TABLE IF EXISTS RECIPE_ELABORATION_STEP ADD COLUMN IF NOT EXISTS id_recipe bigint NOT NULL;
+ALTER TABLE IF EXISTS RECIPE_ELABORATION_STEP ADD CONSTRAINT fk_recipe FOREIGN KEY (id_recipe) REFERENCES recipe(id);
+-- END SQL STATEMENTS DATE --> 30/10/2024
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.6', database_date = '2024-10-30', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- START SQL STATEMENTS DATE --> 04/11/2024
+ALTER TABLE IF EXISTS RECIPE ADD COLUMN IF NOT EXISTS KILOCALORIES SMALLINT NOT NULL;
+-- END SQL STATEMENTS DATE --> 04/11/2024
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.7', database_date = '2024-11-04', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- START SQL STATEMENTS DATE --> 09/11/2024
+-- Added inserts to RECIPE_INGREDIENT. Those inserts are in relation with the recipes and theirs ingredients
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (909, 476, 'BATIDO CON FRUTAS', 'Leche de vaca, entera', '500', 'ml');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 476, 'BATIDO CON FRUTAS', 'Azúcar blanca', '1', 'cucharada');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (575, 477, 'BERENJENAS RELLENAS', 'Berenjena', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (649, 477, 'BERENJENAS RELLENAS', 'Carne picada', '280', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1217, 477, 'BERENJENAS RELLENAS', 'Queso rallado, genérico', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (474, 477, 'BERENJENAS RELLENAS', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 477, 'BERENJENAS RELLENAS', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 478, 'BIZCOCHO DE ALMENDRAS', 'Huevo de gallina fresco', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1366, 478, 'BIZCOCHO DE ALMENDRAS', 'Yogur griego', '0.5', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (474, 478, 'BIZCOCHO DE ALMENDRAS', 'Aceite de oliva virgen extra', '0.5', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 478, 'BIZCOCHO DE ALMENDRAS', 'Azúcar blanca', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (503, 478, 'BIZCOCHO DE ALMENDRAS', 'Almendra, cruda', '0.75', 'vaso');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1399, 479, 'BIZCOCHO DE YOGUR', 'Yogur, líquido, entero, con frutas', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (474, 479, 'BIZCOCHO DE YOGUR', 'Aceite de oliva virgen extra', '0.5', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 479, 'BIZCOCHO DE YOGUR', 'Huevo de gallina fresco', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (853, 479, 'BIZCOCHO DE YOGUR', 'Harina de trigo', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 479, 'BIZCOCHO DE YOGUR', 'Azúcar blanca', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (954, 479, 'BIZCOCHO DE YOGUR', 'Mantequilla, baja en calorías', '10', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1078, 480, 'BOLAS DE PATATA CON CARNE', 'Patata, cruda', '700', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 480, 'BOLAS DE PATATA CON CARNE', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (853, 480, 'BOLAS DE PATATA CON CARNE', 'Harina de trigo', '1.5', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 480, 'BOLAS DE PATATA CON CARNE', 'Huevo de gallina fresco', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1056, 480, 'BOLAS DE PATATA CON CARNE', 'Pan rallado', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (474, 480, 'BOLAS DE PATATA CON CARNE', 'Aceite de oliva virgen extra', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (491, 480, 'BOLAS DE PATATA CON CARNE', 'Ajo', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 480, 'BOLAS DE PATATA CON CARNE', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1103, 480, 'BOLAS DE PATATA CON CARNE', 'Perejil, fresco', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 480, 'BOLAS DE PATATA CON CARNE', 'Pimienta, negra', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1078, 481, 'BRAZO GITANO SALADO', 'Patata, cruda', '5', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (537, 481, 'BRAZO GITANO SALADO', 'Atún, al natural', '160', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 481, 'BRAZO GITANO SALADO', 'Huevo de gallina fresco', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (960, 481, 'BRAZO GITANO SALADO', 'Mayonesa, aceite de oliva', '120', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1332, 481, 'BRAZO GITANO SALADO', 'Tomate frito', '70', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1120, 481, 'BRAZO GITANO SALADO', 'Pimiento rojo, crudo', '4', 'tiras');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 481, 'BRAZO GITANO SALADO', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 482, 'CALABACINES RELLENOS DE TORTILLA', 'Huevo de gallina fresco', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (619, 482, 'CALABACINES RELLENOS DE TORTILLA', 'Calabacín', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 482, 'CALABACINES RELLENOS DE TORTILLA', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1405, 482, 'CALABACINES RELLENOS DE TORTILLA', 'Zanahoria, cruda', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 482, 'CALABACINES RELLENOS DE TORTILLA', 'Agua de la red', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 482, 'CALABACINES RELLENOS DE TORTILLA', 'Aceite de oliva virgen extra', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 482, 'CALABACINES RELLENOS DE TORTILLA', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (631, 483, 'CANELONES DE POLLO ASADO', 'Canelones', '500', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1137, 483, 'CANELONES DE POLLO ASADO', 'Pollo, entero, con piel, asado', '300', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1334, 483, 'CANELONES DE POLLO ASADO', 'Tomate, maduro, pelado y triturado, enlatado', '160', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1217, 483, 'CANELONES DE POLLO ASADO', 'Queso rallado, genérico', '1', 'puñado');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 483, 'CANELONES DE POLLO ASADO', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 483, 'CANELONES DE POLLO ASADO', 'Aceite de oliva virgen extra', '1', 'cucharada');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (955, 484, 'CREPES RELLENOS DE MANZANA', 'Manzana', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (853, 484, 'CREPES RELLENOS DE MANZANA', 'Harina de trigo', '120', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 484, 'CREPES RELLENOS DE MANZANA', 'Huevo de gallina fresco', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 484, 'CREPES RELLENOS DE MANZANA', 'Agua de la red', '0.5', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (909, 484, 'CREPES RELLENOS DE MANZANA', 'Leche de vaca, entera', '0.5', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 484, 'CREPES RELLENOS DE MANZANA', 'Aceite de oliva virgen extra', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 484, 'CREPES RELLENOS DE MANZANA', 'Azúcar blanca', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 484, 'CREPES RELLENOS DE MANZANA', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (630, 484, 'CREPES RELLENOS DE MANZANA', 'Canela, en polvo', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1106, 485, 'CROQUETAS DE PESCADO', 'Pescado, genérico', '350', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (853, 485, 'CROQUETAS DE PESCADO', 'Harina de trigo', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (909, 485, 'CROQUETAS DE PESCADO', 'Leche de vaca, entera', '240', 'ml');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (953, 485, 'CROQUETAS DE PESCADO', 'Mantequilla salada', '40', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1056, 485, 'CROQUETAS DE PESCADO', 'Pan rallado', '150', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 485, 'CROQUETAS DE PESCADO', 'Aceite de oliva virgen extra', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 485, 'CROQUETAS DE PESCADO', 'Sal de mar', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (532, 486, 'ENSALADA DE ARROZ', 'Arroz, hervido', '500', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1106, 486, 'ENSALADA DE ARROZ', 'Pescado, genérico', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (948, 486, 'ENSALADA DE ARROZ', 'Maíz, en mazorca, crudo', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 486, 'ENSALADA DE ARROZ', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1331, 486, 'ENSALADA DE ARROZ', 'Tomate', '2', 'unidad'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (881, 486, 'ENSALADA DE ARROZ', 'Jamón cocido, enlatado', '8', 'lonchas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (479, 486, 'ENSALADA DE ARROZ', 'Aceituna', '100', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 486, 'ENSALADA DE ARROZ', 'Aceite de oliva virgen extra', '4', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1358, 486, 'ENSALADA DE ARROZ', 'Vinagre de vino', '0.5', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 486, 'ENSALADA DE ARROZ', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (820, 487, 'ENSALADA DE LEGUMBRES', 'Garbanzo, hervido', '500', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1331, 487, 'ENSALADA DE LEGUMBRES', 'Tomate', '120', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (948, 487, 'ENSALADA DE LEGUMBRES', 'Maíz, en mazorca, crudo', '120', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1405, 487, 'ENSALADA DE LEGUMBRES', 'Zanahoria, cruda', '120', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 487, 'ENSALADA DE LEGUMBRES', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1095, 487, 'ENSALADA DE LEGUMBRES', 'Pepinillos en vinagre', '60', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 487, 'ENSALADA DE LEGUMBRES', 'Aceite de oliva virgen extra', '4', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1358, 487, 'ENSALADA DE LEGUMBRES', 'Vinagre de vino', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 487, 'ENSALADA DE LEGUMBRES', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1066, 488, 'ENSALADA DE PASTA TEMPLADA', 'Pasta alimenticia, cruda', '400', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (916, 488, 'ENSALADA DE PASTA TEMPLADA', 'Lechuga', '0.5', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 488, 'ENSALADA DE PASTA TEMPLADA', 'Huevo de gallina fresco', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (785, 488, 'ENSALADA DE PASTA TEMPLADA', 'Espárrago, verde', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1106, 488, 'ENSALADA DE PASTA TEMPLADA', 'Pescado, genérico', '80', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 488, 'ENSALADA DE PASTA TEMPLADA', 'Aceite de oliva virgen extra', '4', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1358, 488, 'ENSALADA DE PASTA TEMPLADA', 'Vinagre de vino', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 488, 'ENSALADA DE PASTA TEMPLADA', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1078, 489, 'ENSALADILLA RUSA', 'Patata, cruda', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 489, 'ENSALADILLA RUSA', 'Huevo de gallina fresco', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1405, 489, 'ENSALADILLA RUSA', 'Zanahoria, cruda', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (838, 489, 'ENSALADILLA RUSA', 'Guisante, congelado, crudo', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (537, 489, 'ENSALADILLA RUSA', 'Atún, al natural', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (479, 489, 'ENSALADILLA RUSA', 'Aceituna', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (960, 489, 'ENSALADILLA RUSA', 'Mayonesa, aceite de oliva', '250', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 489, 'ENSALADILLA RUSA', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1066, 490, 'ESPAGUETIS CON PICADILLO DE BARBACOA', 'Pasta alimenticia, cruda', '280', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (649, 490, 'ESPAGUETIS CON PICADILLO DE BARBACOA', 'Carne picada', '300', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1217, 490, 'ESPAGUETIS CON PICADILLO DE BARBACOA', 'Queso rallado, genérico', '50', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1332, 490, 'ESPAGUETIS CON PICADILLO DE BARBACOA', 'Tomate frito', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 490, 'ESPAGUETIS CON PICADILLO DE BARBACOA', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 490, 'ESPAGUETIS CON PICADILLO DE BARBACOA', 'Agua de la red', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 490, 'ESPAGUETIS CON PICADILLO DE BARBACOA', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (649, 491, 'FAJITAS DE TERNERA', 'Carne picada', '300', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1120, 491, 'FAJITAS DE TERNERA', 'Pimiento rojo, crudo', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1331, 491, 'FAJITAS DE TERNERA', 'Tomate', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 491, 'FAJITAS DE TERNERA', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 491, 'FAJITAS DE TERNERA', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 491, 'FAJITAS DE TERNERA', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1116, 491, 'FAJITAS DE TERNERA', 'Pimentón, en polvo', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (916, 492, 'FAJITAS DE VERDURAS', 'Lechuga', '250', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1331, 492, 'FAJITAS DE VERDURAS', 'Tomate', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 492, 'FAJITAS DE VERDURAS', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 492, 'FAJITAS DE VERDURAS', 'Sal yodada', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 493, 'HUEVOS RELLENOS', 'Huevo de gallina fresco', '8', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1106, 493, 'HUEVOS RELLENOS', 'Pescado, genérico', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1332, 493, 'HUEVOS RELLENOS', 'Tomate frito', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (960, 493, 'HUEVOS RELLENOS', 'Mayonesa, aceite de oliva', '4', 'cucharadas');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (820, 494, 'HUMUS', 'Garbanzo, hervido', '500', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 494, 'HUMUS', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1409, 494, 'HUMUS', 'Zumo de limón, fresco', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (491, 494, 'HUMUS', 'Ajo', '3', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 494, 'HUMUS', 'Agua de la red', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 494, 'HUMUS', 'Sal de mar', '1', 'pizca'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1116, 494, 'HUMUS', 'Pimentón, en polvo', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (729, 494, 'HUMUS', 'Comino', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 494, 'HUMUS', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1045, 494, 'HUMUS', 'Pan blanco, tostado', '4', 'rebanadas');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (901, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Lasaña', '12', 'láminas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (649, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Carne picada', '200', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1332, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Tomate frito', '40', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1032, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Orégano, seco', '1', 'pizca'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1165, 495, 'LASAÑA DE VERDURAS CON CARNE', 'Queso cabra, curado', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 496, 'LENGUADO AL CAVA', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 496, 'LENGUADO AL CAVA', 'Sal de mar', '1', 'pizca'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (922, 496, 'LENGUADO AL CAVA', 'Lenguado', '1', 'kg'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (654, 496, 'LENGUADO AL CAVA', 'Cava', '2', 'vaso'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (695, 496, 'LENGUADO AL CAVA', 'Champiñón', '100', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (900, 496, 'LENGUADO AL CAVA', 'Langostino', '4', 'unidad');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (955, 497, 'MACEDONIA DE FRUTAS', 'Manzana', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1132, 497, 'MACEDONIA DE FRUTAS', 'Plátano', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1122, 497, 'MACEDONIA DE FRUTAS', 'Piña', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (967, 497, 'MACEDONIA DE FRUTAS', 'Melocotón', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (798, 497, 'MACEDONIA DE FRUTAS', 'Fresa', '125', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1411, 497, 'MACEDONIA DE FRUTAS', 'Zumo de manzana', '200', 'ml');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 498, 'MERENGUE AL HORNO CON FRUTAS', 'Azúcar blanca', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (955, 498, 'MERENGUE AL HORNO CON FRUTAS', 'Manzana', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 498, 'MERENGUE AL HORNO CON FRUTAS', 'Huevo de gallina fresco', '2', 'unidad');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1045, 499, 'MIGAS CON CARNE', 'Pan blanco, tostado', '500', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (649, 499, 'MIGAS CON CARNE', 'Carne picada', '150', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (491, 499, 'MIGAS CON CARNE', 'Ajo', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 499, 'MIGAS CON CARNE', 'Aceite de oliva virgen extra', '4', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 499, 'MIGAS CON CARNE', 'Agua de la red', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 499, 'MIGAS CON CARNE', 'Sal de mar', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 500, 'MOUSSE DE LIMÓN', 'Agua de la red', '1', 'vaso'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (903, 500, 'MOUSSE DE LIMÓN', 'Leche condensada, entera, con azúcar', '0.5', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 500, 'MOUSSE DE LIMÓN', 'Huevo de gallina fresco', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (937, 500, 'MOUSSE DE LIMÓN', 'Lima, cruda', '1', 'unidad');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1145, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Pollo, pechuga, con piel, crudo', '400', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Huevo de gallina fresco', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (503, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Almendra, cruda', '20', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Cebolla', '0.5', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1056, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Pan rallado', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (916, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Lechuga', '200', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1331, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Tomate', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1409, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Zumo de limón, fresco', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Sal de mar', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 501, 'NUGGETS DE POLLO CON ENSALADA', 'Pimienta, negra', '1', 'pizca');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1066, 502, 'PASTA CON VERDURAS', 'Pasta alimenticia, cruda', '280', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 502, 'PASTA CON VERDURAS', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1217, 502, 'PASTA CON VERDURAS', 'Queso rallado, genérico', '150', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 502, 'PASTA CON VERDURAS', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (785, 502, 'PASTA CON VERDURAS', 'Espárrago, verde', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (575, 502, 'PASTA CON VERDURAS', 'Berenjena', '125', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1132, 503, 'PASTEL DE PLÁTANO MADURO', 'Plátano', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (853, 503, 'PASTEL DE PLÁTANO MADURO', 'Harina de trigo', '200', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (953, 503, 'PASTEL DE PLÁTANO MADURO', 'Mantequilla salada', '40', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 503, 'PASTEL DE PLÁTANO MADURO', 'Huevo de gallina fresco', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 503, 'PASTEL DE PLÁTANO MADURO', 'Azúcar blanca', '70', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1028, 503, 'PASTEL DE PLÁTANO MADURO', 'Nuez', '25', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (504, 504, 'PASTELES DE PIÑONES', 'Almendra, cruda', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 504, 'PASTELES DE PIÑONES', 'Azúcar blanca', '75', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1080, 504, 'PASTELES DE PIÑONES', 'Patata, hervida', '50', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 504, 'PASTELES DE PIÑONES', 'Huevo de gallina fresco', '1', 'unidad'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1125, 504, 'PASTELES DE PIÑONES', 'Piñón', '50', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1080, 505, 'PATAPIZZAS', 'Patata, hervida', '600', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 505, 'PATAPIZZAS', 'Huevo de gallina fresco', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1217, 505, 'PATAPIZZAS', 'Queso rallado, genérico', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 505, 'PATAPIZZAS', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 505, 'PATAPIZZAS', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (881, 505, 'PATAPIZZAS', 'Jamón cocido, enlatado', '8', 'lonchas');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1163, 506, 'PATÉ DE QUESO AZUL', 'Queso azul', '150', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1202, 506, 'PATÉ DE QUESO AZUL', 'Queso manchego', '50', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1045, 506, 'PATÉ DE QUESO AZUL', 'Pan blanco, tostado', '8', 'rebanadas');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1145, 507, 'PECHUGA DE POLLO A LAS UVAS CON MANZANAS GRATINADAS', 'Pollo, pechuga, con piel, crudo', '800', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1346, 507, 'PECHUGA DE POLLO A LAS UVAS CON MANZANAS GRATINADAS', 'Uva negra, cruda', '160', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 507, 'PECHUGA DE POLLO A LAS UVAS CON MANZANAS GRATINADAS', 'Sal de mar', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 507, 'PECHUGA DE POLLO A LAS UVAS CON MANZANAS GRATINADAS', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (955, 507, 'PECHUGA DE POLLO A LAS UVAS CON MANZANAS GRATINADAS', 'Manzana', '125', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (695, 507, 'PECHUGA DE POLLO A LAS UVAS CON MANZANAS GRATINADAS', 'Champiñón', '100', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (508, 508, 'PISTO CON HUEVO', 'Aceite de oliva virgen extra', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 508, 'PISTO CON HUEVO', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (545, 508, 'PISTO CON HUEVO', 'Azúcar blanca', '70', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 508, 'PISTO CON HUEVO', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 508, 'PISTO CON HUEVO', 'Huevo de gallina fresco', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1331, 508, 'PISTO CON HUEVO', 'Tomate', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (785, 508, 'PISTO CON HUEVO', 'Espárrago, verde', '100', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (575, 508, 'PISTO CON HUEVO', 'Berenjena', '100', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (691, 509, 'POLLO A LA CERVEZA', 'Cerveza con alcohol', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (731, 509, 'POLLO A LA CERVEZA', 'Coñac', '1', 'vasito');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (508, 509, 'POLLO A LA CERVEZA', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 509, 'POLLO A LA CERVEZA', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 509, 'POLLO A LA CERVEZA', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1145, 509, 'POLLO A LA CERVEZA', 'Pollo, pechuga, con piel, crudo', '1', 'unidad');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (853, 510, 'QUICHE DE VERDURAS', 'Harina de trigo', '150', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 510, 'QUICHE DE VERDURAS', 'Huevo de gallina fresco', '2', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1217, 510, 'QUICHE DE VERDURAS', 'Queso rallado, genérico', '50', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 510, 'QUICHE DE VERDURAS', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 510, 'QUICHE DE VERDURAS', 'Agua de la red', '20', 'ml');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 510, 'QUICHE DE VERDURAS', 'Sal de mar', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 510, 'QUICHE DE VERDURAS', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (785, 510, 'QUICHE DE VERDURAS', 'Espárrago, verde', '88', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (575, 510, 'QUICHE DE VERDURAS', 'Berenjena', '88', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1010, 510, 'QUICHE DE VERDURAS', 'Nata, líquida, para cocinar, 18% de grasa', '190', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1078, 511, 'ROPA VIEJA', 'Patata, cruda', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (491, 511, 'ROPA VIEJA', 'Ajo', '3', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1120, 511, 'ROPA VIEJA', 'Pimiento rojo, crudo', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 511, 'ROPA VIEJA', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1331, 511, 'ROPA VIEJA', 'Tomate', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1359, 511, 'ROPA VIEJA', 'Vino blanco', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (485, 511, 'ROPA VIEJA', 'Agua de la red', '1', 'vaso');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 511, 'ROPA VIEJA', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 511, 'ROPA VIEJA', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1116, 511, 'ROPA VIEJA', 'Pimentón, en polvo', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 511, 'ROPA VIEJA', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1336, 511, 'ROPA VIEJA', 'Tomillo, seco', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (902, 511, 'ROPA VIEJA', 'Laurel, hoja', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (649, 511, 'ROPA VIEJA', 'Carne picada', '400', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (820, 511, 'ROPA VIEJA', 'Garbanzo, hervido', '300', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1232, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Rape, crudo', '200', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (657, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Cebolla', '1', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1120, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Pimiento rojo, crudo', '0.5', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1358, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Vinagre de vino', '1', 'cucharada');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Sal de mar', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1103, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Perejil, fresco', '1', 'pizca'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (818, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Gamba, hervida', '150', 'g'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1154, 512, 'SALPICÓN DE PESCADO Y MARISCOS', 'Pulpo', '150', 'g');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (532, 513, 'SALTEADO DE VERDURAS CON ARROZ', 'Arroz', '280', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 513, 'SALTEADO DE VERDURAS CON ARROZ', 'Aceite de oliva virgen extra', '2', 'cucharadas');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1259, 513, 'SALTEADO DE VERDURAS CON ARROZ', 'Sal yodada', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1118, 513, 'SALTEADO DE VERDURAS CON ARROZ', 'Pimienta, negra', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (785, 513, 'SALTEADO DE VERDURAS CON ARROZ', 'Espárrago, verde', '80', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (575, 513, 'SALTEADO DE VERDURAS CON ARROZ', 'Berenjena', '80', 'g'); 
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 514, 'SOPA CASTELLANA', 'Aceite de oliva virgen extra', '1', 'cuchadara');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 514, 'SOPA CASTELLANA', 'Sal de mar', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 514, 'SOPA CASTELLANA', 'Huevo de gallina fresco', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (491, 514, 'SOPA CASTELLANA', 'Ajo', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1116, 514, 'SOPA CASTELLANA', 'Pimentón, en polvo', '1', 'pizca'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (714, 514, 'SOPA CASTELLANA', 'Chorizo', '4', 'rodajas'); 
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (884, 514, 'SOPA CASTELLANA', 'Jamón Serrano', '60', 'g');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1045, 514, 'SOPA CASTELLANA', 'Pan blanco, tostado', '4', 'rebanadas');
+
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (472, 515, 'TORTILLITAS DE GAMBAS', 'Aceite de oliva virgen extra', '1', 'cuchadara');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (1258, 515, 'TORTILLITAS DE GAMBAS', 'Sal de mar', '1', 'pizca');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (866, 515, 'TORTILLITAS DE GAMBAS', 'Huevo de gallina fresco', '4', 'unidad');
+INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, recipe_name, ingredient_name, quantity, unit) VALUES (818, 515, 'TORTILLITAS DE GAMBAS', 'Gamba, hervida', '10', 'unidad'); 
+-- END SQL STATEMENTS DATE --> 09/11/2024
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.8', database_date = '2024-11-09', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+- START SQL STATEMENTS DATE --> 13/11/2024
+--Added the steps adn the allergenics of the recipes to the database
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se lava, pela y corta la fruta. Se introduce en la batidora junto con la leche. Se bate hasta que no queden grumos y se añade azúcar al gusto del consumidor.', '476');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Por último, se deja un rato en la nevera para que se enfríe. Se sirve frío.', '476');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se lava la berenjena, se parte a la mitad (a lo largo), y se adereza con aceite y sal.', '477');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Se pone en el horno 10 -15 minutos aproximadamente y cuando esté blanda, se saca de la bandeja, se pone la carne picada, y el queso rallado por encima y se mete la berenjena  en el horno, hasta que el queso esté gratinado.', '477');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'En un bol se bate el huevo. A continuación, se añade la harina, levadura, azúcar y el yogur. Cuando se haya mezclado todo se trituran almendras y se añaden junto con la ralladura de limón.', '478');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Cuando la mezcla esté homogénea se traspasa a un molde con un poco de aceite para evitar que se pegue.', '478');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se colocan las almendras laminadas en la superficie y se mete al horno durante 45 minutos aproximadamente a 180 ºC. Para comprobar que está hecho se mete un cuchillo, si sale limpio estará listo.', '478');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se baten en un bol los huevos. A continuación, se añade el azúcar, el yogur y el aceite de oliva virgen extra. Una vez que estén los ingredientes mezclados se añade la harina y la levadura. Se mezcla hasta que quede una masa homogénea. ', '479');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Por último, se unta mantequilla en el molde donde se va a poner la masa para que no se pegue y se mete al horno precalentado anteriormente a 180ºC durante aproximadamente 30 minutos. Antes de sacarse, se comprueba si está hecho metiendo un cuchillo, y si éste sale limpio quiere decir que ya está  hecho.', '479');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'En primer lugar, sacamos de la nevera las patatas cocidas que nos hayan sobrado, las pelamos, cortamos en rodajas y machacamos con un tenedor hasta que queda una especie de puré muy compacto. A continuación se añade a la masa una pizca de sal, perejil picado y una cucharada de aceite de oliva.', '480');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Por otro lado, se prepara el relleno haciendo un sofrito con los restos de carne, la cebolla (cortada en trozos pequeños y previamente pochada) y el ajo bien picados. Cuando la carne haya cogido color, se añade el tomate frito y la pimienta negra, se remueve y se deja calentar unos 10 minutos hasta que la salsa se reduzca y quede bien seco.', '480');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Cuando se tenga preparada la mezcla, se deja enfriar en la sartén y mientras tanto se empieza a trabajar con el puré de patata. Se forman unas bolas con la masa y se aplastan. En cada una, se pone en el centro un poco de relleno y se cierran de nuevo haciendo una bola del tamaño deseado. Antes de freírlas se pasan por harina, huevo y pan rallado. Por último, se pone una sartén con abundante aceite a calentar y se fríen hasta que estén doradas por todos los lados. Es recomendable que se pongan sobre papel absorbente para retirar el exceso de aceite.', '480');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pone en el fuego un cazo de agua con sal, cuando esté hirviendo pones las patatas y las cueces durante 30 minutos. Se sacan las patatas, y a continuación se hierven los huevos durante 10 minutos. Una vez frías las patatas se pelan y se pasan por el pasapurés.', '481');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Cuando la masa esté lista, se coloca papel de aluminio en una bandeja, y se extiende la masa. Posteriormente preparamos la mezcla, troceamos los huevos, desmenuzamos el atún, añadimos el tomate frito y un poco de mayonesa y se mueve hasta que quede todo mezclado.', '481');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'A continuación, se extiende la mezcla en el centro de la masa de patata. Acto seguido se enrolla con cuidado (sin el papel de plata). Para terminar, se añade por encima mayonesa y se decora con aceitunas y tiras de pimiento rojo.', '481');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'En primer lugar se lavan los calabacines y se les quita el centro dejando siempre una base y se guarda la pulpa para el relleno. Se cuecen en agua con sal hirviendo durante 10 minutos. Por otro lado se trocea la tortilla de patata.', '482');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se pica la cebolla y la zanahoria y se pochan en la sartén junto con el relleno de los calabacines que hemos quitado antes. Cuando esté bien rehogado, se añaden los trozos de tortilla de patata y se deja calentar unos minutos.', '482');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Finalmente, se rellenan los calabacines con la mezcla, se les pone un poco de queso rallado y a gratinar en el horno.', '482');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pone el agua a hervir y cuando esté lista se cuecen las placas de canelones. Mientras tanto se tritura el pollo asado y se pica la cebolla.', '483');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se sofríe la cebolla y se añade el pollo y la salsa de tomate en la misma sartén. Una vez que estén cocidas las placas de canelones se remojan en agua fría.', '483');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Posteriormente, se rellenan las placas de pasta, se hacen un rollito y se colocan en una fuente.', '483');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('4', 'Para hacer la bechamel se derrite la mantequilla, se añade harina y se mueve mientras que se añade leche caliente poco a poco. Se mueve hasta que no queden grumos.', '483');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('5', 'Por último, se vierte la salsa por encima de los canelones, se espolvorea por encima queso rallado y se gratina en el horno.', '483');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se mezcla la harina con los huevos, el aceite, azúcar y sal. Se puede hacer manualmente o en la batidora hasta que no queden grumos. A continuación se añade el agua y la leche mientras se sigue mezclando la masa. Cuando ya está espesa y sin grumos se deja reposar durante una hora aproximadamente.', '484');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Mientras se espera se lavan las manzanas y se cortan en láminas finas, se ponen a hervir en un cazo de agua con canela durante 7 minutos a fuego lento.', '484');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Una vez que la masa esté lista, se pone aceite a calentar y se hacen las crepes en una sartén vertiendo un poco de masa. Se deja en el fuego hasta que cuaje y se le da vuelta. Se repite la misma operación hasta tener la consistencia deseada.', '484');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('4', 'Por último, rellenamos las crepes con las láminas de manzana.', '484');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pone un cazo en el fuego con la mantequilla para que se derrita. Se echa la harina y se va mezclando con la mantequilla. Se añade leche poco a poco mientras se va formando la masa.', '485');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'El salmón ya cocinado se hace picadillo, se añade a la mezcla y se va dando vueltas. Mientras en un cazo con agua hirviendo se hace un huevo durante 10 minutos hasta que esté duro, se deja enfriar, se pela y se hace picadillo.', '485');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se añade el huevo duro junto con un poco de sal. La mezcla se pone en un plato y se deja enfriar en la nevera hasta el día siguiente. ', '485');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('4', 'Para freírlas, se pone un cazo con aceite y se espera hasta que esté bien caliente. Mientras se rebozan las croquetas con huevo y pan rallado. Se fríen hasta que queden doradas por ambos lados. ', '485');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Escurrir el maíz y las aceitunas previamente lavados para quitar el exceso de sal.', '486');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Hacer migajas el atún en aceite y cortar la cebolla y el tomate en dados. Mezclar todo con el arroz sobrante. Trocear el jamón y mezclar con el resto de ingredientes.', '486');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, añadir aceite y vinagre al gusto de los comensales.', '486');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se calientan los garbanzos hasta que queden templados. Mientras se calientan, se lavan los tomates y se cortan en dados, posteriormente se pelan las zanahorias y se rallan.', '487');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se corta la cebolla en aros, se escurren el maíz y los pepinillos, y éstos últimos se cortan en rodajas. Una vez preparados los ingredientes, se colocan en un bol junto con  los garbanzos.', '487');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se sazona y se añade aceite y vinagre al gusto del comensal. ', '487');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'En primer lugar, ponemos a cocer los huevos. Por otro lado, se lavan los tomates, se pelan y trocean.', '488');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación se trocea también la lechuga previamente lavada, los huevos duros y las yemas de espárragos. Por otro lado, se calientan las sobras de pasta.', '488');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Finalmente, se mezclan todos los ingredientes con la pasta, se sazona y se añade aceite y vinagre al gusto de los comensales.', '488');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Primero se pelan las zanahorias. Luego se pone en el fuego un cazo con agua con sal, y cuando esté hirviendo se ponen las patatas junto con las zanahorias durante 25 minutos y se añaden al mismo cazo los huevos. Pasado diez minutos más se saca todo y se espera a que se enfríen.', '489');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se pelan las patatas y se trocean en pequeños cuadrados. Los huevos también se pelan y se trocean, el tamaño depende del gusto del consumidor. Las zanahorias se cortan en finas rodajas, las aceitunas se parten por la mitad y el atún se desmenuza.', '489');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se juntan todos los ingredientes partidos en un cuenco, se añaden los guisantes, la mayonesa y se mueve para que quede mezclado. Se deja enfriar en la nevera durante media hora.', '489');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'La carne sobrante de la barbacoa se parte en trozos pequeños. Se pone agua a hervir y se cuecen los espaguetis.', '490');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Se calienta la carne y el tomate frito y se mezclan con la pasta. Por último, se añade queso rallado al gusto del comensal.', '490');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se trocea en juliana la cebolla y el pimiento. Se sofríen en una sartén hasta que estén dorados.', '491');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Por otro lado, se trocea la ternera y se añade junto a la salsa de tomate en una sartén para calentarlos. Se añade pimentón picante o cayena a gusto del consumidor.', '491');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se calientan las tortitas y se rellenan  con la masa.', '491');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se añade aceite a la sartén, cuando esté caliente, se salan las verduras y se añaden durante unos minutos para calentarlas.', '492');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'El tomate se lava y se corta en cuadraditos. A continuación, se calientan las tortas en el microondas o en la sartén y se rellenan con las verduras y el tomate.', '492');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Ponemos agua a hervir en un cazo, cuando haya hervido se meten los huevos durante 10 minutos hasta que estén duros. Se dejan enfriar y se pelan. Se lavan un poco para limpiarlos de trozos de cáscaras que hayan podido quedar, y se cortan a la mitad longitudinalmente retirando cuidadosamente las yemas.Por un lado, la yema, se separa de la clara, se pone en un recipiente aparte y se pica. ', '493');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Por otro lado, las sobras de pescado o marisco se pican y se mezcla con la yema del huevo y el tomate frito. Finalmente se mezcla todo bien, y se utiliza para rellenar los huevos duros. Se acompaña de mayonesa.', '493');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Los garbanzos se pasan por el pasapurés. Se colocan en un bol y se trituran el resto de ingredientes añadiendo agua hasta conseguir la textura deseada (pasta espesa y homogénea).', '494');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Se coloca la mezcla en un plato hondo. Se rocía el plato con un chorro de aceite y se espolvorea con el pimentón. Se pone pan tostado como acompañamiento.', '494');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pone en un cazo agua con sal a hervir. Cuando ya esté hirviendo se añaden las láminas de pasta durante 5 minutos, tienen que quedar al dente para que no se rompan.', '495');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Mientras tanto, en una sartén se añade un chorrito de aceite, se trocea una cebolla y se añade hasta dorarla. A continuación, se adereza la carne con sal y pimienta y se añade a la sartén. Al cabo de unos 10 minutos, (el tiempo depende del punto en el que se quiera que esté la carne) se mezcla con la verdura sobrante troceada y el tomate frito.', '495');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Una vez que tenemos preparados los ingredientes se monta la lasaña. En un molde para horno ponemos un chorrito de aceite y harina para que no se pegue. Primero se coloca una lámina, a continuación la mezcla que hemos hecho, otra lámina, de nuevo la mezcla y otra lámina. Encima de esta última lámina ponemos queso de cabra cortado en rodajas muy finas. Para terminar espolvoreamos orégano al gusto. Se mete al horno durante 5 minutos a 250ºC en grill.', '495');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se echa la nata en un cazo junto con un vaso de cava y se deja reducir unos 20 minutos al fuego.', '496');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Mientras tanto, se colocan los filetes de lenguado sazonados en una bandeja de horno ligeramente engrasada, se riegan con el otro vaso de cava, se meten en el horno, caliente al máximo, durante 5 minutos.', '496');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por otro lado, se echan los langostinos en la salsa de nata, y se dejan cocer 2-3 minutos.', '496');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('4', 'Por último, se les quita el pie a los champiñones, se lavan y trocean para luego rehogarlos en una sartén con un poco de aceite y sal.', '496');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pelan y trocean las frutas en trozos no muy grandes y se mezclan todas. Se añade zumo a las frutas a gusto del consumidor.', '497');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se baten las claras de huevo hasta conseguir que queden a punto de nieve. A continuación, se va añadiendo azúcar poco a poco mientras se mueve la mezcla. Cuando esté mezclado, se pone a calentar el horno a 120 ºC y en la bandeja se pone papel de horno.', '498');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Posteriormente, la mezcla formada anteriormente se mete en una manga pastelera y se hacen conos. Se meten al horno durante 60 minutos. Mientras esperamos, se lavan las fresas y se cortan en cuatro trozos.', '498');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se colocan los conos de merengue en una bandeja y alrededor de cada uno se colocan los cuatro trozos de fresa.', '498');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se corta el pan duro en rebanadas y se coloca en un recipiente con agua hasta que queden cubiertas. Una vez mojado, se saca y escurre colocándolo en un recipiente donde lo dejamos reservado. Por otro lado, se cortan las sobras de carne en trozos pequeños. La cantidad a incorporar depende del gusto del comensal, lo ideal es que vayan acompañando a las migas que son el ingrediente principal.', '499');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se pone un poco de aceite en la sartén hasta que se caliente y se doran los dientes de ajo para que aromaticen el aceite en el que rehogaremos el resto de ingredientes. En cuanto estén los ajos dorados, se incorporan las sobras de carne y se dejan calentar durante 5-10 minutos. En la misma sartén donde se ha rehogado la carne con el ajo se echa el pimentón, un poco de agua y sal.', '499');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Se incorpora el pan que tenemos escurrido y se va picando enérgicamente con una cuchara de madera sin parar de mover para ayudarle a que se seque el agua que le pueda quedar a la vez que se cuece la miga. Finalmente, se baja el fuego y se siguen trabajando las migas más lentamente hasta que estén bien doradas. Se sazona al gusto de los comensales.', '499');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se lava y pela un limón. En un cazo se añade un vaso de agua y cuando esté hirviendo, se añade la piel del limón y la cucharada de azúcar. Después de unos 6-7 minutos se deja enfriar.', '500');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se pone en un bol la leche condensada, el zumo de limón, el agua aromatizada con la piel de limón y se bate.', '500');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Posteriormente, las claras de huevo se ponen a punto de nieve. Cuando estén se añaden a la mezcla anterior y se mueven lentamente. Una vez que la mezcla quede homogénea, se pone en un recipiente y se deja enfriar en la nevera mínimo media hora. ', '500');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se trocea el pollo sobrante en pequeños trozos para darle forma de nugget, se añade a un bol con una yema de huevo, almendra molida, sal, pimienta y cebolla anteriormente picada al gusto del consumidor.', '501');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Acto seguido, se rebozan los nuggets con pan rallado, huevo y otra vez una capa de pan rallado. Para freírlos es importante que sea en abundante aceite caliente para que la fritura sea la adecuada.', '501');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Una vez hechos, se ponen encima de papel de cocina para retirar el aceite. Por último, se sirven acompañados de una ensalada de lechuga y tomate.', '501');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pone agua a hervir con sal y un chorrito de aceite. Una vez que esté lista se añade la pasta y se deja en agua unos 8 minutos.', '502');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se escurre la pasta y se deja en el cazo. Por otro lado, añadimos un poco de aceite en una sartén, cuando esté caliente ponemos la pasta y las verduras.', '502');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se colocan los ingredientes en una fuente, se añade por encima una capa de queso rallado y se meten al horno unos 10 minutos hasta que el queso se dore.  ', '502');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se mezclan en la batidora la harina, mantequilla, huevos y azúcar hasta que quede una masa homogénea. A continuación se añade la levadura. Se cortan en rodajas los plátanos maduros, se añaden a la masa y se vuelven a mezclar en la batidora. Posteriormente se añaden las nueces y las ralladuras de limón y naranja. Una vez conseguida una textura adecuada se coloca en un molde y se mete al horno precalentado anteriormente, durante una hora a 180 grados.', '503');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Por último, se espolvorea por encima azúcar glas en polvo al gusto del consumidor.', '503');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pone agua sin sal a hervir y cuando esté lista se cuecen las patatas. Pasados unos 15 minutos se sacan, se pelan y se dejan enfriar. Posteriormente, se aplastan las patatas y se mezclan con el azúcar, la almendra molida y la ralladura de piel de limón.', '504');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se añaden la yema y se mezcla bien. Cuando la masa esté homogénea se hacen bolitas y se bate la clara de huevo para el rebozado y posteriormente, se incluyen los piñones. Se van colocando en una bandeja de horno con papel de aluminio y un poco de harina para evitar que se peguen.', '504');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Una vez listos, se pintan por arriba con la yema y se meten al horno 15 minutos hasta que estén dorados, calentado previamente a 180 grados.', '504');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se cogen las patatas cocidas del día anterior y se machacan hasta hacer un puré compacto. A continuación se añade un huevo y se mezcla homogéneamente. Después con la ayuda de un molde, se hacen unos redondeles sobre una bandeja de horno, se aplastan y por encima  se pone un poco de jamón de york picado y queso rallado.', '505');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Se doran las patapizzas en el horno a máxima potencia durante 10 minutos.', '505');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se añaden los restos de queso y la leche evaporada en un cazo a fuego lento. Se baten hasta que queden fundidos y mezclados. Se pone en un molde y se deja enfriar en la nevera.', '506');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'El pan se tuesta cuando se vaya a tomar el paté. Se sirve con una tostada de pan “para untar” como acompañamiento.', '506');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se limpian y cortan las pechugas de pollo en 4 trozos alargados. Se aderezan con sal y pimienta.', '507');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'En una fuente de horno, se pone una capa de nata líquida y se espolvorea crema de champiñón. Se lava y corta la manzana en rodajas y se añade a la fuente. Se añaden las pechugas, otra capa de nata y se vuelve a espolvorear crema de champiñón.', '507');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Una vez calentado el horno, se mete durante 40 minutos aproximadamente. Por último, se añaden las uvas como acompañamiento.', '507');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'En primer lugar se trocean las verduras sobrantes. Después, se añaden  en una sartén con un chorrito de aceite y a continuación el tomate pelado y triturado. Se adereza con pimienta, sal y una cucharadita de azúcar. Mientras se deja reposar a fuego lento se fríen los huevos en aceite abundante. Por último, se juntan los huevos con el pisto.  ', '508');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se limpia el pollo y se corta en cuatro porciones y se adereza con sal y pimienta.', '509');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se cubre con aceite el fondo de una cacerola mediana. Mientras se calienta el aceite se va troceando la cebolla y se añade hasta que esté dorada.', '509');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Posteriormente, a fuego fuerte se añade el pollo durante unos 5-10 minutos hasta que quede dorado.', '509');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('4', 'Por último, se baja el fuego y se añade la cerveza y el coñac. Se mantiene a fuego lento hasta que termine de dorarse el pollo y se ligue un poco la salsa.', '509');
+ 
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'En un bol se añade la harina, un huevo, el aceite y una pizca de sal. Se mezcla hasta que quede una masa homogénea.', '510');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se deja enfriar en la nevera durante 45 minutos aproximadamente. Posteriormente, se extiende con un rodillo y se coloca en un molde con un poco de aceite y harina para que no se pegue. Se hornea a 180ºC durante 20 minutos.', '510');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Para el relleno, se trocean las sobras de verduras y se salpimentan. Se pone un fondo de aceite en una sartén, cuando el aceite esté caliente se añade primero la cebolla y a continuación los puerros, el calabacín, la cebolla, los champiñones y el tomate. Se dejan en la sartén hasta que estén doradas las verduras.', '510');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('4', 'A continuación, en un bol se añade la nata, un huevo sal y pimienta, cuando esté mezclado se añade la verdura. Posteriormente, la mezcla se vierte sobre el hojaldre, se añade queso rallado por encima y se hornea a 180ºC durante 20 minutos. ', '510');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se añade un chorrito de aceite en una sartén y se fríen los garbanzos y la carne sobrantes de otro guiso.', '511');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Mientras se doran, se prepara un sofrito: para ello se corta la cebolla, el pimiento, los ajo y el tomate. Se añaden a una sartén con un fondo de aceite.', '511');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Cuando esté listo, se añade pimentón, una tacita de vino y otra de caldo, tomillo, laurel y por último, la carne y los garbanzos. Mientras se deja a fuego lento, se pelan las patatas, se cortan en dados y se fríen.', '511');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('4', 'Para terminar, se añaden las patatas al guiso.', '511');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se ponen en el fuego dos cazos con agua y sal, cuando haya hervido el agua, en un cazo se ponen los huevos y en el otro el rape durante unos 10 minutos y se dejan enfriar. Mientras tanto, se lavan los pimientos y la cebolleta.', '512');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'A continuación, se cortan en trozos muy pequeños y se dejan en un bol. A los huevos se les quita la cáscara y se trocean. Lo mismo se hace con los palitos de cangrejo. El rape se parte en trozos un poco más grandes que el resto. Por último, los langostinos algunos se cortan en rodajitas y otros se dejan enteros.', '512');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Para terminar, se pone todo junto en un bol. Se aliña con aceite, vinagre y sal, y se pone perejil al gusto. ', '512');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pone en una olla agua a hervir con una pizca de sal. Cuando ya esté se mete el arroz y se deja que se cueza durante 20 minutos.', '513');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Mientras tanto, se trocean las verduras sobrantes y se calientan con un poco de aceite en la sartén. Cuando el arroz esté cocido, se añade agua fría y posteriormente se escurre.', '513');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('3', 'Por último, se le añade sal y pimienta y se mezcla en la sartén con el sofrito.', '513');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pelan los dientes de ajo y se doran en una cazuela grande con un chorrito de aceite. Se agrega el jamón cortado en daditos y se rehoga también. Se añaden las rodajas de pan duro y el pimentón. Se vierte el caldo y deja hervir a fuego no muy fuerte durante 15-20 minutos.', '514');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Cuando lleve unos 10 minutos, se remueve la mezcla para romper un poco el pan. Por último, se añaden las rodajas de chorizo y el huevo batido. Se les da unas vueltas sobre el fuego hasta que los huevos se cuajen, se sala si es necesario y se sirve caliente en cazuela de barro.', '514');
+
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('1', 'Se pelan las gambas. A continuación, se trocean y se incorporan junto con la salsa bechamel en un bol.', '515');
+INSERT INTO RECIPE_ELABORATION_STEP (step_number, step_description, id_recipe) VALUES ('2', 'Por otro lado se baten los huevos y se añade una pizca de sal. En una sartén pequeña se pone una cucharada de postre de aceite y con un cacillo se pone un poco de huevo (como para una crepe). Se pone en el centro una cucharada de bechamel de gambas y se cierra la tortilla.  ', '515');
+
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('476', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('477', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('478', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('478', '12');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('478', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('479', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('479', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('479', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('480', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('480', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('481', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('481', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('481', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('482', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('483', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('483', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('484', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('484', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('484', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('485', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('485', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('485', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('486', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('486', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('486', '10');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('487', '10');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('488', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('488', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('488', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('488', '10');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('489', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('489', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('489', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('490', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('490', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('491', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('493', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('493', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('493', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('494', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('494', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('494', '7');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('494', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('495', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('495', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('495', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('495', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('496', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('496', '2');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('496', '10');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('498', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('499', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('499', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('500', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('500', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('501', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('501', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('501', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('501', '12');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('502', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('502', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('503', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('503', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('503', '12');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('503', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('504', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('504', '12');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('505', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('505', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('505', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('506', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('506', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('507', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('508', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('509', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('509', '10');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('510', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('510', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('510', '14');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('511', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('512', '4');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('512', '10');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('513', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('514', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('514', '8');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('514', '3');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('514', '10');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('515', '1');
+INSERT INTO RECIPE_ALLERGENIC (id_recipe, id_allergenic) VALUES ('515', '4');
+-- END SQL STATEMENTS DATE --> 13/11/2024
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.9', database_date = '2024-11-13', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- START SQL STATEMENTS DATE --> 05/12/2024
+CREATE TABLE user_account (
+    id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    username VARCHAR(32) UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    entity_version bigint NOT NULL DEFAULT 0
+);
+
+CREATE TABLE user_account_authorities (
+    user_account_id BIGINT NOT NULL, 
+    authority VARCHAR(255) NOT NULL, 
+    entity_version bigint NOT NULL DEFAULT 0,
+    PRIMARY KEY (user_account_id, authority),
+    FOREIGN KEY (user_account_id) REFERENCES user_account(id) ON DELETE CASCADE
+);
+
+CREATE TABLE SALUHUD_ADMIN (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(50) NOT NULL,
+    user_account_id BIGINT UNIQUE NOT NULL,
+    entity_version bigint NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_account_id) REFERENCES USER_ACCOUNT(id) ON DELETE CASCADE
+);
+GRANT SELECT, INSERT, UPDATE, DELETE ON USER_ACCOUNT TO saluhud_admin;
+GRANT SELECT, INSERT, UPDATE, DELETE ON USER_ACCOUNT_AUTHORITIES TO saluhud_admin;
+GRANT SELECT, INSERT, UPDATE, DELETE ON SALUHUD_ADMIN TO saluhud_admin;
+-- END SQL STATEMENTS DATE --> 05/12/2024
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.2.0', database_date = '2024-12-05', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
