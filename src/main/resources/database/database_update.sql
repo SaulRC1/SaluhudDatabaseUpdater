@@ -2373,38 +2373,18 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON SALUHUD_ADMIN TO saluhud_admin;
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.2.0', database_date = '2024-12-05', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 
 -- START SQL STATEMENTS DATE --> 14/02/2025
-INSERT INTO user_account (username, password, entity_version)
-VALUES ('saluhud_admin', '$2a$12$zC8DxNlRQqQduLjTNgoRtuMMsj3nIsdT9v20kIGGspmo22JCcEg4m', 1);
+INSERT INTO user_account (id, username, password, entity_version)
+VALUES (1, 'saluhud_admin', '$2a$12$zC8DxNlRQqQduLjTNgoRtuMMsj3nIsdT9v20kIGGspmo22JCcEg4m', 1);
 
 INSERT INTO user_account_authorities (user_account_id, authority)
 VALUES ((SELECT id FROM user_account WHERE username = 'saluhud_admin'), 'ADMIN');
 
-INSERT INTO SALUHUD_ADMIN (name, user_account_id, entity_version)
-VALUES ('saluhud_admin', 12, 0);
+INSERT INTO SALUHUD_ADMIN (id, name, user_account_id, entity_version)
+VALUES (1, 'saluhud_admin', 1, 0);
 
-SELECT setval(
-  pg_get_serial_sequence('recipe', 'id'),
-  (SELECT COALESCE(MAX(id), 0) FROM recipe) + 1,
-  false
-);
-
-SELECT setval(
-  pg_get_serial_sequence('allergenic', 'id'),
-  (SELECT COALESCE(MAX(id), 0) FROM allergenic) + 1,
-  false
-);
-
-SELECT setval(
-  pg_get_serial_sequence('recipe_elaboration_step', 'id'),
-  (SELECT COALESCE(MAX(id), 0) FROM recipe_elaboration_step) + 1,
-  false
-);
-
-SELECT setval(
-  pg_get_serial_sequence('ingredient', 'id'),
-  (SELECT COALESCE(MAX(id), 0) FROM ingredient) + 1,
-  false
-);
+-- Permisos añadidos
+GRANT SELECT, INSERT, UPDATE ON SALUHUD_USER TO saluhud_user;
+GRANT SELECT, INSERT, UPDATE ON SALUHUD_USER_SALUHUD_USER_FITNESS_DATA TO saluhud_user;
 
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.2.1', database_date = '2025-02-14', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 -- END SQL STATEMENTS DATE --> 14/02/2025
