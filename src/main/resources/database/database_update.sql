@@ -2378,7 +2378,7 @@ UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.2.0', database_date = '
 
 -- START SQL STATEMENTS DATE --> 14/02/2025
 INSERT INTO user_account (id, username, password, entity_version)
-VALUES (1, 'saluhud_admin', '$2a$12$zC8DxNlRQqQduLjTNgoRtuMMsj3nIsdT9v20kIGGspmo22JCcEg4m', 1);
+VALUES (1, 'saluhud_admin', '$2a$10$RH7KmhR1sLsnxFMTgagXHeWy66FuH/8QNCUjlkZQsm6XghCJpUMTO', 1);
 
 INSERT INTO user_account_authorities (user_account_id, authority)
 VALUES ((SELECT id FROM user_account WHERE username = 'saluhud_admin'), 'ADMIN');
