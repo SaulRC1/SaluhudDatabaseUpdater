@@ -1771,7 +1771,6 @@ ALTER TABLE IF EXISTS RECIPE_ELABORATION_STEP ADD CONSTRAINT fk_recipe FOREIGN K
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.6', database_date = '2024-10-30', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 
 -- START SQL STATEMENTS DATE --> 04/11/2024
---ALTER TABLE IF EXISTS RECIPE ADD COLUMN IF NOT EXISTS KILOCALORIES SMALLINT NOT NULL;
 -- END SQL STATEMENTS DATE --> 04/11/2024
 
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.7', database_date = '2024-11-04', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
@@ -2390,7 +2389,7 @@ UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.2.1', database_date = '
 -- END SQL STATEMENTS DATE --> 14/02/2025
 
 -- START SQL STATEMENTS DATE --> 17/02/2025
-GRANT SELECT, INSERT, UPDATE, DELETE ON ALLERGENIC TO saluhud_administration_portal;
+GRANT SELECT, INSERT, UPDATE ON ALLERGENIC TO saluhud_administration_portal;
 GRANT SELECT, INSERT, UPDATE, DELETE ON INGREDIENT TO saluhud_administration_portal;
 GRANT SELECT, INSERT, UPDATE, DELETE ON RECIPE TO saluhud_administration_portal;
 GRANT SELECT, INSERT, UPDATE, DELETE ON RECIPE_INGREDIENT TO saluhud_administration_portal;
