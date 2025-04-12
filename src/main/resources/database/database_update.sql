@@ -2411,3 +2411,15 @@ DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('SALUHUD_ADMIN', 'id'), (SELEC
 
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.2.2', database_date = '2025-02-17', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 -- END SQL STATEMENTS DATE --> 17/02/2025
+
+-- START SQL STATEMENTS DATE --> 11/04/2025
+
+-- Test users for Saluhud Mobile App, passwords are equal to the username with first letter uppercase and a percentage symbol at the end.
+-- For example, user_test_1 password would be User_test_1%
+INSERT INTO SALUHUD_USER (username, password, email, name, surname, phone_number) VALUES ('user_test_1', '$2a$10$CE1IsGf77IhysFpRnWfsVup4szD6Zr2GVVFNMVlPAjpdaQSaHXq1i', 'usert_test_1@test-domain.com', 'User', 'Test1', '+34 678567670');
+INSERT INTO SALUHUD_USER (username, password, email, name, surname, phone_number) VALUES ('user_test_2', '$2a$10$0wbCxakGL/Y7yrRsOQsOqejYhtbUjYMdxTtoJRjBeJ4RbDCIpGRU2', 'usert_test_2@test-domain.com', 'User', 'Test2', '+34 678567671');
+INSERT INTO SALUHUD_USER (username, password, email, name, surname, phone_number) VALUES ('user_test_3', '$2a$10$.pfDADZrefM8CtA4IVOAW.zaYg7hZEvEFNq0ZAfQ9napqhTvhHdgW', 'usert_test_3@test-domain.com', 'User', 'Test3', '+34 678567672');
+INSERT INTO SALUHUD_USER (username, password, email, name, surname, phone_number) VALUES ('user_test_4', '$2a$10$WryDx3m3ObJW5iI9uzLgTeiWg6d9XevBbbvTFhHP3dp9Zug8nqLNS', 'usert_test_4@test-domain.com', 'User', 'Test4', '+34 678567673');
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.0', database_date = '2025-04-11', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+-- END SQL STATEMENTS DATE --> 11/04/2025
