@@ -1759,26 +1759,22 @@ UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.1.7', database_date = '
 -- Added inserts to RECIPE_INGREDIENT. Those inserts are in relation with the recipes and theirs ingredients
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (454, 1, '500', 'ml');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 1, '1', 'cucharada');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (113, 2, '2', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (194, 2, '280', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (763, 2, '2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 2, '2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 2, '1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 3, '1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (914, 3, '0.5', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (474, 3,'0.5', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 3,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (41, 3,'0.75', 'vaso');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (947, 4,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 4,'0.5', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 4,'2', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (398, 4,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 4,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (954, 4,'10', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (623, 5,'700', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (202, 5,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (398, 5,'1.5', 'vaso');
@@ -1789,7 +1785,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 5,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (648, 5,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (663, 5,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (623, 6,'5', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (75, 6,'160', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 6,'2', 'unidad');
@@ -1797,7 +1792,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (878, 6,'70', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (665, 6,'4', 'tiras');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 6,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 7,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (157, 7,'4', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (202, 7,'1', 'unidad');
@@ -1805,14 +1799,12 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (23, 7,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 7,'1', 'cucharada');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 7,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (169, 8,'500', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (682, 8,'300', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (880, 8,'160', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (763, 8,'1', 'puñado');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (202, 8,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 8,'1', 'cucharada');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (500, 9,'2', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (398, 9,'120', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 9,'2', 'unidad');
@@ -1822,7 +1814,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 9,'1', 'cucharada');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 9,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (168, 9,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (651, 10,'350', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (398, 10,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (454, 10,'240', 'ml');
@@ -1830,7 +1821,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (601, 10,'150', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 10,'1', 'cucharada');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 10,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (70, 11,'500', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (651, 11,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (493, 11,'1', 'unidad');
@@ -1841,7 +1831,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 11,'4', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (906, 11,'0.5', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 11,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (365, 12,'500', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (877, 12,'120', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (493, 12,'120', 'g');
@@ -1851,7 +1840,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 12,'4', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (906, 12,'1', 'cucharada');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 12,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (611, 13,'400', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (461, 13,'0.5', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 13,'4', 'unidad');
@@ -1860,7 +1848,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 13,'4', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (906, 13,'1', 'cucharada');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 13,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (623, 14,'4', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 14,'2', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (953, 14,'2', 'unidad');
@@ -1869,7 +1856,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (17, 14,'100', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (505, 14,'250', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 14,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (611, 15,'280', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (194, 15,'300', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (763, 15,'50', 'g');
@@ -1877,7 +1863,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 15,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (23, 15,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 15,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (194, 16,'300', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (665, 16,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (877, 16,'100', 'g');
@@ -1885,17 +1870,14 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 16,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 16,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (661, 16,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (461, 17,'250', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (877, 17,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 17,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 17,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 18,'8', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (651, 18,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (878, 18,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (505, 18,'4', 'cucharadas');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (365, 19,'500', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 19,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (957, 19,'1', 'vaso');
@@ -1906,7 +1888,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (274, 19,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (663, 19,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (590, 19,'4', 'rebanadas');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (446, 20,'12', 'láminas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (194, 20,'200', 'g'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (878, 20,'40', 'g');
@@ -1916,37 +1897,31 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (663, 20,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (577, 20,'1', 'pizca'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (711, 20,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 21,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 21,'1', 'pizca'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (467, 21,'1', 'kg'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (199, 21,'2', 'vaso'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (240, 21,'100', 'g'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (445, 21,'4', 'unidad');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (500, 22,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (677, 22,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (667, 22,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (512, 22,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (343, 22,'125', 'g'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (959, 22,'200', 'ml');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 23,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (500, 23,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 23,'2', 'unidad');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (590, 24,'500', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (194, 24,'150', 'g'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (29, 24,'4', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 24,'4', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (23, 24,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 24,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (23, 25,'1', 'vaso'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (448, 25,'0.5', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 25,'2', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (482, 25,'1', 'unidad');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (690, 26,'400', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 26,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (589, 26,'20', 'g');
@@ -1958,45 +1933,38 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (957, 26,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 26,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (663, 26,'1', 'pizca');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (611, 27,'280', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 27,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (763, 27,'150', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 27,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (330, 27,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (113, 27,'125', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (667, 28,'4', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (398, 28,'200', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (498, 28,'40', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 28,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 28,'70', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (573, 28,'25', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (41, 29,'100', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 29,'75', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (625, 29,'50', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 29,'1', 'unidad'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (670, 29,'50', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (625, 30,'600', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 30,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (763, 30,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 30,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 30,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (426, 30,'8', 'lonchas');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (709, 31,'150', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (748, 31,'50', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (590, 31,'8', 'rebanadas');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (683, 32,'800', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (892, 32,'160', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 32,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (663, 32,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (500, 32,'125', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (240, 32,'100', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 33,'1', 'cucharada');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 33,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (83, 33,'70', 'g');
@@ -2005,14 +1973,12 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (877, 33,'4', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (330, 33,'100', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (113, 33,'100', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (236, 34,'1', 'vaso');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (276, 34,'1', 'vasito');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 34,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 34,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (663, 34,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (683, 34,'1', 'unidad');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (398, 35,'150', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 35,'2', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (763, 35,'50', 'g');
@@ -2023,7 +1989,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (330, 35,'88', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (113, 35,'88', 'g'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (555, 35,'190', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (623, 36,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (29, 36,'3', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (665, 36,'1', 'unidad');
@@ -2039,7 +2004,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (447, 36,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (194, 36,'400', 'g'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (365, 36,'300', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (778, 37,'200', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (657, 37,'1', 'unidad');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (665, 37,'0.5', 'unidad');
@@ -2049,14 +2013,12 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (648, 37,'1', 'pizca'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (363, 37,'150', 'g'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (700, 37,'150', 'g');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (65, 38,'280', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 38,'2', 'cucharadas');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (805, 38,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (663, 38,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (330, 38,'80', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (113, 38,'80', 'g'); 
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 39,'1', 'cuchadara');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 39,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 39,'4', 'unidad');
@@ -2065,7 +2027,6 @@ INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (259, 39,'4', 'rodajas'); 
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (429, 39,'60', 'g');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (590, 39,'4', 'rebanadas');
-
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (12, 40,'1', 'cuchadara');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (804, 40,'1', 'pizca');
 INSERT INTO RECIPE_INGREDIENT (id_ingredient, id_recipe, quantity, unit) VALUES (411, 40,'4', 'unidad');
@@ -2423,3 +2384,1629 @@ INSERT INTO SALUHUD_USER (username, password, email, name, surname, phone_number
 
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.0', database_date = '2025-04-11', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 -- END SQL STATEMENTS DATE --> 11/04/2025
+
+-- START SQL STATEMENTS DATE --> 14/04/2025
+ALTER TABLE RECIPE RENAME COLUMN name TO name_key;
+ALTER TABLE RECIPE RENAME COLUMN description TO description_key;
+ALTER TABLE RECIPE RENAME COLUMN ingredients_description TO ingredients_description_key;
+
+UPDATE RECIPE SET name_key = 'recipe.name.1', 
+  description_key = 'recipe.description.1', 
+  ingredients_description_key = 'recipe.ingredientsDescription.1' 
+WHERE id = 1;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.2', 
+  description_key = 'recipe.description.2', 
+  ingredients_description_key = 'recipe.ingredientsDescription.2' 
+WHERE id = 2;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.3', 
+  description_key = 'recipe.description.3', 
+  ingredients_description_key = 'recipe.ingredientsDescription.3' 
+WHERE id = 3;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.4', 
+  description_key = 'recipe.description.4', 
+  ingredients_description_key = 'recipe.ingredientsDescription.4' 
+WHERE id = 4;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.5', 
+  description_key = 'recipe.description.5', 
+  ingredients_description_key = 'recipe.ingredientsDescription.5' 
+WHERE id = 5;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.6', 
+  description_key = 'recipe.description.6', 
+  ingredients_description_key = 'recipe.ingredientsDescription.6' 
+WHERE id = 6;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.7', 
+  description_key = 'recipe.description.7', 
+  ingredients_description_key = 'recipe.ingredientsDescription.7' 
+WHERE id = 7;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.8', 
+  description_key = 'recipe.description.8', 
+  ingredients_description_key = 'recipe.ingredientsDescription.8' 
+WHERE id = 8;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.9', 
+  description_key = 'recipe.description.9', 
+  ingredients_description_key = 'recipe.ingredientsDescription.9' 
+WHERE id = 9;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.10', 
+  description_key = 'recipe.description.10', 
+  ingredients_description_key = 'recipe.ingredientsDescription.10' 
+WHERE id = 10;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.11', 
+  description_key = 'recipe.description.11', 
+  ingredients_description_key = 'recipe.ingredientsDescription.11' 
+WHERE id = 11;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.12', 
+  description_key = 'recipe.description.12', 
+  ingredients_description_key = 'recipe.ingredientsDescription.12' 
+WHERE id = 12;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.13', 
+  description_key = 'recipe.description.13', 
+  ingredients_description_key = 'recipe.ingredientsDescription.13' 
+WHERE id = 13;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.14', 
+  description_key = 'recipe.description.14', 
+  ingredients_description_key = 'recipe.ingredientsDescription.14' 
+WHERE id = 14;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.15', 
+  description_key = 'recipe.description.15', 
+  ingredients_description_key = 'recipe.ingredientsDescription.15' 
+WHERE id = 15;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.16', 
+  description_key = 'recipe.description.16', 
+  ingredients_description_key = 'recipe.ingredientsDescription.16' 
+WHERE id = 16;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.17', 
+  description_key = 'recipe.description.17', 
+  ingredients_description_key = 'recipe.ingredientsDescription.17' 
+WHERE id = 17;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.18', 
+  description_key = 'recipe.description.18', 
+  ingredients_description_key = 'recipe.ingredientsDescription.18' 
+WHERE id = 18;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.19', 
+  description_key = 'recipe.description.19', 
+  ingredients_description_key = 'recipe.ingredientsDescription.19' 
+WHERE id = 19;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.20', 
+  description_key = 'recipe.description.20', 
+  ingredients_description_key = 'recipe.ingredientsDescription.20' 
+WHERE id = 20;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.21', 
+  description_key = 'recipe.description.21', 
+  ingredients_description_key = 'recipe.ingredientsDescription.21' 
+WHERE id = 21;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.22', 
+  description_key = 'recipe.description.22', 
+  ingredients_description_key = 'recipe.ingredientsDescription.22' 
+WHERE id = 22;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.23', 
+  description_key = 'recipe.description.23', 
+  ingredients_description_key = 'recipe.ingredientsDescription.23' 
+WHERE id = 23;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.24', 
+  description_key = 'recipe.description.24', 
+  ingredients_description_key = 'recipe.ingredientsDescription.24' 
+WHERE id = 24;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.25', 
+  description_key = 'recipe.description.25', 
+  ingredients_description_key = 'recipe.ingredientsDescription.25' 
+WHERE id = 25;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.26', 
+  description_key = 'recipe.description.26', 
+  ingredients_description_key = 'recipe.ingredientsDescription.26' 
+WHERE id = 26;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.27', 
+  description_key = 'recipe.description.27', 
+  ingredients_description_key = 'recipe.ingredientsDescription.27' 
+WHERE id = 27;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.28', 
+  description_key = 'recipe.description.28', 
+  ingredients_description_key = 'recipe.ingredientsDescription.28' 
+WHERE id = 28;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.29', 
+  description_key = 'recipe.description.29', 
+  ingredients_description_key = 'recipe.ingredientsDescription.29' 
+WHERE id = 29;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.30', 
+  description_key = 'recipe.description.30', 
+  ingredients_description_key = 'recipe.ingredientsDescription.30' 
+WHERE id = 30;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.31', 
+  description_key = 'recipe.description.31', 
+  ingredients_description_key = 'recipe.ingredientsDescription.31' 
+WHERE id = 31;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.32', 
+  description_key = 'recipe.description.32', 
+  ingredients_description_key = 'recipe.ingredientsDescription.32' 
+WHERE id = 32;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.33', 
+  description_key = 'recipe.description.33', 
+  ingredients_description_key = 'recipe.ingredientsDescription.33' 
+WHERE id = 33;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.34', 
+  description_key = 'recipe.description.34', 
+  ingredients_description_key = 'recipe.ingredientsDescription.34' 
+WHERE id = 34;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.35', 
+  description_key = 'recipe.description.35', 
+  ingredients_description_key = 'recipe.ingredientsDescription.35' 
+WHERE id = 35;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.36', 
+  description_key = 'recipe.description.36', 
+  ingredients_description_key = 'recipe.ingredientsDescription.36' 
+WHERE id = 36;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.37', 
+  description_key = 'recipe.description.37', 
+  ingredients_description_key = 'recipe.ingredientsDescription.37' 
+WHERE id = 37;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.38', 
+  description_key = 'recipe.description.38', 
+  ingredients_description_key = 'recipe.ingredientsDescription.38' 
+WHERE id = 38;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.39', 
+  description_key = 'recipe.description.39', 
+  ingredients_description_key = 'recipe.ingredientsDescription.39' 
+WHERE id = 39;
+
+UPDATE RECIPE SET 
+  name_key = 'recipe.name.40', 
+  description_key = 'recipe.description.40', 
+  ingredients_description_key = 'recipe.ingredientsDescription.40' 
+WHERE id = 40;
+
+ALTER TABLE RECIPE_INGREDIENT RENAME COLUMN unit TO unit_key;
+
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.1' WHERE id_ingredient = 454 AND id_recipe = 1;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.2' WHERE id_ingredient = 83 AND id_recipe = 1;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.3' WHERE id_ingredient = 113 AND id_recipe = 2;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.4' WHERE id_ingredient = 194 AND id_recipe = 2;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.5' WHERE id_ingredient = 763 AND id_recipe = 2;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.6' WHERE id_ingredient = 12 AND id_recipe = 2;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.7' WHERE id_ingredient = 805 AND id_recipe = 2;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.8' WHERE id_ingredient = 411 AND id_recipe = 3;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.9' WHERE id_ingredient = 914 AND id_recipe = 3;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.10' WHERE id_ingredient = 474 AND id_recipe = 3;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.11' WHERE id_ingredient = 83 AND id_recipe = 3;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.12' WHERE id_ingredient = 41 AND id_recipe = 3;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.13' WHERE id_ingredient = 947 AND id_recipe = 4;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.14' WHERE id_ingredient = 12 AND id_recipe = 4;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.15' WHERE id_ingredient = 411 AND id_recipe = 4;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.16' WHERE id_ingredient = 398 AND id_recipe = 4;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.17' WHERE id_ingredient = 83 AND id_recipe = 4;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.18' WHERE id_ingredient = 954 AND id_recipe = 4;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.19' WHERE id_ingredient = 623 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.20' WHERE id_ingredient = 202 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.21' WHERE id_ingredient = 398 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.22' WHERE id_ingredient = 411 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.23' WHERE id_ingredient = 601 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.24' WHERE id_ingredient = 12 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.25' WHERE id_ingredient = 29 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.26' WHERE id_ingredient = 805 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.27' WHERE id_ingredient = 648 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.28' WHERE id_ingredient = 663 AND id_recipe = 5;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.29' WHERE id_ingredient = 623 AND id_recipe = 6;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.30' WHERE id_ingredient = 75 AND id_recipe = 6;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.31' WHERE id_ingredient = 411 AND id_recipe = 6;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.32' WHERE id_ingredient = 505 AND id_recipe = 6;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.33' WHERE id_ingredient = 878 AND id_recipe = 6;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.34' WHERE id_ingredient = 665 AND id_recipe = 6;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.35' WHERE id_ingredient = 805 AND id_recipe = 6;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.36' WHERE id_ingredient = 411 AND id_recipe = 7;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.37' WHERE id_ingredient = 157 AND id_recipe = 7;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.38' WHERE id_ingredient = 202 AND id_recipe = 7;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.39' WHERE id_ingredient = 953 AND id_recipe = 7;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.40' WHERE id_ingredient = 23 AND id_recipe = 7;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.41' WHERE id_ingredient = 12 AND id_recipe = 7;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.42' WHERE id_ingredient = 805 AND id_recipe = 7;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.43' WHERE id_ingredient = 169 AND id_recipe = 8;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.44' WHERE id_ingredient = 682 AND id_recipe = 8;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.45' WHERE id_ingredient = 880 AND id_recipe = 8;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.46' WHERE id_ingredient = 763 AND id_recipe = 8;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.47' WHERE id_ingredient = 202 AND id_recipe = 8;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.48' WHERE id_ingredient = 12 AND id_recipe = 8;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.49' WHERE id_ingredient = 500 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.50' WHERE id_ingredient = 398 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.51' WHERE id_ingredient = 411 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.52' WHERE id_ingredient = 23 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.53' WHERE id_ingredient = 454 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.54' WHERE id_ingredient = 12 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.54' WHERE id_ingredient = 83 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.56' WHERE id_ingredient = 805 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.56' WHERE id_ingredient = 168 AND id_recipe = 9;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.58' WHERE id_ingredient = 651 AND id_recipe = 10;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.59' WHERE id_ingredient = 398 AND id_recipe = 10;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.60' WHERE id_ingredient = 454 AND id_recipe = 10;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.61' WHERE id_ingredient = 498 AND id_recipe = 10;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.62' WHERE id_ingredient = 601 AND id_recipe = 10;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.63' WHERE id_ingredient = 12 AND id_recipe = 10;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.64' WHERE id_ingredient = 804 AND id_recipe = 10;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.65' WHERE id_ingredient = 70 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.66' WHERE id_ingredient = 651 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.67' WHERE id_ingredient = 493 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.68' WHERE id_ingredient = 202 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.69' WHERE id_ingredient = 877 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.70' WHERE id_ingredient = 426 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.71' WHERE id_ingredient = 17 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.72' WHERE id_ingredient = 12 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.73' WHERE id_ingredient = 906 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.74' WHERE id_ingredient = 805 AND id_recipe = 11;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.75' WHERE id_ingredient = 365 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.76' WHERE id_ingredient = 877 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.77' WHERE id_ingredient = 493 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.78' WHERE id_ingredient = 953 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.79' WHERE id_ingredient = 202 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.80' WHERE id_ingredient = 640 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.81' WHERE id_ingredient = 12 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.82' WHERE id_ingredient = 906 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.83' WHERE id_ingredient = 805 AND id_recipe = 12;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.84' WHERE id_ingredient = 611 AND id_recipe = 13;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.85' WHERE id_ingredient = 461 AND id_recipe = 13;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.86' WHERE id_ingredient = 411 AND id_recipe = 13;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.87' WHERE id_ingredient = 330 AND id_recipe = 13;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.88' WHERE id_ingredient = 651 AND id_recipe = 13; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.89' WHERE id_ingredient = 12 AND id_recipe = 13;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.90' WHERE id_ingredient = 906 AND id_recipe = 13;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.91' WHERE id_ingredient = 805 AND id_recipe = 13;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.92' WHERE id_ingredient = 623 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.93' WHERE id_ingredient = 411 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.94' WHERE id_ingredient = 953 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.95' WHERE id_ingredient = 383 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.96' WHERE id_ingredient = 75 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.97' WHERE id_ingredient = 17 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.98' WHERE id_ingredient = 505 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.99' WHERE id_ingredient = 805 AND id_recipe = 14;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.100' WHERE id_ingredient = 611 AND id_recipe = 15;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.101' WHERE id_ingredient = 194 AND id_recipe = 15;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.102' WHERE id_ingredient = 763 AND id_recipe = 15;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.103' WHERE id_ingredient = 878 AND id_recipe = 15;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.104' WHERE id_ingredient = 12 AND id_recipe = 15;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.105' WHERE id_ingredient = 23 AND id_recipe = 15;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.106' WHERE id_ingredient = 805 AND id_recipe = 15;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.107' WHERE id_ingredient = 194 AND id_recipe = 16;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.108' WHERE id_ingredient = 665 AND id_recipe = 16;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.109' WHERE id_ingredient = 877 AND id_recipe = 16;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.110' WHERE id_ingredient = 202 AND id_recipe = 16;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.111' WHERE id_ingredient = 12 AND id_recipe = 16;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.112' WHERE id_ingredient = 805 AND id_recipe = 16;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.113' WHERE id_ingredient = 661 AND id_recipe = 16;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.114' WHERE id_ingredient = 461 AND id_recipe = 17;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.115' WHERE id_ingredient = 877 AND id_recipe = 17;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.116' WHERE id_ingredient = 12 AND id_recipe = 17;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.117' WHERE id_ingredient = 805 AND id_recipe = 17;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.118' WHERE id_ingredient = 411 AND id_recipe = 18;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.119' WHERE id_ingredient = 651 AND id_recipe = 18;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.120' WHERE id_ingredient = 878 AND id_recipe = 18;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.121' WHERE id_ingredient = 505 AND id_recipe = 18;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.122' WHERE id_ingredient = 365 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.123' WHERE id_ingredient = 12 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.124' WHERE id_ingredient = 957 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.125' WHERE id_ingredient = 29 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.126' WHERE id_ingredient = 23 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.127' WHERE id_ingredient = 804 AND id_recipe = 19; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.128' WHERE id_ingredient = 661 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.129' WHERE id_ingredient = 274 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.130' WHERE id_ingredient = 663 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.131' WHERE id_ingredient = 590 AND id_recipe = 19;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.132' WHERE id_ingredient = 446 AND id_recipe = 20;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.133' WHERE id_ingredient = 194 AND id_recipe = 20; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.134' WHERE id_ingredient = 878 AND id_recipe = 20;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.135' WHERE id_ingredient = 202 AND id_recipe = 20;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.136' WHERE id_ingredient = 12 AND id_recipe = 20;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.137' WHERE id_ingredient = 805 AND id_recipe = 20;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.138' WHERE id_ingredient = 663 AND id_recipe = 20;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.139' WHERE id_ingredient = 577 AND id_recipe = 20; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.140' WHERE id_ingredient = 711 AND id_recipe = 20;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.141' WHERE id_ingredient = 12 AND id_recipe = 21;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.142' WHERE id_ingredient = 804 AND id_recipe = 21; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.143' WHERE id_ingredient = 467 AND id_recipe = 21; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.144' WHERE id_ingredient = 199 AND id_recipe = 21; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.145' WHERE id_ingredient = 240 AND id_recipe = 21; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.146' WHERE id_ingredient = 445 AND id_recipe = 21;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.147' WHERE id_ingredient = 500 AND id_recipe = 22;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.148' WHERE id_ingredient = 677 AND id_recipe = 22;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.149' WHERE id_ingredient = 667 AND id_recipe = 22;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.150' WHERE id_ingredient = 512 AND id_recipe = 22;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.151' WHERE id_ingredient = 343 AND id_recipe = 22; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.152' WHERE id_ingredient = 959 AND id_recipe = 22;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.153' WHERE id_ingredient = 83 AND id_recipe = 23;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.154' WHERE id_ingredient = 500 AND id_recipe = 23;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.155' WHERE id_ingredient = 411 AND id_recipe = 23;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.156' WHERE id_ingredient = 590 AND id_recipe = 24;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.157' WHERE id_ingredient = 194 AND id_recipe = 24; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.158' WHERE id_ingredient = 29 AND id_recipe = 24;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.159' WHERE id_ingredient = 12 AND id_recipe = 24;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.160' WHERE id_ingredient = 23 AND id_recipe = 24;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.161' WHERE id_ingredient = 804 AND id_recipe = 24;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.162' WHERE id_ingredient = 23 AND id_recipe = 25; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.163' WHERE id_ingredient = 448 AND id_recipe = 25;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.164' WHERE id_ingredient = 411 AND id_recipe = 25;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.165' WHERE id_ingredient = 482 AND id_recipe = 25;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.166' WHERE id_ingredient = 690 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.167' WHERE id_ingredient = 411 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.168' WHERE id_ingredient = 589 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.169' WHERE id_ingredient = 202 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.170' WHERE id_ingredient = 601 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.171' WHERE id_ingredient = 12 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.172' WHERE id_ingredient = 461 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.173' WHERE id_ingredient = 877 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.174' WHERE id_ingredient = 957 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.175' WHERE id_ingredient = 804 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.176' WHERE id_ingredient = 663 AND id_recipe = 26;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.177' WHERE id_ingredient = 611 AND id_recipe = 27;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.178' WHERE id_ingredient = 12 AND id_recipe = 27;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.179' WHERE id_ingredient = 763 AND id_recipe = 27;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.180' WHERE id_ingredient = 804 AND id_recipe = 27;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.181' WHERE id_ingredient = 330 AND id_recipe = 27;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.182' WHERE id_ingredient = 113 AND id_recipe = 27;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.183' WHERE id_ingredient = 667 AND id_recipe = 28;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.184' WHERE id_ingredient = 398 AND id_recipe = 28;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.185' WHERE id_ingredient = 498 AND id_recipe = 28;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.186' WHERE id_ingredient = 411 AND id_recipe = 28;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.187' WHERE id_ingredient = 83 AND id_recipe = 28;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.188' WHERE id_ingredient = 573 AND id_recipe = 28;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.189' WHERE id_ingredient = 41 AND id_recipe = 29;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.190' WHERE id_ingredient = 83 AND id_recipe = 29;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.191' WHERE id_ingredient = 625 AND id_recipe = 29;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.192' WHERE id_ingredient = 411 AND id_recipe = 29; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.193' WHERE id_ingredient = 670 AND id_recipe = 29;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.194' WHERE id_ingredient = 625 AND id_recipe = 30;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.195' WHERE id_ingredient = 411 AND id_recipe = 30;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.196' WHERE id_ingredient = 763 AND id_recipe = 30;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.197' WHERE id_ingredient = 12 AND id_recipe = 30;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.198' WHERE id_ingredient = 805 AND id_recipe = 30;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.199' WHERE id_ingredient = 426 AND id_recipe = 30;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.200' WHERE id_ingredient = 709 AND id_recipe = 31;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.201' WHERE id_ingredient = 748 AND id_recipe = 31;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.202' WHERE id_ingredient = 590 AND id_recipe = 31;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.203' WHERE id_ingredient = 683 AND id_recipe = 32;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.204' WHERE id_ingredient = 892 AND id_recipe = 32;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.205' WHERE id_ingredient = 804 AND id_recipe = 32;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.206' WHERE id_ingredient = 663 AND id_recipe = 32;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.207' WHERE id_ingredient = 500 AND id_recipe = 32;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.208' WHERE id_ingredient = 240 AND id_recipe = 32;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.209' WHERE id_ingredient = 12 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.210' WHERE id_ingredient = 805 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.211' WHERE id_ingredient = 83 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.212' WHERE id_ingredient = 663 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.212' WHERE id_ingredient = 411 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.214' WHERE id_ingredient = 877 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.215' WHERE id_ingredient = 330 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.216' WHERE id_ingredient = 113 AND id_recipe = 33;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.217' WHERE id_ingredient = 236 AND id_recipe = 34;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.218' WHERE id_ingredient = 276 AND id_recipe = 34;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.219' WHERE id_ingredient = 12 AND id_recipe = 34;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.220' WHERE id_ingredient = 805 AND id_recipe = 34;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.221' WHERE id_ingredient = 663 AND id_recipe = 34;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.222' WHERE id_ingredient = 683 AND id_recipe = 34;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.223' WHERE id_ingredient = 398 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.224' WHERE id_ingredient = 411 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.225' WHERE id_ingredient = 763 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.226' WHERE id_ingredient = 12 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.227' WHERE id_ingredient = 23 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.228' WHERE id_ingredient = 804 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.229' WHERE id_ingredient = 663 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.230' WHERE id_ingredient = 330 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.231' WHERE id_ingredient = 113 AND id_recipe = 35; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.232' WHERE id_ingredient = 555 AND id_recipe = 35;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.233' WHERE id_ingredient = 623 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.234' WHERE id_ingredient = 29 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.235' WHERE id_ingredient = 665 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.236' WHERE id_ingredient = 202 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.237' WHERE id_ingredient = 877 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.238' WHERE id_ingredient = 907 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.239' WHERE id_ingredient = 23 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.240' WHERE id_ingredient = 472 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.241' WHERE id_ingredient = 805 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.242' WHERE id_ingredient = 661 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.243' WHERE id_ingredient = 663 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.244' WHERE id_ingredient = 882 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.245' WHERE id_ingredient = 447 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.246' WHERE id_ingredient = 194 AND id_recipe = 36; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.247' WHERE id_ingredient = 365 AND id_recipe = 36;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.248' WHERE id_ingredient = 778 AND id_recipe = 37;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.249' WHERE id_ingredient = 657 AND id_recipe = 37;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.250' WHERE id_ingredient = 665 AND id_recipe = 37;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.251' WHERE id_ingredient = 12 AND id_recipe = 37;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.252' WHERE id_ingredient = 906 AND id_recipe = 37;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.253' WHERE id_ingredient = 804 AND id_recipe = 37;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.254' WHERE id_ingredient = 648 AND id_recipe = 37; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.255' WHERE id_ingredient = 363 AND id_recipe = 37; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.256' WHERE id_ingredient = 700 AND id_recipe = 37;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.257' WHERE id_ingredient = 65 AND id_recipe = 38;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.258' WHERE id_ingredient = 12 AND id_recipe = 38;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.259' WHERE id_ingredient = 805 AND id_recipe = 38;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.260' WHERE id_ingredient = 663 AND id_recipe = 38;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.261' WHERE id_ingredient = 330 AND id_recipe = 38;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.262' WHERE id_ingredient = 113 AND id_recipe = 38; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.263' WHERE id_ingredient = 12 AND id_recipe = 39;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.264' WHERE id_ingredient = 804 AND id_recipe = 39;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.265' WHERE id_ingredient = 411 AND id_recipe = 39;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.266' WHERE id_ingredient = 29 AND id_recipe = 39;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.267' WHERE id_ingredient = 661 AND id_recipe = 39; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.268' WHERE id_ingredient = 259 AND id_recipe = 39; 
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.269' WHERE id_ingredient = 429 AND id_recipe = 39;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.270' WHERE id_ingredient = 590 AND id_recipe = 39;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.271' WHERE id_ingredient = 12 AND id_recipe = 40;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.272' WHERE id_ingredient = 804 AND id_recipe = 40;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.273' WHERE id_ingredient = 411 AND id_recipe = 40;
+UPDATE RECIPE_INGREDIENT SET unit_key = 'recipeIngredient.274' WHERE id_ingredient = 363 AND id_recipe = 40;
+
+ALTER TABLE RECIPE_ELABORATION_STEP RENAME COLUMN step_description TO step_description_key;
+
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.1' WHERE id = 1;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.2' WHERE id = 2;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.3' WHERE id = 3;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.4' WHERE id = 4;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.5' WHERE id = 5;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.6' WHERE id = 6;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.7' WHERE id = 7;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.8' WHERE id = 8;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.9' WHERE id = 9;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.10' WHERE id = 10;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.11' WHERE id = 11;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.12' WHERE id = 12;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.13' WHERE id = 13;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.14' WHERE id = 14;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.15' WHERE id = 15;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.16' WHERE id = 16;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.17' WHERE id = 17;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.18' WHERE id = 18;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.19' WHERE id = 19;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.20' WHERE id = 20;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.21' WHERE id = 21;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.22' WHERE id = 22;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.23' WHERE id = 23;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.24' WHERE id = 24;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.25' WHERE id = 25;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.26' WHERE id = 26;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.27' WHERE id = 27;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.28' WHERE id = 28;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.29' WHERE id = 29;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.30' WHERE id = 30;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.31' WHERE id = 31;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.32' WHERE id = 32;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.33' WHERE id = 33;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.34' WHERE id = 34;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.35' WHERE id = 35;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.36' WHERE id = 36;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.37' WHERE id = 37;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.38' WHERE id = 38;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.39' WHERE id = 39;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.40' WHERE id = 40;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.41' WHERE id = 41;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.42' WHERE id = 42;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.43' WHERE id = 43;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.44' WHERE id = 44;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.45' WHERE id = 45;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.46' WHERE id = 46;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.47' WHERE id = 47;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.48' WHERE id = 48;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.49' WHERE id = 49;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.50' WHERE id = 50;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.51' WHERE id = 51;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.52' WHERE id = 52;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.53' WHERE id = 53;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.54' WHERE id = 54;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.55' WHERE id = 55;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.56' WHERE id = 56;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.57' WHERE id = 57;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.58' WHERE id = 58;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.59' WHERE id = 59;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.60' WHERE id = 60;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.61' WHERE id = 61;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.62' WHERE id = 62;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.63' WHERE id = 63;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.64' WHERE id = 64;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.65' WHERE id = 65;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.66' WHERE id = 66;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.67' WHERE id = 67;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.68' WHERE id = 68;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.69' WHERE id = 69;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.70' WHERE id = 70;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.71' WHERE id = 71;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.72' WHERE id = 72;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.73' WHERE id = 73;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.74' WHERE id = 74;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.75' WHERE id = 75;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.76' WHERE id = 76;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.77' WHERE id = 77;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.78' WHERE id = 78;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.79' WHERE id = 79;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.80' WHERE id = 80;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.81' WHERE id = 81;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.82' WHERE id = 82;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.83' WHERE id = 83;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.84' WHERE id = 84;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.85' WHERE id = 85;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.86' WHERE id = 86;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.87' WHERE id = 87;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.88' WHERE id = 88;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.89' WHERE id = 89;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.90' WHERE id = 90;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.91' WHERE id = 91;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.92' WHERE id = 92;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.93' WHERE id = 93;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.94' WHERE id = 94;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.95' WHERE id = 95;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.96' WHERE id = 96;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.97' WHERE id = 97;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.98' WHERE id = 98;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.99' WHERE id = 99;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.100' WHERE id = 100;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.101' WHERE id = 101;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.102' WHERE id = 102;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.103' WHERE id = 103;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.104' WHERE id = 104;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.105' WHERE id = 105;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.106' WHERE id = 106;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.107' WHERE id = 107;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.108' WHERE id = 108;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.109' WHERE id = 109;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.110' WHERE id = 110;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.111' WHERE id = 111;
+UPDATE RECIPE_ELABORATION_STEP SET step_description_key = 'step.112' WHERE id = 112;
+
+ALTER TABLE INGREDIENT RENAME COLUMN name TO name_key;
+
+UPDATE INGREDIENT SET name_key = 'ingredient.1' WHERE id = 1;
+UPDATE INGREDIENT SET name_key = 'ingredient.2' WHERE id = 2;
+UPDATE INGREDIENT SET name_key = 'ingredient.3' WHERE id = 3;
+UPDATE INGREDIENT SET name_key = 'ingredient.4' WHERE id = 4;
+UPDATE INGREDIENT SET name_key = 'ingredient.5' WHERE id = 5;
+UPDATE INGREDIENT SET name_key = 'ingredient.6' WHERE id = 6;
+UPDATE INGREDIENT SET name_key = 'ingredient.7' WHERE id = 7;
+UPDATE INGREDIENT SET name_key = 'ingredient.8' WHERE id = 8;
+UPDATE INGREDIENT SET name_key = 'ingredient.9' WHERE id = 9;
+UPDATE INGREDIENT SET name_key = 'ingredient.10' WHERE id = 10;
+UPDATE INGREDIENT SET name_key = 'ingredient.11' WHERE id = 11;
+UPDATE INGREDIENT SET name_key = 'ingredient.12' WHERE id = 12;
+UPDATE INGREDIENT SET name_key = 'ingredient.13' WHERE id = 13;
+UPDATE INGREDIENT SET name_key = 'ingredient.14' WHERE id = 14;
+UPDATE INGREDIENT SET name_key = 'ingredient.15' WHERE id = 15;
+UPDATE INGREDIENT SET name_key = 'ingredient.16' WHERE id = 16;
+UPDATE INGREDIENT SET name_key = 'ingredient.17' WHERE id = 17;
+UPDATE INGREDIENT SET name_key = 'ingredient.18' WHERE id = 18;
+UPDATE INGREDIENT SET name_key = 'ingredient.19' WHERE id = 19;
+UPDATE INGREDIENT SET name_key = 'ingredient.20' WHERE id = 20;
+UPDATE INGREDIENT SET name_key = 'ingredient.21' WHERE id = 21;
+UPDATE INGREDIENT SET name_key = 'ingredient.22' WHERE id = 22;
+UPDATE INGREDIENT SET name_key = 'ingredient.23' WHERE id = 23;
+UPDATE INGREDIENT SET name_key = 'ingredient.24' WHERE id = 24;
+UPDATE INGREDIENT SET name_key = 'ingredient.25' WHERE id = 25;
+UPDATE INGREDIENT SET name_key = 'ingredient.26' WHERE id = 26;
+UPDATE INGREDIENT SET name_key = 'ingredient.27' WHERE id = 27;
+UPDATE INGREDIENT SET name_key = 'ingredient.28' WHERE id = 28;
+UPDATE INGREDIENT SET name_key = 'ingredient.29' WHERE id = 29;
+UPDATE INGREDIENT SET name_key = 'ingredient.30' WHERE id = 30;
+UPDATE INGREDIENT SET name_key = 'ingredient.31' WHERE id = 31;
+UPDATE INGREDIENT SET name_key = 'ingredient.32' WHERE id = 32;
+UPDATE INGREDIENT SET name_key = 'ingredient.33' WHERE id = 33;
+UPDATE INGREDIENT SET name_key = 'ingredient.34' WHERE id = 34;
+UPDATE INGREDIENT SET name_key = 'ingredient.35' WHERE id = 35;
+UPDATE INGREDIENT SET name_key = 'ingredient.36' WHERE id = 36;
+UPDATE INGREDIENT SET name_key = 'ingredient.37' WHERE id = 37;
+UPDATE INGREDIENT SET name_key = 'ingredient.38' WHERE id = 38;
+UPDATE INGREDIENT SET name_key = 'ingredient.39' WHERE id = 39;
+UPDATE INGREDIENT SET name_key = 'ingredient.40' WHERE id = 40;
+UPDATE INGREDIENT SET name_key = 'ingredient.41' WHERE id = 41;
+UPDATE INGREDIENT SET name_key = 'ingredient.42' WHERE id = 42;
+UPDATE INGREDIENT SET name_key = 'ingredient.43' WHERE id = 43;
+UPDATE INGREDIENT SET name_key = 'ingredient.44' WHERE id = 44;
+UPDATE INGREDIENT SET name_key = 'ingredient.45' WHERE id = 45;
+UPDATE INGREDIENT SET name_key = 'ingredient.46' WHERE id = 46;
+UPDATE INGREDIENT SET name_key = 'ingredient.47' WHERE id = 47;
+UPDATE INGREDIENT SET name_key = 'ingredient.48' WHERE id = 48;
+UPDATE INGREDIENT SET name_key = 'ingredient.49' WHERE id = 49;
+UPDATE INGREDIENT SET name_key = 'ingredient.50' WHERE id = 50;
+UPDATE INGREDIENT SET name_key = 'ingredient.51' WHERE id = 51;
+UPDATE INGREDIENT SET name_key = 'ingredient.52' WHERE id = 52;
+UPDATE INGREDIENT SET name_key = 'ingredient.53' WHERE id = 53;
+UPDATE INGREDIENT SET name_key = 'ingredient.54' WHERE id = 54;
+UPDATE INGREDIENT SET name_key = 'ingredient.55' WHERE id = 55;
+UPDATE INGREDIENT SET name_key = 'ingredient.56' WHERE id = 56;
+UPDATE INGREDIENT SET name_key = 'ingredient.57' WHERE id = 57;
+UPDATE INGREDIENT SET name_key = 'ingredient.58' WHERE id = 58;
+UPDATE INGREDIENT SET name_key = 'ingredient.59' WHERE id = 59;
+UPDATE INGREDIENT SET name_key = 'ingredient.60' WHERE id = 60;
+UPDATE INGREDIENT SET name_key = 'ingredient.61' WHERE id = 61;
+UPDATE INGREDIENT SET name_key = 'ingredient.62' WHERE id = 62;
+UPDATE INGREDIENT SET name_key = 'ingredient.63' WHERE id = 63;
+UPDATE INGREDIENT SET name_key = 'ingredient.64' WHERE id = 64;
+UPDATE INGREDIENT SET name_key = 'ingredient.65' WHERE id = 65;
+UPDATE INGREDIENT SET name_key = 'ingredient.66' WHERE id = 66;
+UPDATE INGREDIENT SET name_key = 'ingredient.67' WHERE id = 67;
+UPDATE INGREDIENT SET name_key = 'ingredient.68' WHERE id = 68;
+UPDATE INGREDIENT SET name_key = 'ingredient.69' WHERE id = 69;
+UPDATE INGREDIENT SET name_key = 'ingredient.70' WHERE id = 70;
+UPDATE INGREDIENT SET name_key = 'ingredient.71' WHERE id = 71;
+UPDATE INGREDIENT SET name_key = 'ingredient.72' WHERE id = 72;
+UPDATE INGREDIENT SET name_key = 'ingredient.73' WHERE id = 73;
+UPDATE INGREDIENT SET name_key = 'ingredient.74' WHERE id = 74;
+UPDATE INGREDIENT SET name_key = 'ingredient.75' WHERE id = 75;
+UPDATE INGREDIENT SET name_key = 'ingredient.76' WHERE id = 76;
+UPDATE INGREDIENT SET name_key = 'ingredient.77' WHERE id = 77;
+UPDATE INGREDIENT SET name_key = 'ingredient.78' WHERE id = 78;
+UPDATE INGREDIENT SET name_key = 'ingredient.79' WHERE id = 79;
+UPDATE INGREDIENT SET name_key = 'ingredient.80' WHERE id = 80;
+UPDATE INGREDIENT SET name_key = 'ingredient.81' WHERE id = 81;
+UPDATE INGREDIENT SET name_key = 'ingredient.82' WHERE id = 82;
+UPDATE INGREDIENT SET name_key = 'ingredient.83' WHERE id = 83;
+UPDATE INGREDIENT SET name_key = 'ingredient.84' WHERE id = 84;
+UPDATE INGREDIENT SET name_key = 'ingredient.85' WHERE id = 85;
+UPDATE INGREDIENT SET name_key = 'ingredient.86' WHERE id = 86;
+UPDATE INGREDIENT SET name_key = 'ingredient.87' WHERE id = 87;
+UPDATE INGREDIENT SET name_key = 'ingredient.88' WHERE id = 88;
+UPDATE INGREDIENT SET name_key = 'ingredient.89' WHERE id = 89;
+UPDATE INGREDIENT SET name_key = 'ingredient.90' WHERE id = 90;
+UPDATE INGREDIENT SET name_key = 'ingredient.91' WHERE id = 91;
+UPDATE INGREDIENT SET name_key = 'ingredient.92' WHERE id = 92;
+UPDATE INGREDIENT SET name_key = 'ingredient.93' WHERE id = 93;
+UPDATE INGREDIENT SET name_key = 'ingredient.94' WHERE id = 94;
+UPDATE INGREDIENT SET name_key = 'ingredient.95' WHERE id = 95;
+UPDATE INGREDIENT SET name_key = 'ingredient.96' WHERE id = 96;
+UPDATE INGREDIENT SET name_key = 'ingredient.97' WHERE id = 97;
+UPDATE INGREDIENT SET name_key = 'ingredient.98' WHERE id = 98;
+UPDATE INGREDIENT SET name_key = 'ingredient.99' WHERE id = 99;
+UPDATE INGREDIENT SET name_key = 'ingredient.100' WHERE id = 100;
+UPDATE INGREDIENT SET name_key = 'ingredient.101' WHERE id = 101;
+UPDATE INGREDIENT SET name_key = 'ingredient.102' WHERE id = 102;
+UPDATE INGREDIENT SET name_key = 'ingredient.103' WHERE id = 103;
+UPDATE INGREDIENT SET name_key = 'ingredient.104' WHERE id = 104;
+UPDATE INGREDIENT SET name_key = 'ingredient.105' WHERE id = 105;
+UPDATE INGREDIENT SET name_key = 'ingredient.106' WHERE id = 106;
+UPDATE INGREDIENT SET name_key = 'ingredient.107' WHERE id = 107;
+UPDATE INGREDIENT SET name_key = 'ingredient.108' WHERE id = 108;
+UPDATE INGREDIENT SET name_key = 'ingredient.109' WHERE id = 109;
+UPDATE INGREDIENT SET name_key = 'ingredient.110' WHERE id = 110;
+UPDATE INGREDIENT SET name_key = 'ingredient.111' WHERE id = 111;
+UPDATE INGREDIENT SET name_key = 'ingredient.112' WHERE id = 112;
+UPDATE INGREDIENT SET name_key = 'ingredient.113' WHERE id = 113;
+UPDATE INGREDIENT SET name_key = 'ingredient.114' WHERE id = 114;
+UPDATE INGREDIENT SET name_key = 'ingredient.115' WHERE id = 115;
+UPDATE INGREDIENT SET name_key = 'ingredient.116' WHERE id = 116;
+UPDATE INGREDIENT SET name_key = 'ingredient.117' WHERE id = 117;
+UPDATE INGREDIENT SET name_key = 'ingredient.118' WHERE id = 118;
+UPDATE INGREDIENT SET name_key = 'ingredient.119' WHERE id = 119;
+UPDATE INGREDIENT SET name_key = 'ingredient.120' WHERE id = 120;
+UPDATE INGREDIENT SET name_key = 'ingredient.121' WHERE id = 121;
+UPDATE INGREDIENT SET name_key = 'ingredient.122' WHERE id = 122;
+UPDATE INGREDIENT SET name_key = 'ingredient.123' WHERE id = 123;
+UPDATE INGREDIENT SET name_key = 'ingredient.124' WHERE id = 124;
+UPDATE INGREDIENT SET name_key = 'ingredient.125' WHERE id = 125;
+UPDATE INGREDIENT SET name_key = 'ingredient.126' WHERE id = 126;
+UPDATE INGREDIENT SET name_key = 'ingredient.127' WHERE id = 127;
+UPDATE INGREDIENT SET name_key = 'ingredient.128' WHERE id = 128;
+UPDATE INGREDIENT SET name_key = 'ingredient.129' WHERE id = 129;
+UPDATE INGREDIENT SET name_key = 'ingredient.130' WHERE id = 130;
+UPDATE INGREDIENT SET name_key = 'ingredient.131' WHERE id = 131;
+UPDATE INGREDIENT SET name_key = 'ingredient.132' WHERE id = 132;
+UPDATE INGREDIENT SET name_key = 'ingredient.133' WHERE id = 133;
+UPDATE INGREDIENT SET name_key = 'ingredient.134' WHERE id = 134;
+UPDATE INGREDIENT SET name_key = 'ingredient.135' WHERE id = 135;
+UPDATE INGREDIENT SET name_key = 'ingredient.136' WHERE id = 136;
+UPDATE INGREDIENT SET name_key = 'ingredient.137' WHERE id = 137;
+UPDATE INGREDIENT SET name_key = 'ingredient.138' WHERE id = 138;
+UPDATE INGREDIENT SET name_key = 'ingredient.139' WHERE id = 139;
+UPDATE INGREDIENT SET name_key = 'ingredient.140' WHERE id = 140;
+UPDATE INGREDIENT SET name_key = 'ingredient.141' WHERE id = 141;
+UPDATE INGREDIENT SET name_key = 'ingredient.142' WHERE id = 142;
+UPDATE INGREDIENT SET name_key = 'ingredient.143' WHERE id = 143;
+UPDATE INGREDIENT SET name_key = 'ingredient.144' WHERE id = 144;
+UPDATE INGREDIENT SET name_key = 'ingredient.145' WHERE id = 145;
+UPDATE INGREDIENT SET name_key = 'ingredient.146' WHERE id = 146;
+UPDATE INGREDIENT SET name_key = 'ingredient.147' WHERE id = 147;
+UPDATE INGREDIENT SET name_key = 'ingredient.148' WHERE id = 148;
+UPDATE INGREDIENT SET name_key = 'ingredient.149' WHERE id = 149;
+UPDATE INGREDIENT SET name_key = 'ingredient.150' WHERE id = 150;
+UPDATE INGREDIENT SET name_key = 'ingredient.151' WHERE id = 151;
+UPDATE INGREDIENT SET name_key = 'ingredient.152' WHERE id = 152;
+UPDATE INGREDIENT SET name_key = 'ingredient.153' WHERE id = 153;
+UPDATE INGREDIENT SET name_key = 'ingredient.154' WHERE id = 154;
+UPDATE INGREDIENT SET name_key = 'ingredient.155' WHERE id = 155;
+UPDATE INGREDIENT SET name_key = 'ingredient.156' WHERE id = 156;
+UPDATE INGREDIENT SET name_key = 'ingredient.157' WHERE id = 157;
+UPDATE INGREDIENT SET name_key = 'ingredient.158' WHERE id = 158;
+UPDATE INGREDIENT SET name_key = 'ingredient.159' WHERE id = 159;
+UPDATE INGREDIENT SET name_key = 'ingredient.160' WHERE id = 160;
+UPDATE INGREDIENT SET name_key = 'ingredient.161' WHERE id = 161;
+UPDATE INGREDIENT SET name_key = 'ingredient.162' WHERE id = 162;
+UPDATE INGREDIENT SET name_key = 'ingredient.163' WHERE id = 163;
+UPDATE INGREDIENT SET name_key = 'ingredient.164' WHERE id = 164;
+UPDATE INGREDIENT SET name_key = 'ingredient.165' WHERE id = 165;
+UPDATE INGREDIENT SET name_key = 'ingredient.166' WHERE id = 166;
+UPDATE INGREDIENT SET name_key = 'ingredient.167' WHERE id = 167;
+UPDATE INGREDIENT SET name_key = 'ingredient.168' WHERE id = 168;
+UPDATE INGREDIENT SET name_key = 'ingredient.169' WHERE id = 169;
+UPDATE INGREDIENT SET name_key = 'ingredient.170' WHERE id = 170;
+UPDATE INGREDIENT SET name_key = 'ingredient.171' WHERE id = 171;
+UPDATE INGREDIENT SET name_key = 'ingredient.172' WHERE id = 172;
+UPDATE INGREDIENT SET name_key = 'ingredient.173' WHERE id = 173;
+UPDATE INGREDIENT SET name_key = 'ingredient.174' WHERE id = 174;
+UPDATE INGREDIENT SET name_key = 'ingredient.175' WHERE id = 175;
+UPDATE INGREDIENT SET name_key = 'ingredient.176' WHERE id = 176;
+UPDATE INGREDIENT SET name_key = 'ingredient.177' WHERE id = 177;
+UPDATE INGREDIENT SET name_key = 'ingredient.178' WHERE id = 178;
+UPDATE INGREDIENT SET name_key = 'ingredient.179' WHERE id = 179;
+UPDATE INGREDIENT SET name_key = 'ingredient.180' WHERE id = 180;
+UPDATE INGREDIENT SET name_key = 'ingredient.181' WHERE id = 181;
+UPDATE INGREDIENT SET name_key = 'ingredient.182' WHERE id = 182;
+UPDATE INGREDIENT SET name_key = 'ingredient.183' WHERE id = 183;
+UPDATE INGREDIENT SET name_key = 'ingredient.184' WHERE id = 184;
+UPDATE INGREDIENT SET name_key = 'ingredient.185' WHERE id = 185;
+UPDATE INGREDIENT SET name_key = 'ingredient.186' WHERE id = 186;
+UPDATE INGREDIENT SET name_key = 'ingredient.187' WHERE id = 187;
+UPDATE INGREDIENT SET name_key = 'ingredient.188' WHERE id = 188;
+UPDATE INGREDIENT SET name_key = 'ingredient.189' WHERE id = 189;
+UPDATE INGREDIENT SET name_key = 'ingredient.190' WHERE id = 190;
+UPDATE INGREDIENT SET name_key = 'ingredient.191' WHERE id = 191;
+UPDATE INGREDIENT SET name_key = 'ingredient.192' WHERE id = 192;
+UPDATE INGREDIENT SET name_key = 'ingredient.193' WHERE id = 193;
+UPDATE INGREDIENT SET name_key = 'ingredient.194' WHERE id = 194;
+UPDATE INGREDIENT SET name_key = 'ingredient.195' WHERE id = 195;
+UPDATE INGREDIENT SET name_key = 'ingredient.196' WHERE id = 196;
+UPDATE INGREDIENT SET name_key = 'ingredient.197' WHERE id = 197;
+UPDATE INGREDIENT SET name_key = 'ingredient.198' WHERE id = 198;
+UPDATE INGREDIENT SET name_key = 'ingredient.199' WHERE id = 199;
+UPDATE INGREDIENT SET name_key = 'ingredient.200' WHERE id = 200;
+UPDATE INGREDIENT SET name_key = 'ingredient.201' WHERE id = 201;
+UPDATE INGREDIENT SET name_key = 'ingredient.202' WHERE id = 202;
+UPDATE INGREDIENT SET name_key = 'ingredient.203' WHERE id = 203;
+UPDATE INGREDIENT SET name_key = 'ingredient.204' WHERE id = 204;
+UPDATE INGREDIENT SET name_key = 'ingredient.205' WHERE id = 205;
+UPDATE INGREDIENT SET name_key = 'ingredient.206' WHERE id = 206;
+UPDATE INGREDIENT SET name_key = 'ingredient.207' WHERE id = 207;
+UPDATE INGREDIENT SET name_key = 'ingredient.208' WHERE id = 208;
+UPDATE INGREDIENT SET name_key = 'ingredient.209' WHERE id = 209;
+UPDATE INGREDIENT SET name_key = 'ingredient.210' WHERE id = 210;
+UPDATE INGREDIENT SET name_key = 'ingredient.211' WHERE id = 211;
+UPDATE INGREDIENT SET name_key = 'ingredient.212' WHERE id = 212;
+UPDATE INGREDIENT SET name_key = 'ingredient.213' WHERE id = 213;
+UPDATE INGREDIENT SET name_key = 'ingredient.214' WHERE id = 214;
+UPDATE INGREDIENT SET name_key = 'ingredient.215' WHERE id = 215;
+UPDATE INGREDIENT SET name_key = 'ingredient.216' WHERE id = 216;
+UPDATE INGREDIENT SET name_key = 'ingredient.217' WHERE id = 217;
+UPDATE INGREDIENT SET name_key = 'ingredient.218' WHERE id = 218;
+UPDATE INGREDIENT SET name_key = 'ingredient.219' WHERE id = 219;
+UPDATE INGREDIENT SET name_key = 'ingredient.220' WHERE id = 220;
+UPDATE INGREDIENT SET name_key = 'ingredient.221' WHERE id = 221;
+UPDATE INGREDIENT SET name_key = 'ingredient.222' WHERE id = 222;
+UPDATE INGREDIENT SET name_key = 'ingredient.223' WHERE id = 223;
+UPDATE INGREDIENT SET name_key = 'ingredient.224' WHERE id = 224;
+UPDATE INGREDIENT SET name_key = 'ingredient.225' WHERE id = 225;
+UPDATE INGREDIENT SET name_key = 'ingredient.226' WHERE id = 226;
+UPDATE INGREDIENT SET name_key = 'ingredient.227' WHERE id = 227;
+UPDATE INGREDIENT SET name_key = 'ingredient.228' WHERE id = 228;
+UPDATE INGREDIENT SET name_key = 'ingredient.229' WHERE id = 229;
+UPDATE INGREDIENT SET name_key = 'ingredient.230' WHERE id = 230;
+UPDATE INGREDIENT SET name_key = 'ingredient.231' WHERE id = 231;
+UPDATE INGREDIENT SET name_key = 'ingredient.232' WHERE id = 232;
+UPDATE INGREDIENT SET name_key = 'ingredient.233' WHERE id = 233;
+UPDATE INGREDIENT SET name_key = 'ingredient.234' WHERE id = 234;
+UPDATE INGREDIENT SET name_key = 'ingredient.235' WHERE id = 235;
+UPDATE INGREDIENT SET name_key = 'ingredient.236' WHERE id = 236;
+UPDATE INGREDIENT SET name_key = 'ingredient.237' WHERE id = 237;
+UPDATE INGREDIENT SET name_key = 'ingredient.238' WHERE id = 238;
+UPDATE INGREDIENT SET name_key = 'ingredient.239' WHERE id = 239;
+UPDATE INGREDIENT SET name_key = 'ingredient.240' WHERE id = 240;
+UPDATE INGREDIENT SET name_key = 'ingredient.241' WHERE id = 241;
+UPDATE INGREDIENT SET name_key = 'ingredient.242' WHERE id = 242;
+UPDATE INGREDIENT SET name_key = 'ingredient.243' WHERE id = 243;
+UPDATE INGREDIENT SET name_key = 'ingredient.244' WHERE id = 244;
+UPDATE INGREDIENT SET name_key = 'ingredient.245' WHERE id = 245;
+UPDATE INGREDIENT SET name_key = 'ingredient.246' WHERE id = 246;
+UPDATE INGREDIENT SET name_key = 'ingredient.247' WHERE id = 247;
+UPDATE INGREDIENT SET name_key = 'ingredient.248' WHERE id = 248;
+UPDATE INGREDIENT SET name_key = 'ingredient.249' WHERE id = 249;
+UPDATE INGREDIENT SET name_key = 'ingredient.250' WHERE id = 250;
+UPDATE INGREDIENT SET name_key = 'ingredient.251' WHERE id = 251;
+UPDATE INGREDIENT SET name_key = 'ingredient.252' WHERE id = 252;
+UPDATE INGREDIENT SET name_key = 'ingredient.253' WHERE id = 253;
+UPDATE INGREDIENT SET name_key = 'ingredient.254' WHERE id = 254;
+UPDATE INGREDIENT SET name_key = 'ingredient.255' WHERE id = 255;
+UPDATE INGREDIENT SET name_key = 'ingredient.256' WHERE id = 256;
+UPDATE INGREDIENT SET name_key = 'ingredient.257' WHERE id = 257;
+UPDATE INGREDIENT SET name_key = 'ingredient.258' WHERE id = 258;
+UPDATE INGREDIENT SET name_key = 'ingredient.259' WHERE id = 259;
+UPDATE INGREDIENT SET name_key = 'ingredient.260' WHERE id = 260;
+UPDATE INGREDIENT SET name_key = 'ingredient.261' WHERE id = 261;
+UPDATE INGREDIENT SET name_key = 'ingredient.262' WHERE id = 262;
+UPDATE INGREDIENT SET name_key = 'ingredient.263' WHERE id = 263;
+UPDATE INGREDIENT SET name_key = 'ingredient.264' WHERE id = 264;
+UPDATE INGREDIENT SET name_key = 'ingredient.265' WHERE id = 265;
+UPDATE INGREDIENT SET name_key = 'ingredient.266' WHERE id = 266;
+UPDATE INGREDIENT SET name_key = 'ingredient.267' WHERE id = 267;
+UPDATE INGREDIENT SET name_key = 'ingredient.268' WHERE id = 268;
+UPDATE INGREDIENT SET name_key = 'ingredient.269' WHERE id = 269;
+UPDATE INGREDIENT SET name_key = 'ingredient.270' WHERE id = 270;
+UPDATE INGREDIENT SET name_key = 'ingredient.271' WHERE id = 271;
+UPDATE INGREDIENT SET name_key = 'ingredient.272' WHERE id = 272;
+UPDATE INGREDIENT SET name_key = 'ingredient.273' WHERE id = 273;
+UPDATE INGREDIENT SET name_key = 'ingredient.274' WHERE id = 274;
+UPDATE INGREDIENT SET name_key = 'ingredient.275' WHERE id = 275;
+UPDATE INGREDIENT SET name_key = 'ingredient.276' WHERE id = 276;
+UPDATE INGREDIENT SET name_key = 'ingredient.277' WHERE id = 277;
+UPDATE INGREDIENT SET name_key = 'ingredient.278' WHERE id = 278;
+UPDATE INGREDIENT SET name_key = 'ingredient.279' WHERE id = 279;
+UPDATE INGREDIENT SET name_key = 'ingredient.280' WHERE id = 280;
+UPDATE INGREDIENT SET name_key = 'ingredient.281' WHERE id = 281;
+UPDATE INGREDIENT SET name_key = 'ingredient.282' WHERE id = 282;
+UPDATE INGREDIENT SET name_key = 'ingredient.283' WHERE id = 283;
+UPDATE INGREDIENT SET name_key = 'ingredient.284' WHERE id = 284;
+UPDATE INGREDIENT SET name_key = 'ingredient.285' WHERE id = 285;
+UPDATE INGREDIENT SET name_key = 'ingredient.286' WHERE id = 286;
+UPDATE INGREDIENT SET name_key = 'ingredient.287' WHERE id = 287;
+UPDATE INGREDIENT SET name_key = 'ingredient.288' WHERE id = 288;
+UPDATE INGREDIENT SET name_key = 'ingredient.289' WHERE id = 289;
+UPDATE INGREDIENT SET name_key = 'ingredient.290' WHERE id = 290;
+UPDATE INGREDIENT SET name_key = 'ingredient.291' WHERE id = 291;
+UPDATE INGREDIENT SET name_key = 'ingredient.292' WHERE id = 292;
+UPDATE INGREDIENT SET name_key = 'ingredient.293' WHERE id = 293;
+UPDATE INGREDIENT SET name_key = 'ingredient.294' WHERE id = 294;
+UPDATE INGREDIENT SET name_key = 'ingredient.295' WHERE id = 295;
+UPDATE INGREDIENT SET name_key = 'ingredient.296' WHERE id = 296;
+UPDATE INGREDIENT SET name_key = 'ingredient.297' WHERE id = 297;
+UPDATE INGREDIENT SET name_key = 'ingredient.298' WHERE id = 298;
+UPDATE INGREDIENT SET name_key = 'ingredient.299' WHERE id = 299;
+UPDATE INGREDIENT SET name_key = 'ingredient.300' WHERE id = 300;
+UPDATE INGREDIENT SET name_key = 'ingredient.301' WHERE id = 301;
+UPDATE INGREDIENT SET name_key = 'ingredient.302' WHERE id = 302;
+UPDATE INGREDIENT SET name_key = 'ingredient.303' WHERE id = 303;
+UPDATE INGREDIENT SET name_key = 'ingredient.304' WHERE id = 304;
+UPDATE INGREDIENT SET name_key = 'ingredient.305' WHERE id = 305;
+UPDATE INGREDIENT SET name_key = 'ingredient.306' WHERE id = 306;
+UPDATE INGREDIENT SET name_key = 'ingredient.307' WHERE id = 307;
+UPDATE INGREDIENT SET name_key = 'ingredient.308' WHERE id = 308;
+UPDATE INGREDIENT SET name_key = 'ingredient.309' WHERE id = 309;
+UPDATE INGREDIENT SET name_key = 'ingredient.310' WHERE id = 310;
+UPDATE INGREDIENT SET name_key = 'ingredient.311' WHERE id = 311;
+UPDATE INGREDIENT SET name_key = 'ingredient.312' WHERE id = 312;
+UPDATE INGREDIENT SET name_key = 'ingredient.313' WHERE id = 313;
+UPDATE INGREDIENT SET name_key = 'ingredient.314' WHERE id = 314;
+UPDATE INGREDIENT SET name_key = 'ingredient.315' WHERE id = 315;
+UPDATE INGREDIENT SET name_key = 'ingredient.316' WHERE id = 316;
+UPDATE INGREDIENT SET name_key = 'ingredient.317' WHERE id = 317;
+UPDATE INGREDIENT SET name_key = 'ingredient.318' WHERE id = 318;
+UPDATE INGREDIENT SET name_key = 'ingredient.319' WHERE id = 319;
+UPDATE INGREDIENT SET name_key = 'ingredient.320' WHERE id = 320;
+UPDATE INGREDIENT SET name_key = 'ingredient.321' WHERE id = 321;
+UPDATE INGREDIENT SET name_key = 'ingredient.322' WHERE id = 322;
+UPDATE INGREDIENT SET name_key = 'ingredient.323' WHERE id = 323;
+UPDATE INGREDIENT SET name_key = 'ingredient.324' WHERE id = 324;
+UPDATE INGREDIENT SET name_key = 'ingredient.325' WHERE id = 325;
+UPDATE INGREDIENT SET name_key = 'ingredient.326' WHERE id = 326;
+UPDATE INGREDIENT SET name_key = 'ingredient.327' WHERE id = 327;
+UPDATE INGREDIENT SET name_key = 'ingredient.328' WHERE id = 328;
+UPDATE INGREDIENT SET name_key = 'ingredient.329' WHERE id = 329;
+UPDATE INGREDIENT SET name_key = 'ingredient.330' WHERE id = 330;
+UPDATE INGREDIENT SET name_key = 'ingredient.331' WHERE id = 331;
+UPDATE INGREDIENT SET name_key = 'ingredient.332' WHERE id = 332;
+UPDATE INGREDIENT SET name_key = 'ingredient.333' WHERE id = 333;
+UPDATE INGREDIENT SET name_key = 'ingredient.334' WHERE id = 334;
+UPDATE INGREDIENT SET name_key = 'ingredient.335' WHERE id = 335;
+UPDATE INGREDIENT SET name_key = 'ingredient.336' WHERE id = 336;
+UPDATE INGREDIENT SET name_key = 'ingredient.337' WHERE id = 337;
+UPDATE INGREDIENT SET name_key = 'ingredient.338' WHERE id = 338;
+UPDATE INGREDIENT SET name_key = 'ingredient.339' WHERE id = 339;
+UPDATE INGREDIENT SET name_key = 'ingredient.340' WHERE id = 340;
+UPDATE INGREDIENT SET name_key = 'ingredient.341' WHERE id = 341;
+UPDATE INGREDIENT SET name_key = 'ingredient.342' WHERE id = 342;
+UPDATE INGREDIENT SET name_key = 'ingredient.343' WHERE id = 343;
+UPDATE INGREDIENT SET name_key = 'ingredient.344' WHERE id = 344;
+UPDATE INGREDIENT SET name_key = 'ingredient.345' WHERE id = 345;
+UPDATE INGREDIENT SET name_key = 'ingredient.346' WHERE id = 346;
+UPDATE INGREDIENT SET name_key = 'ingredient.347' WHERE id = 347;
+UPDATE INGREDIENT SET name_key = 'ingredient.348' WHERE id = 348;
+UPDATE INGREDIENT SET name_key = 'ingredient.349' WHERE id = 349;
+UPDATE INGREDIENT SET name_key = 'ingredient.350' WHERE id = 350;
+UPDATE INGREDIENT SET name_key = 'ingredient.351' WHERE id = 351;
+UPDATE INGREDIENT SET name_key = 'ingredient.352' WHERE id = 352;
+UPDATE INGREDIENT SET name_key = 'ingredient.353' WHERE id = 353;
+UPDATE INGREDIENT SET name_key = 'ingredient.354' WHERE id = 354;
+UPDATE INGREDIENT SET name_key = 'ingredient.355' WHERE id = 355;
+UPDATE INGREDIENT SET name_key = 'ingredient.356' WHERE id = 356;
+UPDATE INGREDIENT SET name_key = 'ingredient.357' WHERE id = 357;
+UPDATE INGREDIENT SET name_key = 'ingredient.358' WHERE id = 358;
+UPDATE INGREDIENT SET name_key = 'ingredient.359' WHERE id = 359;
+UPDATE INGREDIENT SET name_key = 'ingredient.360' WHERE id = 360;
+UPDATE INGREDIENT SET name_key = 'ingredient.361' WHERE id = 361;
+UPDATE INGREDIENT SET name_key = 'ingredient.362' WHERE id = 362;
+UPDATE INGREDIENT SET name_key = 'ingredient.363' WHERE id = 363;
+UPDATE INGREDIENT SET name_key = 'ingredient.364' WHERE id = 364;
+UPDATE INGREDIENT SET name_key = 'ingredient.365' WHERE id = 365;
+UPDATE INGREDIENT SET name_key = 'ingredient.366' WHERE id = 366;
+UPDATE INGREDIENT SET name_key = 'ingredient.367' WHERE id = 367;
+UPDATE INGREDIENT SET name_key = 'ingredient.368' WHERE id = 368;
+UPDATE INGREDIENT SET name_key = 'ingredient.369' WHERE id = 369;
+UPDATE INGREDIENT SET name_key = 'ingredient.370' WHERE id = 370;
+UPDATE INGREDIENT SET name_key = 'ingredient.371' WHERE id = 371;
+UPDATE INGREDIENT SET name_key = 'ingredient.372' WHERE id = 372;
+UPDATE INGREDIENT SET name_key = 'ingredient.373' WHERE id = 373;
+UPDATE INGREDIENT SET name_key = 'ingredient.374' WHERE id = 374;
+UPDATE INGREDIENT SET name_key = 'ingredient.375' WHERE id = 375;
+UPDATE INGREDIENT SET name_key = 'ingredient.376' WHERE id = 376;
+UPDATE INGREDIENT SET name_key = 'ingredient.377' WHERE id = 377;
+UPDATE INGREDIENT SET name_key = 'ingredient.378' WHERE id = 378;
+UPDATE INGREDIENT SET name_key = 'ingredient.379' WHERE id = 379;
+UPDATE INGREDIENT SET name_key = 'ingredient.380' WHERE id = 380;
+UPDATE INGREDIENT SET name_key = 'ingredient.381' WHERE id = 381;
+UPDATE INGREDIENT SET name_key = 'ingredient.382' WHERE id = 382;
+UPDATE INGREDIENT SET name_key = 'ingredient.383' WHERE id = 383;
+UPDATE INGREDIENT SET name_key = 'ingredient.384' WHERE id = 384;
+UPDATE INGREDIENT SET name_key = 'ingredient.385' WHERE id = 385;
+UPDATE INGREDIENT SET name_key = 'ingredient.386' WHERE id = 386;
+UPDATE INGREDIENT SET name_key = 'ingredient.387' WHERE id = 387;
+UPDATE INGREDIENT SET name_key = 'ingredient.388' WHERE id = 388;
+UPDATE INGREDIENT SET name_key = 'ingredient.389' WHERE id = 389;
+UPDATE INGREDIENT SET name_key = 'ingredient.390' WHERE id = 390;
+UPDATE INGREDIENT SET name_key = 'ingredient.391' WHERE id = 391;
+UPDATE INGREDIENT SET name_key = 'ingredient.392' WHERE id = 392;
+UPDATE INGREDIENT SET name_key = 'ingredient.393' WHERE id = 393;
+UPDATE INGREDIENT SET name_key = 'ingredient.394' WHERE id = 394;
+UPDATE INGREDIENT SET name_key = 'ingredient.395' WHERE id = 395;
+UPDATE INGREDIENT SET name_key = 'ingredient.396' WHERE id = 396;
+UPDATE INGREDIENT SET name_key = 'ingredient.397' WHERE id = 397;
+UPDATE INGREDIENT SET name_key = 'ingredient.398' WHERE id = 398;
+UPDATE INGREDIENT SET name_key = 'ingredient.399' WHERE id = 399;
+UPDATE INGREDIENT SET name_key = 'ingredient.400' WHERE id = 400;
+UPDATE INGREDIENT SET name_key = 'ingredient.401' WHERE id = 401;
+UPDATE INGREDIENT SET name_key = 'ingredient.402' WHERE id = 402;
+UPDATE INGREDIENT SET name_key = 'ingredient.403' WHERE id = 403;
+UPDATE INGREDIENT SET name_key = 'ingredient.404' WHERE id = 404;
+UPDATE INGREDIENT SET name_key = 'ingredient.405' WHERE id = 405;
+UPDATE INGREDIENT SET name_key = 'ingredient.406' WHERE id = 406;
+UPDATE INGREDIENT SET name_key = 'ingredient.407' WHERE id = 407;
+UPDATE INGREDIENT SET name_key = 'ingredient.408' WHERE id = 408;
+UPDATE INGREDIENT SET name_key = 'ingredient.409' WHERE id = 409;
+UPDATE INGREDIENT SET name_key = 'ingredient.410' WHERE id = 410;
+UPDATE INGREDIENT SET name_key = 'ingredient.411' WHERE id = 411;
+UPDATE INGREDIENT SET name_key = 'ingredient.412' WHERE id = 412;
+UPDATE INGREDIENT SET name_key = 'ingredient.413' WHERE id = 413;
+UPDATE INGREDIENT SET name_key = 'ingredient.414' WHERE id = 414;
+UPDATE INGREDIENT SET name_key = 'ingredient.415' WHERE id = 415;
+UPDATE INGREDIENT SET name_key = 'ingredient.416' WHERE id = 416;
+UPDATE INGREDIENT SET name_key = 'ingredient.417' WHERE id = 417;
+UPDATE INGREDIENT SET name_key = 'ingredient.418' WHERE id = 418;
+UPDATE INGREDIENT SET name_key = 'ingredient.419' WHERE id = 419;
+UPDATE INGREDIENT SET name_key = 'ingredient.420' WHERE id = 420;
+UPDATE INGREDIENT SET name_key = 'ingredient.421' WHERE id = 421;
+UPDATE INGREDIENT SET name_key = 'ingredient.422' WHERE id = 422;
+UPDATE INGREDIENT SET name_key = 'ingredient.423' WHERE id = 423;
+UPDATE INGREDIENT SET name_key = 'ingredient.424' WHERE id = 424;
+UPDATE INGREDIENT SET name_key = 'ingredient.425' WHERE id = 425;
+UPDATE INGREDIENT SET name_key = 'ingredient.426' WHERE id = 426;
+UPDATE INGREDIENT SET name_key = 'ingredient.427' WHERE id = 427;
+UPDATE INGREDIENT SET name_key = 'ingredient.428' WHERE id = 428;
+UPDATE INGREDIENT SET name_key = 'ingredient.429' WHERE id = 429;
+UPDATE INGREDIENT SET name_key = 'ingredient.430' WHERE id = 430;
+UPDATE INGREDIENT SET name_key = 'ingredient.431' WHERE id = 431;
+UPDATE INGREDIENT SET name_key = 'ingredient.432' WHERE id = 432;
+UPDATE INGREDIENT SET name_key = 'ingredient.433' WHERE id = 433;
+UPDATE INGREDIENT SET name_key = 'ingredient.434' WHERE id = 434;
+UPDATE INGREDIENT SET name_key = 'ingredient.435' WHERE id = 435;
+UPDATE INGREDIENT SET name_key = 'ingredient.436' WHERE id = 436;
+UPDATE INGREDIENT SET name_key = 'ingredient.437' WHERE id = 437;
+UPDATE INGREDIENT SET name_key = 'ingredient.438' WHERE id = 438;
+UPDATE INGREDIENT SET name_key = 'ingredient.439' WHERE id = 439;
+UPDATE INGREDIENT SET name_key = 'ingredient.440' WHERE id = 440;
+UPDATE INGREDIENT SET name_key = 'ingredient.441' WHERE id = 441;
+UPDATE INGREDIENT SET name_key = 'ingredient.442' WHERE id = 442;
+UPDATE INGREDIENT SET name_key = 'ingredient.443' WHERE id = 443;
+UPDATE INGREDIENT SET name_key = 'ingredient.444' WHERE id = 444;
+UPDATE INGREDIENT SET name_key = 'ingredient.445' WHERE id = 445;
+UPDATE INGREDIENT SET name_key = 'ingredient.446' WHERE id = 446;
+UPDATE INGREDIENT SET name_key = 'ingredient.447' WHERE id = 447;
+UPDATE INGREDIENT SET name_key = 'ingredient.448' WHERE id = 448;
+UPDATE INGREDIENT SET name_key = 'ingredient.449' WHERE id = 449;
+UPDATE INGREDIENT SET name_key = 'ingredient.450' WHERE id = 450;
+UPDATE INGREDIENT SET name_key = 'ingredient.451' WHERE id = 451;
+UPDATE INGREDIENT SET name_key = 'ingredient.452' WHERE id = 452;
+UPDATE INGREDIENT SET name_key = 'ingredient.453' WHERE id = 453;
+UPDATE INGREDIENT SET name_key = 'ingredient.454' WHERE id = 454;
+UPDATE INGREDIENT SET name_key = 'ingredient.455' WHERE id = 455;
+UPDATE INGREDIENT SET name_key = 'ingredient.456' WHERE id = 456;
+UPDATE INGREDIENT SET name_key = 'ingredient.457' WHERE id = 457;
+UPDATE INGREDIENT SET name_key = 'ingredient.458' WHERE id = 458;
+UPDATE INGREDIENT SET name_key = 'ingredient.459' WHERE id = 459;
+UPDATE INGREDIENT SET name_key = 'ingredient.460' WHERE id = 460;
+UPDATE INGREDIENT SET name_key = 'ingredient.461' WHERE id = 461;
+UPDATE INGREDIENT SET name_key = 'ingredient.462' WHERE id = 462;
+UPDATE INGREDIENT SET name_key = 'ingredient.463' WHERE id = 463;
+UPDATE INGREDIENT SET name_key = 'ingredient.464' WHERE id = 464;
+UPDATE INGREDIENT SET name_key = 'ingredient.465' WHERE id = 465;
+UPDATE INGREDIENT SET name_key = 'ingredient.466' WHERE id = 466;
+UPDATE INGREDIENT SET name_key = 'ingredient.467' WHERE id = 467;
+UPDATE INGREDIENT SET name_key = 'ingredient.468' WHERE id = 468;
+UPDATE INGREDIENT SET name_key = 'ingredient.469' WHERE id = 469;
+UPDATE INGREDIENT SET name_key = 'ingredient.470' WHERE id = 470;
+UPDATE INGREDIENT SET name_key = 'ingredient.471' WHERE id = 471;
+UPDATE INGREDIENT SET name_key = 'ingredient.472' WHERE id = 472;
+UPDATE INGREDIENT SET name_key = 'ingredient.473' WHERE id = 473;
+UPDATE INGREDIENT SET name_key = 'ingredient.474' WHERE id = 474;
+UPDATE INGREDIENT SET name_key = 'ingredient.475' WHERE id = 475;
+UPDATE INGREDIENT SET name_key = 'ingredient.476' WHERE id = 476;
+UPDATE INGREDIENT SET name_key = 'ingredient.477' WHERE id = 477;
+UPDATE INGREDIENT SET name_key = 'ingredient.478' WHERE id = 478;
+UPDATE INGREDIENT SET name_key = 'ingredient.479' WHERE id = 479;
+UPDATE INGREDIENT SET name_key = 'ingredient.480' WHERE id = 480;
+UPDATE INGREDIENT SET name_key = 'ingredient.481' WHERE id = 481;
+UPDATE INGREDIENT SET name_key = 'ingredient.482' WHERE id = 482;
+UPDATE INGREDIENT SET name_key = 'ingredient.483' WHERE id = 483;
+UPDATE INGREDIENT SET name_key = 'ingredient.484' WHERE id = 484;
+UPDATE INGREDIENT SET name_key = 'ingredient.485' WHERE id = 485;
+UPDATE INGREDIENT SET name_key = 'ingredient.486' WHERE id = 486;
+UPDATE INGREDIENT SET name_key = 'ingredient.487' WHERE id = 487;
+UPDATE INGREDIENT SET name_key = 'ingredient.488' WHERE id = 488;
+UPDATE INGREDIENT SET name_key = 'ingredient.489' WHERE id = 489;
+UPDATE INGREDIENT SET name_key = 'ingredient.490' WHERE id = 490;
+UPDATE INGREDIENT SET name_key = 'ingredient.491' WHERE id = 491;
+UPDATE INGREDIENT SET name_key = 'ingredient.492' WHERE id = 492;
+UPDATE INGREDIENT SET name_key = 'ingredient.493' WHERE id = 493;
+UPDATE INGREDIENT SET name_key = 'ingredient.494' WHERE id = 494;
+UPDATE INGREDIENT SET name_key = 'ingredient.495' WHERE id = 495;
+UPDATE INGREDIENT SET name_key = 'ingredient.496' WHERE id = 496;
+UPDATE INGREDIENT SET name_key = 'ingredient.497' WHERE id = 497;
+UPDATE INGREDIENT SET name_key = 'ingredient.498' WHERE id = 498;
+UPDATE INGREDIENT SET name_key = 'ingredient.499' WHERE id = 499;
+UPDATE INGREDIENT SET name_key = 'ingredient.500' WHERE id = 500;
+UPDATE INGREDIENT SET name_key = 'ingredient.501' WHERE id = 501;
+UPDATE INGREDIENT SET name_key = 'ingredient.502' WHERE id = 502;
+UPDATE INGREDIENT SET name_key = 'ingredient.503' WHERE id = 503;
+UPDATE INGREDIENT SET name_key = 'ingredient.504' WHERE id = 504;
+UPDATE INGREDIENT SET name_key = 'ingredient.505' WHERE id = 505;
+UPDATE INGREDIENT SET name_key = 'ingredient.506' WHERE id = 506;
+UPDATE INGREDIENT SET name_key = 'ingredient.507' WHERE id = 507;
+UPDATE INGREDIENT SET name_key = 'ingredient.508' WHERE id = 508;
+UPDATE INGREDIENT SET name_key = 'ingredient.509' WHERE id = 509;
+UPDATE INGREDIENT SET name_key = 'ingredient.510' WHERE id = 510;
+UPDATE INGREDIENT SET name_key = 'ingredient.511' WHERE id = 511;
+UPDATE INGREDIENT SET name_key = 'ingredient.512' WHERE id = 512;
+UPDATE INGREDIENT SET name_key = 'ingredient.513' WHERE id = 513;
+UPDATE INGREDIENT SET name_key = 'ingredient.514' WHERE id = 514;
+UPDATE INGREDIENT SET name_key = 'ingredient.515' WHERE id = 515;
+UPDATE INGREDIENT SET name_key = 'ingredient.516' WHERE id = 516;
+UPDATE INGREDIENT SET name_key = 'ingredient.517' WHERE id = 517;
+UPDATE INGREDIENT SET name_key = 'ingredient.518' WHERE id = 518;
+UPDATE INGREDIENT SET name_key = 'ingredient.519' WHERE id = 519;
+UPDATE INGREDIENT SET name_key = 'ingredient.520' WHERE id = 520;
+UPDATE INGREDIENT SET name_key = 'ingredient.521' WHERE id = 521;
+UPDATE INGREDIENT SET name_key = 'ingredient.522' WHERE id = 522;
+UPDATE INGREDIENT SET name_key = 'ingredient.523' WHERE id = 523;
+UPDATE INGREDIENT SET name_key = 'ingredient.524' WHERE id = 524;
+UPDATE INGREDIENT SET name_key = 'ingredient.525' WHERE id = 525;
+UPDATE INGREDIENT SET name_key = 'ingredient.526' WHERE id = 526;
+UPDATE INGREDIENT SET name_key = 'ingredient.527' WHERE id = 527;
+UPDATE INGREDIENT SET name_key = 'ingredient.528' WHERE id = 528;
+UPDATE INGREDIENT SET name_key = 'ingredient.529' WHERE id = 529;
+UPDATE INGREDIENT SET name_key = 'ingredient.530' WHERE id = 530;
+UPDATE INGREDIENT SET name_key = 'ingredient.531' WHERE id = 531;
+UPDATE INGREDIENT SET name_key = 'ingredient.532' WHERE id = 532;
+UPDATE INGREDIENT SET name_key = 'ingredient.533' WHERE id = 533;
+UPDATE INGREDIENT SET name_key = 'ingredient.534' WHERE id = 534;
+UPDATE INGREDIENT SET name_key = 'ingredient.535' WHERE id = 535;
+UPDATE INGREDIENT SET name_key = 'ingredient.536' WHERE id = 536;
+UPDATE INGREDIENT SET name_key = 'ingredient.537' WHERE id = 537;
+UPDATE INGREDIENT SET name_key = 'ingredient.538' WHERE id = 538;
+UPDATE INGREDIENT SET name_key = 'ingredient.539' WHERE id = 539;
+UPDATE INGREDIENT SET name_key = 'ingredient.540' WHERE id = 540;
+UPDATE INGREDIENT SET name_key = 'ingredient.541' WHERE id = 541;
+UPDATE INGREDIENT SET name_key = 'ingredient.542' WHERE id = 542;
+UPDATE INGREDIENT SET name_key = 'ingredient.543' WHERE id = 543;
+UPDATE INGREDIENT SET name_key = 'ingredient.544' WHERE id = 544;
+UPDATE INGREDIENT SET name_key = 'ingredient.545' WHERE id = 545;
+UPDATE INGREDIENT SET name_key = 'ingredient.546' WHERE id = 546;
+UPDATE INGREDIENT SET name_key = 'ingredient.547' WHERE id = 547;
+UPDATE INGREDIENT SET name_key = 'ingredient.548' WHERE id = 548;
+UPDATE INGREDIENT SET name_key = 'ingredient.549' WHERE id = 549;
+UPDATE INGREDIENT SET name_key = 'ingredient.550' WHERE id = 550;
+UPDATE INGREDIENT SET name_key = 'ingredient.551' WHERE id = 551;
+UPDATE INGREDIENT SET name_key = 'ingredient.552' WHERE id = 552;
+UPDATE INGREDIENT SET name_key = 'ingredient.553' WHERE id = 553;
+UPDATE INGREDIENT SET name_key = 'ingredient.554' WHERE id = 554;
+UPDATE INGREDIENT SET name_key = 'ingredient.555' WHERE id = 555;
+UPDATE INGREDIENT SET name_key = 'ingredient.556' WHERE id = 556;
+UPDATE INGREDIENT SET name_key = 'ingredient.557' WHERE id = 557;
+UPDATE INGREDIENT SET name_key = 'ingredient.558' WHERE id = 558;
+UPDATE INGREDIENT SET name_key = 'ingredient.559' WHERE id = 559;
+UPDATE INGREDIENT SET name_key = 'ingredient.560' WHERE id = 560;
+UPDATE INGREDIENT SET name_key = 'ingredient.561' WHERE id = 561;
+UPDATE INGREDIENT SET name_key = 'ingredient.562' WHERE id = 562;
+UPDATE INGREDIENT SET name_key = 'ingredient.563' WHERE id = 563;
+UPDATE INGREDIENT SET name_key = 'ingredient.564' WHERE id = 564;
+UPDATE INGREDIENT SET name_key = 'ingredient.565' WHERE id = 565;
+UPDATE INGREDIENT SET name_key = 'ingredient.566' WHERE id = 566;
+UPDATE INGREDIENT SET name_key = 'ingredient.567' WHERE id = 567;
+UPDATE INGREDIENT SET name_key = 'ingredient.568' WHERE id = 568;
+UPDATE INGREDIENT SET name_key = 'ingredient.569' WHERE id = 569;
+UPDATE INGREDIENT SET name_key = 'ingredient.570' WHERE id = 570;
+UPDATE INGREDIENT SET name_key = 'ingredient.571' WHERE id = 571;
+UPDATE INGREDIENT SET name_key = 'ingredient.572' WHERE id = 572;
+UPDATE INGREDIENT SET name_key = 'ingredient.573' WHERE id = 573;
+UPDATE INGREDIENT SET name_key = 'ingredient.574' WHERE id = 574;
+UPDATE INGREDIENT SET name_key = 'ingredient.575' WHERE id = 575;
+UPDATE INGREDIENT SET name_key = 'ingredient.576' WHERE id = 576;
+UPDATE INGREDIENT SET name_key = 'ingredient.577' WHERE id = 577;
+UPDATE INGREDIENT SET name_key = 'ingredient.578' WHERE id = 578;
+UPDATE INGREDIENT SET name_key = 'ingredient.579' WHERE id = 579;
+UPDATE INGREDIENT SET name_key = 'ingredient.580' WHERE id = 580;
+UPDATE INGREDIENT SET name_key = 'ingredient.581' WHERE id = 581;
+UPDATE INGREDIENT SET name_key = 'ingredient.582' WHERE id = 582;
+UPDATE INGREDIENT SET name_key = 'ingredient.583' WHERE id = 583;
+UPDATE INGREDIENT SET name_key = 'ingredient.584' WHERE id = 584;
+UPDATE INGREDIENT SET name_key = 'ingredient.585' WHERE id = 585;
+UPDATE INGREDIENT SET name_key = 'ingredient.586' WHERE id = 586;
+UPDATE INGREDIENT SET name_key = 'ingredient.587' WHERE id = 587;
+UPDATE INGREDIENT SET name_key = 'ingredient.588' WHERE id = 588;
+UPDATE INGREDIENT SET name_key = 'ingredient.589' WHERE id = 589;
+UPDATE INGREDIENT SET name_key = 'ingredient.590' WHERE id = 590;
+UPDATE INGREDIENT SET name_key = 'ingredient.591' WHERE id = 591;
+UPDATE INGREDIENT SET name_key = 'ingredient.592' WHERE id = 592;
+UPDATE INGREDIENT SET name_key = 'ingredient.593' WHERE id = 593;
+UPDATE INGREDIENT SET name_key = 'ingredient.594' WHERE id = 594;
+UPDATE INGREDIENT SET name_key = 'ingredient.595' WHERE id = 595;
+UPDATE INGREDIENT SET name_key = 'ingredient.596' WHERE id = 596;
+UPDATE INGREDIENT SET name_key = 'ingredient.597' WHERE id = 597;
+UPDATE INGREDIENT SET name_key = 'ingredient.598' WHERE id = 598;
+UPDATE INGREDIENT SET name_key = 'ingredient.599' WHERE id = 599;
+UPDATE INGREDIENT SET name_key = 'ingredient.600' WHERE id = 600;
+UPDATE INGREDIENT SET name_key = 'ingredient.601' WHERE id = 601;
+UPDATE INGREDIENT SET name_key = 'ingredient.602' WHERE id = 602;
+UPDATE INGREDIENT SET name_key = 'ingredient.603' WHERE id = 603;
+UPDATE INGREDIENT SET name_key = 'ingredient.604' WHERE id = 604;
+UPDATE INGREDIENT SET name_key = 'ingredient.605' WHERE id = 605;
+UPDATE INGREDIENT SET name_key = 'ingredient.606' WHERE id = 606;
+UPDATE INGREDIENT SET name_key = 'ingredient.607' WHERE id = 607;
+UPDATE INGREDIENT SET name_key = 'ingredient.608' WHERE id = 608;
+UPDATE INGREDIENT SET name_key = 'ingredient.609' WHERE id = 609;
+UPDATE INGREDIENT SET name_key = 'ingredient.610' WHERE id = 610;
+UPDATE INGREDIENT SET name_key = 'ingredient.611' WHERE id = 611;
+UPDATE INGREDIENT SET name_key = 'ingredient.612' WHERE id = 612;
+UPDATE INGREDIENT SET name_key = 'ingredient.613' WHERE id = 613;
+UPDATE INGREDIENT SET name_key = 'ingredient.614' WHERE id = 614;
+UPDATE INGREDIENT SET name_key = 'ingredient.615' WHERE id = 615;
+UPDATE INGREDIENT SET name_key = 'ingredient.616' WHERE id = 616;
+UPDATE INGREDIENT SET name_key = 'ingredient.617' WHERE id = 617;
+UPDATE INGREDIENT SET name_key = 'ingredient.618' WHERE id = 618;
+UPDATE INGREDIENT SET name_key = 'ingredient.619' WHERE id = 619;
+UPDATE INGREDIENT SET name_key = 'ingredient.620' WHERE id = 620;
+UPDATE INGREDIENT SET name_key = 'ingredient.621' WHERE id = 621;
+UPDATE INGREDIENT SET name_key = 'ingredient.622' WHERE id = 622;
+UPDATE INGREDIENT SET name_key = 'ingredient.623' WHERE id = 623;
+UPDATE INGREDIENT SET name_key = 'ingredient.624' WHERE id = 624;
+UPDATE INGREDIENT SET name_key = 'ingredient.625' WHERE id = 625;
+UPDATE INGREDIENT SET name_key = 'ingredient.626' WHERE id = 626;
+UPDATE INGREDIENT SET name_key = 'ingredient.627' WHERE id = 627;
+UPDATE INGREDIENT SET name_key = 'ingredient.628' WHERE id = 628;
+UPDATE INGREDIENT SET name_key = 'ingredient.629' WHERE id = 629;
+UPDATE INGREDIENT SET name_key = 'ingredient.630' WHERE id = 630;
+UPDATE INGREDIENT SET name_key = 'ingredient.631' WHERE id = 631;
+UPDATE INGREDIENT SET name_key = 'ingredient.632' WHERE id = 632;
+UPDATE INGREDIENT SET name_key = 'ingredient.633' WHERE id = 633;
+UPDATE INGREDIENT SET name_key = 'ingredient.634' WHERE id = 634;
+UPDATE INGREDIENT SET name_key = 'ingredient.635' WHERE id = 635;
+UPDATE INGREDIENT SET name_key = 'ingredient.636' WHERE id = 636;
+UPDATE INGREDIENT SET name_key = 'ingredient.637' WHERE id = 637;
+UPDATE INGREDIENT SET name_key = 'ingredient.638' WHERE id = 638;
+UPDATE INGREDIENT SET name_key = 'ingredient.639' WHERE id = 639;
+UPDATE INGREDIENT SET name_key = 'ingredient.640' WHERE id = 640;
+UPDATE INGREDIENT SET name_key = 'ingredient.641' WHERE id = 641;
+UPDATE INGREDIENT SET name_key = 'ingredient.642' WHERE id = 642;
+UPDATE INGREDIENT SET name_key = 'ingredient.643' WHERE id = 643;
+UPDATE INGREDIENT SET name_key = 'ingredient.644' WHERE id = 644;
+UPDATE INGREDIENT SET name_key = 'ingredient.645' WHERE id = 645;
+UPDATE INGREDIENT SET name_key = 'ingredient.646' WHERE id = 646;
+UPDATE INGREDIENT SET name_key = 'ingredient.647' WHERE id = 647;
+UPDATE INGREDIENT SET name_key = 'ingredient.648' WHERE id = 648;
+UPDATE INGREDIENT SET name_key = 'ingredient.649' WHERE id = 649;
+UPDATE INGREDIENT SET name_key = 'ingredient.650' WHERE id = 650;
+UPDATE INGREDIENT SET name_key = 'ingredient.651' WHERE id = 651;
+UPDATE INGREDIENT SET name_key = 'ingredient.652' WHERE id = 652;
+UPDATE INGREDIENT SET name_key = 'ingredient.653' WHERE id = 653;
+UPDATE INGREDIENT SET name_key = 'ingredient.654' WHERE id = 654;
+UPDATE INGREDIENT SET name_key = 'ingredient.655' WHERE id = 655;
+UPDATE INGREDIENT SET name_key = 'ingredient.656' WHERE id = 656;
+UPDATE INGREDIENT SET name_key = 'ingredient.657' WHERE id = 657;
+UPDATE INGREDIENT SET name_key = 'ingredient.658' WHERE id = 658;
+UPDATE INGREDIENT SET name_key = 'ingredient.659' WHERE id = 659;
+UPDATE INGREDIENT SET name_key = 'ingredient.660' WHERE id = 660;
+UPDATE INGREDIENT SET name_key = 'ingredient.661' WHERE id = 661;
+UPDATE INGREDIENT SET name_key = 'ingredient.662' WHERE id = 662;
+UPDATE INGREDIENT SET name_key = 'ingredient.663' WHERE id = 663;
+UPDATE INGREDIENT SET name_key = 'ingredient.664' WHERE id = 664;
+UPDATE INGREDIENT SET name_key = 'ingredient.665' WHERE id = 665;
+UPDATE INGREDIENT SET name_key = 'ingredient.666' WHERE id = 666;
+UPDATE INGREDIENT SET name_key = 'ingredient.667' WHERE id = 667;
+UPDATE INGREDIENT SET name_key = 'ingredient.668' WHERE id = 668;
+UPDATE INGREDIENT SET name_key = 'ingredient.669' WHERE id = 669;
+UPDATE INGREDIENT SET name_key = 'ingredient.670' WHERE id = 670;
+UPDATE INGREDIENT SET name_key = 'ingredient.671' WHERE id = 671;
+UPDATE INGREDIENT SET name_key = 'ingredient.672' WHERE id = 672;
+UPDATE INGREDIENT SET name_key = 'ingredient.673' WHERE id = 673;
+UPDATE INGREDIENT SET name_key = 'ingredient.674' WHERE id = 674;
+UPDATE INGREDIENT SET name_key = 'ingredient.675' WHERE id = 675;
+UPDATE INGREDIENT SET name_key = 'ingredient.676' WHERE id = 676;
+UPDATE INGREDIENT SET name_key = 'ingredient.677' WHERE id = 677;
+UPDATE INGREDIENT SET name_key = 'ingredient.678' WHERE id = 678;
+UPDATE INGREDIENT SET name_key = 'ingredient.679' WHERE id = 679;
+UPDATE INGREDIENT SET name_key = 'ingredient.680' WHERE id = 680;
+UPDATE INGREDIENT SET name_key = 'ingredient.681' WHERE id = 681;
+UPDATE INGREDIENT SET name_key = 'ingredient.682' WHERE id = 682;
+UPDATE INGREDIENT SET name_key = 'ingredient.683' WHERE id = 683;
+UPDATE INGREDIENT SET name_key = 'ingredient.684' WHERE id = 684;
+UPDATE INGREDIENT SET name_key = 'ingredient.685' WHERE id = 685;
+UPDATE INGREDIENT SET name_key = 'ingredient.686' WHERE id = 686;
+UPDATE INGREDIENT SET name_key = 'ingredient.687' WHERE id = 687;
+UPDATE INGREDIENT SET name_key = 'ingredient.688' WHERE id = 688;
+UPDATE INGREDIENT SET name_key = 'ingredient.689' WHERE id = 689;
+UPDATE INGREDIENT SET name_key = 'ingredient.690' WHERE id = 690;
+UPDATE INGREDIENT SET name_key = 'ingredient.691' WHERE id = 691;
+UPDATE INGREDIENT SET name_key = 'ingredient.692' WHERE id = 692;
+UPDATE INGREDIENT SET name_key = 'ingredient.693' WHERE id = 693;
+UPDATE INGREDIENT SET name_key = 'ingredient.694' WHERE id = 694;
+UPDATE INGREDIENT SET name_key = 'ingredient.695' WHERE id = 695;
+UPDATE INGREDIENT SET name_key = 'ingredient.696' WHERE id = 696;
+UPDATE INGREDIENT SET name_key = 'ingredient.697' WHERE id = 697;
+UPDATE INGREDIENT SET name_key = 'ingredient.698' WHERE id = 698;
+UPDATE INGREDIENT SET name_key = 'ingredient.699' WHERE id = 699;
+UPDATE INGREDIENT SET name_key = 'ingredient.700' WHERE id = 700;
+UPDATE INGREDIENT SET name_key = 'ingredient.701' WHERE id = 701;
+UPDATE INGREDIENT SET name_key = 'ingredient.702' WHERE id = 702;
+UPDATE INGREDIENT SET name_key = 'ingredient.703' WHERE id = 703;
+UPDATE INGREDIENT SET name_key = 'ingredient.704' WHERE id = 704;
+UPDATE INGREDIENT SET name_key = 'ingredient.705' WHERE id = 705;
+UPDATE INGREDIENT SET name_key = 'ingredient.706' WHERE id = 706;
+UPDATE INGREDIENT SET name_key = 'ingredient.707' WHERE id = 707;
+UPDATE INGREDIENT SET name_key = 'ingredient.708' WHERE id = 708;
+UPDATE INGREDIENT SET name_key = 'ingredient.709' WHERE id = 709;
+UPDATE INGREDIENT SET name_key = 'ingredient.710' WHERE id = 710;
+UPDATE INGREDIENT SET name_key = 'ingredient.711' WHERE id = 711;
+UPDATE INGREDIENT SET name_key = 'ingredient.712' WHERE id = 712;
+UPDATE INGREDIENT SET name_key = 'ingredient.713' WHERE id = 713;
+UPDATE INGREDIENT SET name_key = 'ingredient.714' WHERE id = 714;
+UPDATE INGREDIENT SET name_key = 'ingredient.715' WHERE id = 715;
+UPDATE INGREDIENT SET name_key = 'ingredient.716' WHERE id = 716;
+UPDATE INGREDIENT SET name_key = 'ingredient.717' WHERE id = 717;
+UPDATE INGREDIENT SET name_key = 'ingredient.718' WHERE id = 718;
+UPDATE INGREDIENT SET name_key = 'ingredient.719' WHERE id = 719;
+UPDATE INGREDIENT SET name_key = 'ingredient.720' WHERE id = 720;
+UPDATE INGREDIENT SET name_key = 'ingredient.721' WHERE id = 721;
+UPDATE INGREDIENT SET name_key = 'ingredient.722' WHERE id = 722;
+UPDATE INGREDIENT SET name_key = 'ingredient.723' WHERE id = 723;
+UPDATE INGREDIENT SET name_key = 'ingredient.724' WHERE id = 724;
+UPDATE INGREDIENT SET name_key = 'ingredient.725' WHERE id = 725;
+UPDATE INGREDIENT SET name_key = 'ingredient.726' WHERE id = 726;
+UPDATE INGREDIENT SET name_key = 'ingredient.727' WHERE id = 727;
+UPDATE INGREDIENT SET name_key = 'ingredient.728' WHERE id = 728;
+UPDATE INGREDIENT SET name_key = 'ingredient.729' WHERE id = 729;
+UPDATE INGREDIENT SET name_key = 'ingredient.730' WHERE id = 730;
+UPDATE INGREDIENT SET name_key = 'ingredient.731' WHERE id = 731;
+UPDATE INGREDIENT SET name_key = 'ingredient.732' WHERE id = 732;
+UPDATE INGREDIENT SET name_key = 'ingredient.733' WHERE id = 733;
+UPDATE INGREDIENT SET name_key = 'ingredient.734' WHERE id = 734;
+UPDATE INGREDIENT SET name_key = 'ingredient.735' WHERE id = 735;
+UPDATE INGREDIENT SET name_key = 'ingredient.736' WHERE id = 736;
+UPDATE INGREDIENT SET name_key = 'ingredient.737' WHERE id = 737;
+UPDATE INGREDIENT SET name_key = 'ingredient.738' WHERE id = 738;
+UPDATE INGREDIENT SET name_key = 'ingredient.739' WHERE id = 739;
+UPDATE INGREDIENT SET name_key = 'ingredient.740' WHERE id = 740;
+UPDATE INGREDIENT SET name_key = 'ingredient.741' WHERE id = 741;
+UPDATE INGREDIENT SET name_key = 'ingredient.742' WHERE id = 742;
+UPDATE INGREDIENT SET name_key = 'ingredient.743' WHERE id = 743;
+UPDATE INGREDIENT SET name_key = 'ingredient.744' WHERE id = 744;
+UPDATE INGREDIENT SET name_key = 'ingredient.745' WHERE id = 745;
+UPDATE INGREDIENT SET name_key = 'ingredient.746' WHERE id = 746;
+UPDATE INGREDIENT SET name_key = 'ingredient.747' WHERE id = 747;
+UPDATE INGREDIENT SET name_key = 'ingredient.748' WHERE id = 748;
+UPDATE INGREDIENT SET name_key = 'ingredient.749' WHERE id = 749;
+UPDATE INGREDIENT SET name_key = 'ingredient.750' WHERE id = 750;
+UPDATE INGREDIENT SET name_key = 'ingredient.751' WHERE id = 751;
+UPDATE INGREDIENT SET name_key = 'ingredient.752' WHERE id = 752;
+UPDATE INGREDIENT SET name_key = 'ingredient.753' WHERE id = 753;
+UPDATE INGREDIENT SET name_key = 'ingredient.754' WHERE id = 754;
+UPDATE INGREDIENT SET name_key = 'ingredient.755' WHERE id = 755;
+UPDATE INGREDIENT SET name_key = 'ingredient.756' WHERE id = 756;
+UPDATE INGREDIENT SET name_key = 'ingredient.757' WHERE id = 757;
+UPDATE INGREDIENT SET name_key = 'ingredient.758' WHERE id = 758;
+UPDATE INGREDIENT SET name_key = 'ingredient.759' WHERE id = 759;
+UPDATE INGREDIENT SET name_key = 'ingredient.760' WHERE id = 760;
+UPDATE INGREDIENT SET name_key = 'ingredient.761' WHERE id = 761;
+UPDATE INGREDIENT SET name_key = 'ingredient.762' WHERE id = 762;
+UPDATE INGREDIENT SET name_key = 'ingredient.763' WHERE id = 763;
+UPDATE INGREDIENT SET name_key = 'ingredient.764' WHERE id = 764;
+UPDATE INGREDIENT SET name_key = 'ingredient.765' WHERE id = 765;
+UPDATE INGREDIENT SET name_key = 'ingredient.766' WHERE id = 766;
+UPDATE INGREDIENT SET name_key = 'ingredient.767' WHERE id = 767;
+UPDATE INGREDIENT SET name_key = 'ingredient.768' WHERE id = 768;
+UPDATE INGREDIENT SET name_key = 'ingredient.769' WHERE id = 769;
+UPDATE INGREDIENT SET name_key = 'ingredient.770' WHERE id = 770;
+UPDATE INGREDIENT SET name_key = 'ingredient.771' WHERE id = 771;
+UPDATE INGREDIENT SET name_key = 'ingredient.772' WHERE id = 772;
+UPDATE INGREDIENT SET name_key = 'ingredient.773' WHERE id = 773;
+UPDATE INGREDIENT SET name_key = 'ingredient.774' WHERE id = 774;
+UPDATE INGREDIENT SET name_key = 'ingredient.775' WHERE id = 775;
+UPDATE INGREDIENT SET name_key = 'ingredient.776' WHERE id = 776;
+UPDATE INGREDIENT SET name_key = 'ingredient.777' WHERE id = 777;
+UPDATE INGREDIENT SET name_key = 'ingredient.778' WHERE id = 778;
+UPDATE INGREDIENT SET name_key = 'ingredient.779' WHERE id = 779;
+UPDATE INGREDIENT SET name_key = 'ingredient.780' WHERE id = 780;
+UPDATE INGREDIENT SET name_key = 'ingredient.781' WHERE id = 781;
+UPDATE INGREDIENT SET name_key = 'ingredient.782' WHERE id = 782;
+UPDATE INGREDIENT SET name_key = 'ingredient.783' WHERE id = 783;
+UPDATE INGREDIENT SET name_key = 'ingredient.784' WHERE id = 784;
+UPDATE INGREDIENT SET name_key = 'ingredient.785' WHERE id = 785;
+UPDATE INGREDIENT SET name_key = 'ingredient.786' WHERE id = 786;
+UPDATE INGREDIENT SET name_key = 'ingredient.787' WHERE id = 787;
+UPDATE INGREDIENT SET name_key = 'ingredient.788' WHERE id = 788;
+UPDATE INGREDIENT SET name_key = 'ingredient.789' WHERE id = 789;
+UPDATE INGREDIENT SET name_key = 'ingredient.790' WHERE id = 790;
+UPDATE INGREDIENT SET name_key = 'ingredient.791' WHERE id = 791;
+UPDATE INGREDIENT SET name_key = 'ingredient.792' WHERE id = 792;
+UPDATE INGREDIENT SET name_key = 'ingredient.793' WHERE id = 793;
+UPDATE INGREDIENT SET name_key = 'ingredient.794' WHERE id = 794;
+UPDATE INGREDIENT SET name_key = 'ingredient.795' WHERE id = 795;
+UPDATE INGREDIENT SET name_key = 'ingredient.796' WHERE id = 796;
+UPDATE INGREDIENT SET name_key = 'ingredient.797' WHERE id = 797;
+UPDATE INGREDIENT SET name_key = 'ingredient.798' WHERE id = 798;
+UPDATE INGREDIENT SET name_key = 'ingredient.799' WHERE id = 799;
+UPDATE INGREDIENT SET name_key = 'ingredient.800' WHERE id = 800;
+UPDATE INGREDIENT SET name_key = 'ingredient.801' WHERE id = 801;
+UPDATE INGREDIENT SET name_key = 'ingredient.802' WHERE id = 802;
+UPDATE INGREDIENT SET name_key = 'ingredient.803' WHERE id = 803;
+UPDATE INGREDIENT SET name_key = 'ingredient.804' WHERE id = 804;
+UPDATE INGREDIENT SET name_key = 'ingredient.805' WHERE id = 805;
+UPDATE INGREDIENT SET name_key = 'ingredient.806' WHERE id = 806;
+UPDATE INGREDIENT SET name_key = 'ingredient.807' WHERE id = 807;
+UPDATE INGREDIENT SET name_key = 'ingredient.808' WHERE id = 808;
+UPDATE INGREDIENT SET name_key = 'ingredient.809' WHERE id = 809;
+UPDATE INGREDIENT SET name_key = 'ingredient.810' WHERE id = 810;
+UPDATE INGREDIENT SET name_key = 'ingredient.811' WHERE id = 811;
+UPDATE INGREDIENT SET name_key = 'ingredient.812' WHERE id = 812;
+UPDATE INGREDIENT SET name_key = 'ingredient.813' WHERE id = 813;
+UPDATE INGREDIENT SET name_key = 'ingredient.814' WHERE id = 814;
+UPDATE INGREDIENT SET name_key = 'ingredient.815' WHERE id = 815;
+UPDATE INGREDIENT SET name_key = 'ingredient.816' WHERE id = 816;
+UPDATE INGREDIENT SET name_key = 'ingredient.817' WHERE id = 817;
+UPDATE INGREDIENT SET name_key = 'ingredient.818' WHERE id = 818;
+UPDATE INGREDIENT SET name_key = 'ingredient.819' WHERE id = 819;
+UPDATE INGREDIENT SET name_key = 'ingredient.820' WHERE id = 820;
+UPDATE INGREDIENT SET name_key = 'ingredient.821' WHERE id = 821;
+UPDATE INGREDIENT SET name_key = 'ingredient.822' WHERE id = 822;
+UPDATE INGREDIENT SET name_key = 'ingredient.823' WHERE id = 823;
+UPDATE INGREDIENT SET name_key = 'ingredient.824' WHERE id = 824;
+UPDATE INGREDIENT SET name_key = 'ingredient.825' WHERE id = 825;
+UPDATE INGREDIENT SET name_key = 'ingredient.826' WHERE id = 826;
+UPDATE INGREDIENT SET name_key = 'ingredient.827' WHERE id = 827;
+UPDATE INGREDIENT SET name_key = 'ingredient.828' WHERE id = 828;
+UPDATE INGREDIENT SET name_key = 'ingredient.829' WHERE id = 829;
+UPDATE INGREDIENT SET name_key = 'ingredient.830' WHERE id = 830;
+UPDATE INGREDIENT SET name_key = 'ingredient.831' WHERE id = 831;
+UPDATE INGREDIENT SET name_key = 'ingredient.832' WHERE id = 832;
+UPDATE INGREDIENT SET name_key = 'ingredient.833' WHERE id = 833;
+UPDATE INGREDIENT SET name_key = 'ingredient.834' WHERE id = 834;
+UPDATE INGREDIENT SET name_key = 'ingredient.835' WHERE id = 835;
+UPDATE INGREDIENT SET name_key = 'ingredient.836' WHERE id = 836;
+UPDATE INGREDIENT SET name_key = 'ingredient.837' WHERE id = 837;
+UPDATE INGREDIENT SET name_key = 'ingredient.838' WHERE id = 838;
+UPDATE INGREDIENT SET name_key = 'ingredient.839' WHERE id = 839;
+UPDATE INGREDIENT SET name_key = 'ingredient.840' WHERE id = 840;
+UPDATE INGREDIENT SET name_key = 'ingredient.841' WHERE id = 841;
+UPDATE INGREDIENT SET name_key = 'ingredient.842' WHERE id = 842;
+UPDATE INGREDIENT SET name_key = 'ingredient.843' WHERE id = 843;
+UPDATE INGREDIENT SET name_key = 'ingredient.844' WHERE id = 844;
+UPDATE INGREDIENT SET name_key = 'ingredient.845' WHERE id = 845;
+UPDATE INGREDIENT SET name_key = 'ingredient.846' WHERE id = 846;
+UPDATE INGREDIENT SET name_key = 'ingredient.847' WHERE id = 847;
+UPDATE INGREDIENT SET name_key = 'ingredient.848' WHERE id = 848;
+UPDATE INGREDIENT SET name_key = 'ingredient.849' WHERE id = 849;
+UPDATE INGREDIENT SET name_key = 'ingredient.850' WHERE id = 850;
+UPDATE INGREDIENT SET name_key = 'ingredient.851' WHERE id = 851;
+UPDATE INGREDIENT SET name_key = 'ingredient.852' WHERE id = 852;
+UPDATE INGREDIENT SET name_key = 'ingredient.853' WHERE id = 853;
+UPDATE INGREDIENT SET name_key = 'ingredient.854' WHERE id = 854;
+UPDATE INGREDIENT SET name_key = 'ingredient.855' WHERE id = 855;
+UPDATE INGREDIENT SET name_key = 'ingredient.856' WHERE id = 856;
+UPDATE INGREDIENT SET name_key = 'ingredient.857' WHERE id = 857;
+UPDATE INGREDIENT SET name_key = 'ingredient.858' WHERE id = 858;
+UPDATE INGREDIENT SET name_key = 'ingredient.859' WHERE id = 859;
+UPDATE INGREDIENT SET name_key = 'ingredient.860' WHERE id = 860;
+UPDATE INGREDIENT SET name_key = 'ingredient.861' WHERE id = 861;
+UPDATE INGREDIENT SET name_key = 'ingredient.862' WHERE id = 862;
+UPDATE INGREDIENT SET name_key = 'ingredient.863' WHERE id = 863;
+UPDATE INGREDIENT SET name_key = 'ingredient.864' WHERE id = 864;
+UPDATE INGREDIENT SET name_key = 'ingredient.865' WHERE id = 865;
+UPDATE INGREDIENT SET name_key = 'ingredient.866' WHERE id = 866;
+UPDATE INGREDIENT SET name_key = 'ingredient.867' WHERE id = 867;
+UPDATE INGREDIENT SET name_key = 'ingredient.868' WHERE id = 868;
+UPDATE INGREDIENT SET name_key = 'ingredient.869' WHERE id = 869;
+UPDATE INGREDIENT SET name_key = 'ingredient.870' WHERE id = 870;
+UPDATE INGREDIENT SET name_key = 'ingredient.871' WHERE id = 871;
+UPDATE INGREDIENT SET name_key = 'ingredient.872' WHERE id = 872;
+UPDATE INGREDIENT SET name_key = 'ingredient.873' WHERE id = 873;
+UPDATE INGREDIENT SET name_key = 'ingredient.874' WHERE id = 874;
+UPDATE INGREDIENT SET name_key = 'ingredient.875' WHERE id = 875;
+UPDATE INGREDIENT SET name_key = 'ingredient.876' WHERE id = 876;
+UPDATE INGREDIENT SET name_key = 'ingredient.877' WHERE id = 877;
+UPDATE INGREDIENT SET name_key = 'ingredient.878' WHERE id = 878;
+UPDATE INGREDIENT SET name_key = 'ingredient.879' WHERE id = 879;
+UPDATE INGREDIENT SET name_key = 'ingredient.880' WHERE id = 880;
+UPDATE INGREDIENT SET name_key = 'ingredient.881' WHERE id = 881;
+UPDATE INGREDIENT SET name_key = 'ingredient.882' WHERE id = 882;
+UPDATE INGREDIENT SET name_key = 'ingredient.883' WHERE id = 883;
+UPDATE INGREDIENT SET name_key = 'ingredient.884' WHERE id = 884;
+UPDATE INGREDIENT SET name_key = 'ingredient.885' WHERE id = 885;
+UPDATE INGREDIENT SET name_key = 'ingredient.886' WHERE id = 886;
+UPDATE INGREDIENT SET name_key = 'ingredient.887' WHERE id = 887;
+UPDATE INGREDIENT SET name_key = 'ingredient.888' WHERE id = 888;
+UPDATE INGREDIENT SET name_key = 'ingredient.889' WHERE id = 889;
+UPDATE INGREDIENT SET name_key = 'ingredient.890' WHERE id = 890;
+UPDATE INGREDIENT SET name_key = 'ingredient.891' WHERE id = 891;
+UPDATE INGREDIENT SET name_key = 'ingredient.892' WHERE id = 892;
+UPDATE INGREDIENT SET name_key = 'ingredient.893' WHERE id = 893;
+UPDATE INGREDIENT SET name_key = 'ingredient.894' WHERE id = 894;
+UPDATE INGREDIENT SET name_key = 'ingredient.895' WHERE id = 895;
+UPDATE INGREDIENT SET name_key = 'ingredient.896' WHERE id = 896;
+UPDATE INGREDIENT SET name_key = 'ingredient.897' WHERE id = 897;
+UPDATE INGREDIENT SET name_key = 'ingredient.898' WHERE id = 898;
+UPDATE INGREDIENT SET name_key = 'ingredient.899' WHERE id = 899;
+UPDATE INGREDIENT SET name_key = 'ingredient.900' WHERE id = 900;
+UPDATE INGREDIENT SET name_key = 'ingredient.901' WHERE id = 901;
+UPDATE INGREDIENT SET name_key = 'ingredient.902' WHERE id = 902;
+UPDATE INGREDIENT SET name_key = 'ingredient.903' WHERE id = 903;
+UPDATE INGREDIENT SET name_key = 'ingredient.904' WHERE id = 904;
+UPDATE INGREDIENT SET name_key = 'ingredient.905' WHERE id = 905;
+UPDATE INGREDIENT SET name_key = 'ingredient.906' WHERE id = 906;
+UPDATE INGREDIENT SET name_key = 'ingredient.907' WHERE id = 907;
+UPDATE INGREDIENT SET name_key = 'ingredient.908' WHERE id = 908;
+UPDATE INGREDIENT SET name_key = 'ingredient.909' WHERE id = 909;
+UPDATE INGREDIENT SET name_key = 'ingredient.910' WHERE id = 910;
+UPDATE INGREDIENT SET name_key = 'ingredient.911' WHERE id = 911;
+UPDATE INGREDIENT SET name_key = 'ingredient.912' WHERE id = 912;
+UPDATE INGREDIENT SET name_key = 'ingredient.913' WHERE id = 913;
+UPDATE INGREDIENT SET name_key = 'ingredient.914' WHERE id = 914;
+UPDATE INGREDIENT SET name_key = 'ingredient.915' WHERE id = 915;
+UPDATE INGREDIENT SET name_key = 'ingredient.916' WHERE id = 916;
+UPDATE INGREDIENT SET name_key = 'ingredient.917' WHERE id = 917;
+UPDATE INGREDIENT SET name_key = 'ingredient.918' WHERE id = 918;
+UPDATE INGREDIENT SET name_key = 'ingredient.919' WHERE id = 919;
+UPDATE INGREDIENT SET name_key = 'ingredient.920' WHERE id = 920;
+UPDATE INGREDIENT SET name_key = 'ingredient.921' WHERE id = 921;
+UPDATE INGREDIENT SET name_key = 'ingredient.922' WHERE id = 922;
+UPDATE INGREDIENT SET name_key = 'ingredient.923' WHERE id = 923;
+UPDATE INGREDIENT SET name_key = 'ingredient.924' WHERE id = 924;
+UPDATE INGREDIENT SET name_key = 'ingredient.925' WHERE id = 925;
+UPDATE INGREDIENT SET name_key = 'ingredient.926' WHERE id = 926;
+UPDATE INGREDIENT SET name_key = 'ingredient.927' WHERE id = 927;
+UPDATE INGREDIENT SET name_key = 'ingredient.928' WHERE id = 928;
+UPDATE INGREDIENT SET name_key = 'ingredient.929' WHERE id = 929;
+UPDATE INGREDIENT SET name_key = 'ingredient.930' WHERE id = 930;
+UPDATE INGREDIENT SET name_key = 'ingredient.931' WHERE id = 931;
+UPDATE INGREDIENT SET name_key = 'ingredient.932' WHERE id = 932;
+UPDATE INGREDIENT SET name_key = 'ingredient.933' WHERE id = 933;
+UPDATE INGREDIENT SET name_key = 'ingredient.934' WHERE id = 934;
+UPDATE INGREDIENT SET name_key = 'ingredient.935' WHERE id = 935;
+UPDATE INGREDIENT SET name_key = 'ingredient.936' WHERE id = 936;
+UPDATE INGREDIENT SET name_key = 'ingredient.937' WHERE id = 937;
+UPDATE INGREDIENT SET name_key = 'ingredient.938' WHERE id = 938;
+UPDATE INGREDIENT SET name_key = 'ingredient.939' WHERE id = 939;
+UPDATE INGREDIENT SET name_key = 'ingredient.940' WHERE id = 940;
+UPDATE INGREDIENT SET name_key = 'ingredient.941' WHERE id = 941;
+UPDATE INGREDIENT SET name_key = 'ingredient.942' WHERE id = 942;
+UPDATE INGREDIENT SET name_key = 'ingredient.943' WHERE id = 943;
+UPDATE INGREDIENT SET name_key = 'ingredient.944' WHERE id = 944;
+UPDATE INGREDIENT SET name_key = 'ingredient.945' WHERE id = 945;
+UPDATE INGREDIENT SET name_key = 'ingredient.946' WHERE id = 946;
+UPDATE INGREDIENT SET name_key = 'ingredient.947' WHERE id = 947;
+UPDATE INGREDIENT SET name_key = 'ingredient.948' WHERE id = 948;
+UPDATE INGREDIENT SET name_key = 'ingredient.949' WHERE id = 949;
+UPDATE INGREDIENT SET name_key = 'ingredient.950' WHERE id = 950;
+UPDATE INGREDIENT SET name_key = 'ingredient.951' WHERE id = 951;
+UPDATE INGREDIENT SET name_key = 'ingredient.952' WHERE id = 952;
+UPDATE INGREDIENT SET name_key = 'ingredient.953' WHERE id = 953;
+UPDATE INGREDIENT SET name_key = 'ingredient.954' WHERE id = 954;
+UPDATE INGREDIENT SET name_key = 'ingredient.955' WHERE id = 955;
+UPDATE INGREDIENT SET name_key = 'ingredient.956' WHERE id = 956;
+UPDATE INGREDIENT SET name_key = 'ingredient.957' WHERE id = 957;
+UPDATE INGREDIENT SET name_key = 'ingredient.958' WHERE id = 958;
+UPDATE INGREDIENT SET name_key = 'ingredient.959' WHERE id = 959;
+UPDATE INGREDIENT SET name_key = 'ingredient.960' WHERE id = 960;
+UPDATE INGREDIENT SET name_key = 'ingredient.961' WHERE id = 961;
+UPDATE INGREDIENT SET name_key = 'ingredient.962' WHERE id = 962;
+UPDATE INGREDIENT SET name_key = 'ingredient.963' WHERE id = 963;
+UPDATE INGREDIENT SET name_key = 'ingredient.964' WHERE id = 964;
+UPDATE INGREDIENT SET name_key = 'ingredient.965' WHERE id = 965;
+UPDATE INGREDIENT SET name_key = 'ingredient.966' WHERE id = 966;
+UPDATE INGREDIENT SET name_key = 'ingredient.967' WHERE id = 967;
+
+ALTER TABLE ALLERGENIC RENAME COLUMN name to name_key;
+
+UPDATE ALLERGENIC SET name_key = 'allergenic.1' WHERE id = 1;
+UPDATE ALLERGENIC SET name_key = 'allergenic.2' WHERE id = 2;
+UPDATE ALLERGENIC SET name_key = 'allergenic.3' WHERE id = 3;
+UPDATE ALLERGENIC SET name_key = 'allergenic.4' WHERE id = 4;
+UPDATE ALLERGENIC SET name_key = 'allergenic.5' WHERE id = 5;
+UPDATE ALLERGENIC SET name_key = 'allergenic.6' WHERE id = 6;
+UPDATE ALLERGENIC SET name_key = 'allergenic.7' WHERE id = 7;
+UPDATE ALLERGENIC SET name_key = 'allergenic.8' WHERE id = 8;
+UPDATE ALLERGENIC SET name_key = 'allergenic.9' WHERE id = 9;
+UPDATE ALLERGENIC SET name_key = 'allergenic.10' WHERE id = 10;
+UPDATE ALLERGENIC SET name_key = 'allergenic.11' WHERE id = 11;
+UPDATE ALLERGENIC SET name_key = 'allergenic.12' WHERE id = 12;
+UPDATE ALLERGENIC SET name_key = 'allergenic.13' WHERE id = 13;
+UPDATE ALLERGENIC SET name_key = 'allergenic.14' WHERE id = 14;
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.1', database_date = '2025-04-14', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+-- END SQL STATEMENTS DATE --> 14/04/2025
