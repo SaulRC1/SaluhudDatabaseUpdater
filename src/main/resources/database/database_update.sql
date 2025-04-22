@@ -4029,3 +4029,52 @@ UPDATE ALLERGENIC SET name_key = 'allergenic.14' WHERE id = 14;
 
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.1', database_date = '2025-04-14', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 -- END SQL STATEMENTS DATE --> 14/04/2025
+
+-- START SQL STATEMENTS DATE --> 23/04/2025
+
+ALTER TABLE RECIPE ADD COLUMN image_source TEXT NOT NULL DEFAULT '';
+
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/batidos-de-frutas.jpg' WHERE id = 1;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/berenjenas-rellenas.jpg' WHERE id = 2;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/bizcocho-de-almendras.jpg' WHERE id = 3;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/bizcocho-de-yogur.jpg' WHERE id = 4;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/bombas-de-patata-con-carne.jpg' WHERE id = 5;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/brazo-de-gitano-salado.jpg' WHERE id = 6;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/calabacines-rellenos-de-tortilla.jpg' WHERE id = 7;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/canelones-de-pollo-asado.jpg' WHERE id = 8;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/crepes-rellenos.jpg' WHERE id = 9;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/croquetas-de-pescado.jpg' WHERE id = 10;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/ensalada-de-arroz.jpg' WHERE id = 11;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/ensalada-de-legumbres.jpg' WHERE id = 12;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/ensalada-de-pasta.jpg' WHERE id = 13;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/ensaladilla-rusa.jpg' WHERE id = 14;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/espaguettis-barbacoa.jpg' WHERE id = 15;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/fajitas-de-ternera.jpg' WHERE id = 16;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/fajitas-verduras.jpg' WHERE id = 17;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/fondos-y-adornos/imagen-recetas.jpg' WHERE id = 18;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/hummus.jpg' WHERE id = 19;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/lasana-verduras-y-carne.jpg' WHERE id = 20;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/lenguado-al-cava.jpg' WHERE id = 21;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/macedonia-de-frutas.jpg' WHERE id = 22;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/merengue-al-horno-con-frutas.jpg' WHERE id = 23;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/migas-con-carne.jpg' WHERE id = 24;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/mousse-de-limon.jpg' WHERE id = 25;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/nuggets-con-ensalada.jpg' WHERE id = 26;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/pasta-con-verduras.jpg' WHERE id = 27;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/pastel-de-platano-maduro.jpg' WHERE id = 28;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/pasteles-de-pinones.jpg' WHERE id = 29;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/patapizza_dscf8037.jpg' WHERE id = 30;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/pate-de-queso-azul.jpg' WHERE id = 31;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/pechuga-a-las-uvas.jpg' WHERE id = 32;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/pisto-con-huevo.jpg' WHERE id = 33;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/pollo-a-la-cerveza.jpg' WHERE id = 34;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/quiche-de-verduras.jpg' WHERE id = 35;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/ropa-vieja.jpg' WHERE id = 36;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/salpicon-de-pescados-y-mariscos.jpg' WHERE id = 37;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/salteado-de-verduras-con-arroz.jpg' WHERE id = 38;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/sopa-castellana.jpg' WHERE id = 39;
+UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/contenido/conoce-lo-que-comes/aprovecha-los-alimentos/imagenes-recetas/tortillitas-de-gambas.jpg' WHERE id = 40;
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.2', database_date = '2025-04-23', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- END SQL STATEMENTS DATE --> 23/04/2025
