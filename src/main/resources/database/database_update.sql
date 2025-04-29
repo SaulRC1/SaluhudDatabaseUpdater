@@ -4075,3 +4075,26 @@ UPDATE RECIPE SET image_source = 'https://www.alimentosdespana.es/dam/ade/conten
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.2', database_date = '2025-04-23', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 
 -- END SQL STATEMENTS DATE --> 23/04/2025
+
+-- START SQL STATEMENTS DATE --> 29/04/2025
+CREATE INDEX idx_recipe_name ON recipe(name_key);
+CREATE INDEX idx_ingredient_kcal ON ingredient(kilocalories);
+CREATE INDEX idx_ingredient_protein ON ingredient(protein_amount);
+CREATE INDEX idx_ingredient_carbs ON ingredient(carbohydrates_amount);
+CREATE INDEX idx_ingredient_fat ON ingredient(fat_amount);
+CREATE INDEX idx_elaboration_step_number ON recipe_elaboration_step(step_number);
+CREATE INDEX idx_recipe_ingredient_recipe ON recipe_ingredient(id_recipe);
+CREATE INDEX idx_recipe_ingredient_ingredient ON recipe_ingredient(id_ingredient);
+CREATE INDEX idx_recipe_allergenic_recipe ON recipe_allergenic(id_recipe);
+CREATE INDEX idx_recipe_allergenic_allergenic ON recipe_allergenic(id_allergenic);
+CREATE INDEX idx_fitness_data_sex ON saluhud_user_fitness_data(biological_sex);
+CREATE INDEX idx_fitness_data_age ON saluhud_user_fitness_data(age);
+CREATE INDEX idx_fitness_data_composition ON saluhud_user_fitness_data(body_composition);
+CREATE INDEX idx_fitness_data_kcal ON saluhud_user_fitness_data(daily_kilocalories_objective);
+CREATE INDEX idx_fitness_data_steps ON saluhud_user_fitness_data(recommended_daily_steps);
+CREATE INDEX idx_saluhud_user_name ON saluhud_user(name);
+CREATE INDEX idx_saluhud_user_surname ON saluhud_user(surname);
+CREATE INDEX idx_user_fitness_data_fk ON saluhud_user(id_user_fitness_data);
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.3', database_date = '2025-04-29', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+-- END SQL STATEMENTS DATE --> 29/04/2025
