@@ -4098,3 +4098,21 @@ CREATE INDEX idx_user_fitness_data_fk ON saluhud_user(id_user_fitness_data);
 
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.3', database_date = '2025-04-29', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 -- END SQL STATEMENTS DATE --> 29/04/2025
+
+-- START SQL STATEMENTS DATE --> 02/05/2025
+
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ADD COLUMN lean_body_mass_percentage REAL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ADD COLUMN body_fat_percentage REAL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ADD COLUMN body_fat_weight REAL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ADD COLUMN lean_body_mass_weight REAL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ADD COLUMN activity_factor REAL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ALTER COLUMN body_mass_index TYPE REAL USING body_mass_index::REAL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA DROP COLUMN body_composition;
+
+UPDATE SALUHUD_USER SET surname = 'Test' WHERE username = 'user_test_1';
+UPDATE SALUHUD_USER SET surname = 'Test' WHERE username = 'user_test_2';
+UPDATE SALUHUD_USER SET surname = 'Test' WHERE username = 'user_test_3';
+UPDATE SALUHUD_USER SET surname = 'Test' WHERE username = 'user_test_4';
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.3.4', database_date = '2025-05-02', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+-- END SQL STATEMENTS DATE --> 02/05/2025
