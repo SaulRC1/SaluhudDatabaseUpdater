@@ -87,4 +87,18 @@ public class SaluhudDatabaseInformation
     {
         databaseUpdateLoggers.add(logger);
     }
+
+    @Override
+    public String toString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.append("SaluhudDatabaseInformation{");
+        sb.append("databaseCurrentVersion=").append(databaseCurrentVersion);
+        sb.append(", databaseLastVersionDate=").append(databaseLastVersionDate);
+        sb.append(", databaseVersionAfterUpdate=").append(databaseVersionAfterUpdate);
+        sb.append(", databaseNewVersionDate=").append(databaseNewVersionDate);
+        sb.append(", saluhudDatabaseUpdaterVersion=").append(saluhudDatabaseUpdaterVersion);
+        sb.append('}');
+        return sb.toString();
+    }
 }
