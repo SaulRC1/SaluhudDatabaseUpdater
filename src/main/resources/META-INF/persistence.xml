@@ -20,12 +20,6 @@
             <property name="jakarta.persistence.jdbc.url"
                       value="jdbc:postgresql://localhost:5432/saluhud" />
 
-            <property name="jakarta.persistence.jdbc.user"
-                      value="postgres" />
-
-            <property name="jakarta.persistence.jdbc.password"
-                      value="admin" />
-
             <property name="hibernate.show_sql"
                       value="false" />
 

@@ -21,6 +21,12 @@ public class SaluhudDatabaseUpdaterHibernateBootstrapper
     {
         this.persistenceUnitName = persistenceUnitName;
         this.persistenceUnitProperties = new HashMap();
+        
+        String dbUser = System.getenv("SALUHUD_DB_SUPER_USER");
+        String dbPassword = System.getenv("SALUHUD_DB_SUPER_USER_PASSWORD");
+
+        this.persistenceUnitProperties.put("jakarta.persistence.jdbc.user", dbUser);
+        this.persistenceUnitProperties.put("jakarta.persistence.jdbc.password", dbPassword);
     }
 
     public SaluhudDatabaseUpdaterHibernateBootstrapper(String persistenceUnitName, Map persistenceUnitProperties)
