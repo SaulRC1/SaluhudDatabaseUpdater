@@ -4160,104 +4160,104 @@ INSERT INTO MENU (id, name, user_id, favourite) VALUES (1, 'Menu 1', (SELECT id 
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (1, 1, 'MONDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (1, 3, '09:00', '09:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (1, 8, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (1, 1, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (1, 11, '22:00', '23:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (1, 1, 3, '09:00', '09:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (2, 1, 8, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (3, 1, 1, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (4, 1, 11, '22:00', '23:00');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (2, 1, 'TUESDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (2, 9, '08:00', '08:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (2, 21, '15:00', '16:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (2, 25, '19:00', '19:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (2, 18, '21:00', '22:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (5, 2, 9, '08:00', '08:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (6, 2, 21, '15:00', '16:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (7, 2, 25, '19:00', '19:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (8, 2, 18, '21:00', '22:00');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (3, 1, 'WEDNESDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (3, 4, '09:00', '09:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (3, 24, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (3, 29, '19:00', '19:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (3, 30, '22:00', '22:30');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (9, 3, 4, '09:00', '09:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (10, 3, 24, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (11, 3, 29, '19:00', '19:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (12, 3, 30, '22:00', '22:30');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (4, 1, 'THURSDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (4, 3, '09:00', '09:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (4, 8, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (4, 1, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (4, 11, '22:00', '23:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (13, 4, 3, '09:00', '09:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (14, 4, 8, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (15, 4, 1, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (16, 4, 11, '22:00', '23:00');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (5, 1, 'FRIDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (5, 22, '08:00', '09:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (5, 15, '16:00', '16:30');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (5, 1, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (5, 33, '22:00', '23:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (17, 5, 22, '08:00', '09:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (18, 5, 15, '16:00', '16:30');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (19, 5, 1, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (20, 5, 33, '22:00', '23:00');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (6, 1, 'SATURDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (6, 1, '11:00', '11:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (6, 10, '15:00', '16:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (6, 4, '18:30', '19:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (6, 34, '23:00', '23:30');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (21, 6, 1, '11:00', '11:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (22, 6, 10, '15:00', '16:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (23, 6, 4, '18:30', '19:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (24, 6, 34, '23:00', '23:30');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (7, 1, 'SUNDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (7, 22, '11:00', '11:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (7, 27, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (7, 1, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (7, 14, '21:15', '22:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (25, 7, 22, '11:00', '11:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (26, 7, 27, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (27, 7, 1, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (28, 7, 14, '21:15', '22:00');
 
 INSERT INTO MENU (id, name, user_id) VALUES (2, 'Menu 2', (SELECT id FROM SALUHUD_USER WHERE username = 'user_test_1'));
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (8, 2, 'MONDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (8, 28, '09:00', '09:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (8, 32, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (8, 25, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (8, 26, '22:00', '23:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (29, 8, 28, '09:00', '09:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (30, 8, 32, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (31, 8, 25, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (32, 8, 26, '22:00', '23:00');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (9, 2, 'TUESDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (9, 4, '08:00', '08:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (9, 8, '15:00', '16:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (9, 1, '19:00', '19:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (9, 11, '21:00', '22:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (33, 9, 4, '08:00', '08:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (34, 9, 8, '15:00', '16:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (35, 9, 1, '19:00', '19:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (36, 9, 11, '21:00', '22:00');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (10, 2, 'WEDNESDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (10, 4, '09:00', '09:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (10, 40, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (10, 29, '19:00', '19:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (10, 37, '22:00', '22:30');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (37, 10, 4, '09:00', '09:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (38, 10, 40, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (39, 10, 29, '19:00', '19:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (40, 10, 37, '22:00', '22:30');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (11, 2, 'THURSDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (11, 3, '09:00', '09:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (11, 8, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (11, 1, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (11, 39, '22:00', '23:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (11, 28, '23:00', '23:45');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (41, 11, 3, '09:00', '09:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (42, 11, 8, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (43, 11, 1, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (44, 11, 39, '22:00', '23:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (45, 11, 28, '23:00', '23:45');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (12, 2, 'FRIDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (12, 22, '08:00', '09:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (12, 15, '16:00', '16:30');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (12, 1, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (12, 33, '22:00', '23:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (46, 12, 22, '08:00', '09:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (47, 12, 15, '16:00', '16:30');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (48, 12, 1, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (49, 12, 33, '22:00', '23:00');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (13, 2, 'SATURDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (13, 4, '11:00', '11:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (13, 2, '15:00', '16:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (13, 23, '18:30', '19:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (13, 17, '23:00', '23:30');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (50, 13, 4, '11:00', '11:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (51, 13, 2, '15:00', '16:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (52, 13, 23, '18:30', '19:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (53, 13, 17, '23:00', '23:30');
 
 INSERT INTO MENU_DAY (id, menu_id, week_day) VALUES (14, 2, 'SUNDAY');
 
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (14, 23, '11:00', '11:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (14, 20, '14:00', '15:00');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (14, 3, '18:00', '18:15');
-INSERT INTO MENU_DAY_RECIPE (menu_day_id, recipe_id, start_time, end_time) VALUES (14, 36, '21:15', '22:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (54, 14, 23, '11:00', '11:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (55, 14, 20, '14:00', '15:00');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (56, 14, 3, '18:00', '18:15');
+INSERT INTO MENU_DAY_RECIPE (id, menu_day_id, recipe_id, start_time, end_time) VALUES (57, 14, 36, '21:15', '22:00');
 
 -- Set MENU table sequence to the next index for new additions
 DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('MENU', 'id'), (SELECT COALESCE(MAX(id), 0) FROM MENU) + 1, false); END $$;
@@ -4265,6 +4265,17 @@ DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('MENU', 'id'), (SELECT COALESC
 -- Set MENU_DAY table sequence to the next index for new additions
 DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('MENU_DAY', 'id'), (SELECT COALESCE(MAX(id), 0) FROM MENU_DAY) + 1, false); END $$;
 
+-- Set MENU_DAY_RECIPE table sequence to the next index for new additions
+DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('MENU_DAY_RECIPE', 'id'), (SELECT COALESCE(MAX(id), 0) FROM MENU_DAY_RECIPE) + 1, false); END $$;
+
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.4.0', database_date = '2025-05-23', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 
 -- END SQL STATEMENTS DATE --> 23/05/2025
+
+-- START SQL STATEMENTS DATE --> 02/06/2025
+
+ALTER TABLE RECIPE ALTER COLUMN image_source DROP NOT NULL;
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.4.1', database_date = '2025-06-02', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- END SQL STATEMENTS DATE --> 02/06/2025
