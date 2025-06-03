@@ -4279,3 +4279,24 @@ ALTER TABLE RECIPE ALTER COLUMN image_source DROP NOT NULL;
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.4.1', database_date = '2025-06-02', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 
 -- END SQL STATEMENTS DATE --> 02/06/2025
+
+-- START SQL STATEMENTS DATE --> 03/06/2025
+
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ADD COLUMN fitness_target VARCHAR(255) NOT NULL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA ADD COLUMN fitness_target_recommended_kilocalories SMALLINT NOT NULL;
+ALTER TABLE SALUHUD_USER_FITNESS_DATA RENAME COLUMN daily_kilocalories_objective TO maintenance_daily_kilocalories;
+
+INSERT INTO SALUHUD_USER_FITNESS_DATA (id, weight, height, biological_sex, age, 
+recommended_daily_water_liters, recommended_sleep_hours, recommended_daily_steps, 
+maintenance_daily_kilocalories, body_mass_index, lean_body_mass_percentage, 
+body_fat_percentage, body_fat_weight, lean_body_mass_weight, activity_factor, fitness_target, 
+fitness_target_recommended_kilocalories) VALUES (1, 70, 175, 'MALE', 20, 3, 8, 10000, 2633, 22.9, 80, 20, 14, 56, 1.55, 'WEIGHT_GAIN', 2933);
+
+UPDATE SALUHUD_USER SET id_user_fitness_data = 1 WHERE username = 'user_test_1';
+
+-- Set SALUHUD_USER_FITNESS_DATA table sequence to the next index for new additions
+DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('SALUHUD_USER_FITNESS_DATA', 'id'), (SELECT COALESCE(MAX(id), 0) FROM SALUHUD_USER_FITNESS_DATA) + 1, false); END $$;
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.5.0', database_date = '2025-06-03', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- END SQL STATEMENTS DATE --> 03/06/2025
