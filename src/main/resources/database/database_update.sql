@@ -4300,3 +4300,384 @@ DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('SALUHUD_USER_FITNESS_DATA', '
 UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.5.0', database_date = '2025-06-03', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
 
 -- END SQL STATEMENTS DATE --> 03/06/2025
+
+-- START SQL STATEMENTS DATE --> 07/06/2025
+
+-- Add constraint to DAILY_STEPS_HISTORICAL to only allow one entry per date on 
+-- a historical
+ALTER TABLE DAILY_STEPS_HISTORICAL_ENTRY ADD CONSTRAINT unique_entry_per_day_per_user UNIQUE (daily_steps_historical_id, entry_date);
+
+-- Create daily steps historical for user_test_1
+INSERT INTO DAILY_STEPS_HISTORICAL (id, user_id) VALUES (1, (SELECT id FROM SALUHUD_USER WHERE username = 'user_test_1'));
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-01', 8500, 340, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-02', 10000, 400, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-03', 9000, 360, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-04', 9500, 380, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-05', 10500, 340, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-06', 7500, 300, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-07', 4500, 180, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-08', 3500, 140, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-09', 8500, 340, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-10', 10000, 400, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-11', 9000, 360, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-12', 9500, 380, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-13', 10500, 340, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-14', 7500, 300, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-15', 4500, 180, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-16', 3500, 140, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-17', 8500, 340, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-18', 10000, 400, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-19', 9000, 360, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-20', 9500, 380, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-21', 10500, 340, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-22', 7500, 300, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-23', 4500, 180, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-24', 3500, 140, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-25', 8500, 340, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-26', 10000, 400, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-27', 9000, 360, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-28', 9500, 380, 'WELL');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-29', 10500, 340, 'EXCELLENT');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-06-30', 7500, 300, 'MINIMUM');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-07-01', 4500, 180, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-07-02', 3500, 140, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-07-03', 4500, 180, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-07-04', 3500, 140, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-07-05', 4500, 180, 'FAILED');
+
+INSERT INTO DAILY_STEPS_HISTORICAL_ENTRY (daily_steps_historical_id, entry_date, done_steps, kilo_calories_burned, steps_evaluation)
+VALUES (1, '2025-07-06', 3500, 140, 'FAILED');
+
+-- Add constraint to SLEEP_HISTORICAL_ENTRY to only allow one entry per date on 
+-- a historical
+ALTER TABLE SLEEP_HISTORICAL_ENTRY ADD CONSTRAINT sleep_historical_unique_entry_per_day_per_user UNIQUE (sleep_historical_id, entry_date);
+
+-- Create sleep historical for user_test_1
+INSERT INTO SLEEP_HISTORICAL (id, user_id) VALUES (1, (SELECT id FROM SALUHUD_USER WHERE username = 'user_test_1'));
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-01', 8, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-02', 7, 45, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-03', 7, 30, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-04', 7, 0, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-05', 6, 30, 'MINIMUM');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-06', 5, 30, 'FAILED');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-07', 10, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-08', 10, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-09', 8, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-10', 8, 45, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-11', 7, 30, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-12', 7, 0, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-13', 6, 0, 'MINIMUM');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-14', 5, 30, 'FAILED');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-15', 8, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-16', 7, 45, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-17', 7, 30, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-18', 7, 0, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-19', 4, 30, 'FAILED');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-20', 8, 30, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-21', 10, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-22', 10, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-23', 9, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-24', 7, 0, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-25', 8, 30, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-26', 10, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-27', 10, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-28', 9, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-29', 7, 0, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-06-30', 5, 30, 'FAILED');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-07-01', 10, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-07-02', 9, 0, 'EXCELLENT');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-07-03', 6, 0, 'MINIMUM');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-07-04', 6, 50, 'MINIMUM');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-07-05', 7, 50, 'WELL');
+
+INSERT INTO SLEEP_HISTORICAL_ENTRY (sleep_historical_id, entry_date, hours_slept, minutes_slept, sleep_evaluation)
+VALUES (1, '2025-07-06', 6, 20, 'MINIMUM');
+
+-- Add constraint to WEIGHT_HISTORICAL_ENTRY to only allow one entry per date on 
+-- a historical
+ALTER TABLE WEIGHT_HISTORICAL_ENTRY ADD CONSTRAINT weight_historical_unique_entry_per_day_per_user UNIQUE (weight_historical_id, entry_date);
+
+-- Create weight historical for user_test_1
+INSERT INTO WEIGHT_HISTORICAL (id, user_id) VALUES (1, (SELECT id FROM SALUHUD_USER WHERE username = 'user_test_1'));
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-01', 70.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-02', 70.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-03', 70.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-04', 70.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-05', 71.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-06', 71.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-07', 71.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-08', 71.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-01', 70.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-02', 70.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-03', 70.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-04', 70.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-05', 71.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-06', 71.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-07', 71.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-08', 71.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-10', 71.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-11', 71.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-12', 71.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-13', 71.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-14', 72.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-15', 72.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-16', 72.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-17', 72.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-18', 72.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-19', 72.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-20', 73.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-21', 73.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-22', 73.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-23', 73.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-24', 73.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-25', 73.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-26', 73.5, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-27', 73.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-28', 73.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-29', 73.75, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-06-30', 74.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-07-01', 74.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-07-02', 74.0, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-07-03', 74.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-07-04', 74.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-07-05', 74.25, 175.0, 2933.0);
+
+INSERT INTO WEIGHT_HISTORICAL_ENTRY (weight_historical_id, entry_date, weight_entry, height_entry, kilo_calories_objective_entry)
+VALUES (1, '2025-07-06', 74.5, 175.0, 2933.0);
+
+-- Set DAILY_STEPS_HISTORICAL table sequence to the next index for new additions
+DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('DAILY_STEPS_HISTORICAL', 'id'), (SELECT COALESCE(MAX(id), 0) FROM DAILY_STEPS_HISTORICAL) + 1, false); END $$;
+
+-- Set SLEEP_HISTORICAL table sequence to the next index for new additions
+DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('SLEEP_HISTORICAL', 'id'), (SELECT COALESCE(MAX(id), 0) FROM SLEEP_HISTORICAL) + 1, false); END $$;
+
+-- Set WEIGHT_HISTORICAL table sequence to the next index for new additions
+DO $$ BEGIN PERFORM setval(pg_get_serial_sequence('WEIGHT_HISTORICAL', 'id'), (SELECT COALESCE(MAX(id), 0) FROM WEIGHT_HISTORICAL) + 1, false); END $$;
+
+UPDATE SALUHUD_SYSTEM_METADATA SET database_version = '1.6.0', database_date = '2025-06-07', mobile_app_expected_version = '1.0.0', backend_expected_version = '1.0.0' WHERE id = 1;
+
+-- END SQL STATEMENTS DATE --> 07/06/2025
